@@ -1,0 +1,29 @@
+/** @define Button; use strict */
+
+.Button {
+}
+
+.Button.is-black {
+}
+
+.Button.is-pink {
+}
+
+.Button.is-grey {
+}
+
+.Button.is-white {
+}
+
+
+.Button.is-black:hover {
+}
+
+.Button.is-pink:hover {
+}
+
+.Button.is-grey:hover {
+}
+
+.Button.is-white:hover {
+}
