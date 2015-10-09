@@ -2,55 +2,53 @@ import React from 'react';
 import {Resolver} from 'react-resolver';
 
 /* TODOs: 
-* Refactor and separate out Components.
-* Continue working on the logic.
-* Prevent users from skipping ahead. Only should be able to revisit budget item that they've already visited using Next.
-* Add in setBacks.
+* Guide the user through creating the budget one step at a time.
 * Set up a fail state for cases when the user is too greedy up front.
-* Move appAreas[i].set to React's state.
-* Create more TODOs.
-* Make it look prettier.
+* Make it so that setbacks are only seen once. (I'm thinking about using the visited flag on the object for that.)
+* Keep users from skipping ahead.
+* Make it pretty.
+* More comments!
+* Refactor the heck out of this thing.
 */
 
 let appAreas = [
-  {name: "Housing", desc: "Choose a housing budget.", options: [500, 700, 900], set: null, order: 0,
+  {name: "Housing", desc: "Choose a housing budget.", options: [500, 700, 900], set: null, type: "normal",
    sectionImage: "http://simpleicon.com/wp-content/uploads/home-7.png",
    optionDesc: [
      "1 bedroom, 1 bath apartment, unfurnished, no patio or yard, street parking, and stove only", 
      "2 bedroom, 1 bath apartment, unfurnished, covered patio, 1 parking space, stove, and refrigerator", 
      "3 bedroom, 11/2 bath house, unfurnished, small yard, 2 car garage, stove, refrigerator, and dishwasher"]},
-  {name: "Transportation", desc: "Choose a transportation budget.", options: [50, 100, 200], set: null, order: 1,
+  {name: "Transportation", desc: "Choose a transportation budget.", options: [50, 100, 200], set: null, type: "normal",
    sectionImage: "http://simpleicon.com/wp-content/uploads/car_4.png",
    optionDesc: [
      "Small", 
      "Medium", 
      "Large"]},
-  {name: "Food", desc: "Choose a food budget.", options: [500, 700, 900], set: null, order: 4,
+  {name: "Uh oh! (Example setBack)", desc: "Your dog got rabies. You need to take him to the vet before he goes on a rabid rampage!", 
+   options: [100, 200], set: null, type: "setback", visited: 0,
+   sectionImage: "https://cdn3.iconfinder.com/data/icons/medical-5-1/512/rabies-512.png",
+   optionDesc: [
+     "Cheaper medicine, but it could work.", 
+     "Good medicine. Definitely will work."]},
+  {name: "Food", desc: "Choose a food budget.", options: [500, 700, 900], set: null, type: "normal",
    sectionImage: "http://simpleicon.com/wp-content/uploads/apple.png",
    optionDesc: [
      "Small", 
      "Medium", 
      "Large"]},
-  {name: "Health", desc: "You need healthcare too.", options: [250, 500, 750], set: null, order: 3,
+  {name: "Health", desc: "You need healthcare too.", options: [250, 500, 750], set: null, type: "normal",
    sectionImage: "http://simpleicon.com/wp-content/uploads/docter__nurse_1.png",
    optionDesc: [
      "Small", 
      "Medium", 
      "Large"]},
-  {name: "Communications", desc: "Phone, internet, etc.", options: [50, 200, 400], set: null, order: 2,
+  {name: "Communications", desc: "Phone, internet, etc.", options: [50, 200, 400], set: null, type: "normal",
    sectionImage: "http://simpleicon.com/wp-content/uploads/mobile_phone.png",
    optionDesc: [
      "Small", 
      "Medium", 
      "Large"]},
 ];
-
-/* The idea is that we can flexibly define the order in which screens 
-should appear whether the item is an appArea, setBack, discussion, or 
-whatever screen. The order should also be saved to state so that the 
-game can continue if interrupted by a budget adjustment.*/
-let setBacks = [{order: 5}];
-
 
 let MenuItems = React.createClass({
   
@@ -62,10 +60,11 @@ let MenuItems = React.createClass({
   
   renderMenuItems () {
     let activeItemIndex = this.props.activeItemIndex;
+    
     return (
       this.props.menuItems.map((item, index) => // pass in each item in the array along with its index
         <li onClick={this.handleItemClick.bind(this, index)} // pass the index to the handleItemClick method
-            className={index === activeItemIndex ? "bold" : null}>
+            className={item.type === "setback" ? "hidden" : (index === activeItemIndex ? "bold" : null)}>
           {item.name}
         </li>
       )
@@ -158,7 +157,7 @@ let App = React.createClass({
       activeItemIndex: null, // App starts without an Item selected
       balance: 2500,
       page: 0, // This is order.
-      diverged: false,
+      diverged: false
     };
   },
   
@@ -178,22 +177,11 @@ let App = React.createClass({
     }
   },
   
+  
+  
   setPage () {
-    let page = this.state.page;
-    this.setState({page: page += 1, diverged: false, activeItemIndex: page - 1});
-    
-    // This is for getting the object by order key.
-    // TODO: Build that out to search multiple arrays based on order so we can easily intersperse
-    var getIndexIfObjWithOwnAttr = function(array, attr, value) {
-        for(var i = 0; i < array.length; i++) {
-            if(array[i].hasOwnProperty(attr) && array[i][attr] === value) {
-                return i;
-            }
-        }
-        return -1;
-    };
-    
-    // alert(getIndexIfObjWithOwnAttr(this.props.menuItems, 'order', 2));
+    let page = this.state.page;    
+    this.setState({page: page + 1, diverged: false, activeItemIndex: page});
   },
   
   cyclePage (item) {
@@ -202,7 +190,6 @@ let App = React.createClass({
     console.log("Diverged: " + this.state.diverged);
     
     if (!this.state.diverged) {
-      
       item = appAreas[this.state.page-1];
     };
     
@@ -231,12 +218,12 @@ let App = React.createClass({
         <h1>Charmeck PovSim</h1>
       
         <div className="itemDrawer">
-			<MenuItems 
-			  onActivate={this.handleItem} 
-			  activeItemIndex={this.state.activeItemIndex} 
-			  diverged={this.state.diverged}
-			  menuItems={appAreas} />
-		</div>
+          <MenuItems 
+            onActivate={this.handleItem} 
+            activeItemIndex={this.state.activeItemIndex} 
+            diverged={this.state.diverged}
+            menuItems={appAreas} />
+        </div>
       
         {selectedItem ? <div>{this.cyclePage(selectedItem)}</div> : null}
       

@@ -3,14 +3,15 @@ import {Resolver} from 'react-resolver';
 
 var Home = React.createClass({
 	handleClick () {
-		alert('clicked');
+		alert('We\'re up and running, Dude!');
 	},
 	
 	render () {
 		return (
 			<div>
-				<p><a href='#' onClick={this.handleClick}>Click Me, Dude!</a></p>
-				<a className="btn btn-primary" href="#" role="button">Bootstrap</a>
+				<p><a href='#' onClick={this.handleClick}>Are we up and running?</a></p>
+				<h2>Check out the <a href="/app">Povizio engine.</a></h2>
+				<p>Just added interspersed setbacks. Can you spot it? Still need work to keep people from skipping ahead, require $ selections, etc.</p>
 			</div>
 		);
 	}
