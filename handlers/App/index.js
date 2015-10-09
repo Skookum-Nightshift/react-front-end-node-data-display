@@ -63,9 +63,10 @@ let MenuItems = React.createClass({
     
     return (
       this.props.menuItems.map((item, index) => // pass in each item in the array along with its index
-        <li onClick={this.handleItemClick.bind(this, index)} // pass the index to the handleItemClick method
-            className={item.type === "setback" ? "hidden" : (index === activeItemIndex ? "bold" : null)}>
+        <li className={item.type === "setback" ? "hidden" : (index === activeItemIndex ? "bold" : null)}>
+        <a onClick={this.handleItemClick.bind(this, index)}>
           {item.name}
+        </a>
         </li>
       )
     );
