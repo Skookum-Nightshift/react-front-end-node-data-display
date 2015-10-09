@@ -8,6 +8,7 @@
     "eslint": "eslint .",
     "suit": "node scripts/suit-conformance",
     "start": "export PORT=4000 && DEBUG=*,-babel node . & node server.js",
+	"start-windows": "set PORT=4000 && set DEBUG=*,-babel & start /b node index.js & node server.js",
     "build": "node ./scripts/build && node ./dist/main.js",
     "test": "jest",
     "preinstall": "npm prune"

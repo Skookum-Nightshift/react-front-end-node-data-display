@@ -9,13 +9,15 @@ const {
 } = Router;
 
 import NotFound from './handlers/NotFound';
-import App from './handlers/Base';
+import AppBase from './handlers/Base';
 import Home from'./handlers/Home';
+import App from './handlers/App';
 
 var routes = (
-  <Route path="/" handler={App} >
+  <Route path="/" handler={AppBase} >
     <DefaultRoute name="home" handler={Home} />
     <NotFoundRoute handler={NotFound} />
+    <Route path="/app" handler={App} />
   </Route>
 );
 
