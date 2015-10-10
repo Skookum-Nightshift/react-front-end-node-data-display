@@ -126,7 +126,6 @@ let Options = React.createClass({
         cost is less than the selection, it should always be enabled. You always
         want to allow people to decrease their budget. If no selection has been
         made, then disable whatever doesn't fit within their budget. */
-        
         <button type="button" 
                 onClick={this.setBalance.bind(this, item, cost, index)}
                 className={cost === item.set ? "activeOption" : null}
@@ -144,7 +143,7 @@ let Options = React.createClass({
     return (
       <div>
         {this.renderOptionsDesc()}
-        {this.renderOptions()}
+        <div className="btn-group" role="group">{this.renderOptions()}</div>
       </div>
     );
   }
