@@ -18,6 +18,9 @@ let appAreas = [
      "1 bedroom, 1 bath apartment, unfurnished, no patio or yard, street parking, and stove only", 
      "2 bedroom, 1 bath apartment, unfurnished, covered patio, 1 parking space, stove, and refrigerator", 
      "3 bedroom, 11/2 bath house, unfurnished, small yard, 2 car garage, stove, refrigerator, and dishwasher"]},
+  {name: "Housing", desc: "Housing is expensive. This is a fact.", options: [], set: null, type: "fact",
+   sectionImage: "http://simpleicon.com/wp-content/uploads/home-7.png",
+   optionDesc: []},
   {name: "Transportation", desc: "Choose a transportation budget.", options: [50, 100, 200], set: null, type: "normal",
    sectionImage: "http://simpleicon.com/wp-content/uploads/car_4.png",
    optionDesc: [
@@ -63,7 +66,7 @@ let MenuItems = React.createClass({
     
     return (
       this.props.menuItems.map((item, index) => // pass in each item in the array along with its index
-        <li className={item.type === "setback" ? "hidden" : (index === activeItemIndex ? "bold" : null)}>
+        <li className={item.type != "normal" ? "hidden" : (index === activeItemIndex ? "bold" : null)}>
         <a href="#" onClick={this.handleItemClick.bind(this, index)}>
           {item.name}
         </a>
