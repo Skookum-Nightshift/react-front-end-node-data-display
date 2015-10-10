@@ -12,7 +12,11 @@ import {Resolver} from 'react-resolver';
 */
 
 let appAreas = [
+<<<<<<< HEAD
   {name: "Housing", desc: "Choose a housing budget.", options: [600, 700, 900], set: null, type: "normal",
+=======
+  {name: "Housing", desc: "Choose a housing budget.", options: [400, 700, 900], set: null, type: "normal",
+>>>>>>> 9c1715c85b55436cdf34d6b7abff51df01d52569
    sectionImage: "http://simpleicon.com/wp-content/uploads/home-7.png",
    optionDesc: [
      "1 bedroom, 1 bath apartment, unfurnished, no patio or yard, street parking, and stove only", 
