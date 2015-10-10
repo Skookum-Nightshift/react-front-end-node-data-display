@@ -30,7 +30,7 @@ let appAreas = [
    optionDesc: [
      "Cheaper medicine, but it could work.", 
      "Good medicine. Definitely will work."]},
-  {name: "Food", desc: "Choose a food budget.", options: [500, 700, 900], set: null, type: "normal",
+  {name: "Food", desc: "Choose a food budget.", options: [44, 66, 77], set: null, type: "normal",
    sectionImage: "http://simpleicon.com/wp-content/uploads/apple.png",
    optionDesc: [
      "Small", 
