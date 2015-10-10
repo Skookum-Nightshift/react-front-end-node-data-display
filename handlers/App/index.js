@@ -12,45 +12,57 @@ import {Resolver} from 'react-resolver';
 */
 
 let appAreas = [
-  {name: "Housing", desc: "Choose a housing budget.", options: [600, 700, 900], set: null, type: "normal",
+  {name: "Housing", desc: "Choose a housing budget.", options: [700, 830, 950], set: null, type: "normal",
    sectionImage: "http://simpleicon.com/wp-content/uploads/home-7.png",
    optionDesc: [
      "1 bedroom, 1 bath apartment, unfurnished, no patio or yard, street parking, and stove only", 
      "2 bedroom, 1 bath apartment, unfurnished, covered patio, 1 parking space, stove, and refrigerator", 
      "3 bedroom, 11/2 bath house, unfurnished, small yard, 2 car garage, stove, refrigerator, and dishwasher"]},
-  {name: "Housing", desc: "Housing is expensive. This is a fact.", options: [], set: null, type: "fact",
+  {name: "Housing Fact", desc: "Fair Market Rent for a 2 bedroom in Mecklenburg County is $831 a month. Nearly 50% of renters in Charlotte-Mecklenburg spend more than 30% of their income on housing.", options: [], set: null, type: "fact",
    sectionImage: "http://simpleicon.com/wp-content/uploads/home-7.png",
    optionDesc: []},
-  {name: "Transportation", desc: "Choose a transportation budget.", options: [50, 100, 200], set: null, type: "normal",
+  {name: "Food", desc: "Choose a food budget.", options: [80, 180, 280], set: null, type: "normal",
+   sectionImage: "http://simpleicon.com/wp-content/uploads/apple.png",
+   optionDesc: [
+     "1 meal a day", 
+     "2 meals a day", 
+     "3 meals a day + snacks"]},
+  {name: "Food Fact", desc: "In our five-county region, 69,154 households receive food stamps. This is an 83% increase from 2008. And accounts for 12% of households in the region.", options: [], set: null, type: "fact",
+   sectionImage: "http://simpleicon.com/wp-content/uploads/apple.png",
+   optionDesc: []},
+  {name: "Transportation", desc: "Choose a transportation budget.", options: [0, 80, 360], set: null, type: "normal",
    sectionImage: "http://simpleicon.com/wp-content/uploads/car_4.png",
    optionDesc: [
-     "Small", 
-     "Medium", 
-     "Large"]},
-  {name: "Uh oh! (Example setBack)", desc: "Your dog got rabies. You need to take him to the vet before he goes on a rabid rampage!", 
+     "Walk or bike everywhere.", 
+     "Walk, bike, or take public transit.", 
+     "Own your own car."]},
+  {name: "Transportation Fact", desc: "It takes the average Charlottean 30 minutes to travel to work, for workers age 16 years+, 2009-2013.", options: [], set: null, type: "fact",
+   sectionImage: "http://simpleicon.com/wp-content/uploads/car_4.png",
+   optionDesc: []},
+  {name: "Uh oh!", desc: "Your dog got rabies. You need to take him to the vet before he goes on a rabid rampage!", 
    options: [100, 200], set: null, type: "setback", visited: 0,
    sectionImage: "https://cdn3.iconfinder.com/data/icons/medical-5-1/512/rabies-512.png",
    optionDesc: [
      "Cheaper medicine, but it could work.", 
      "Good medicine. Definitely will work."]},
-  {name: "Food", desc: "Choose a food budget.", options: [44, 66, 77], set: null, type: "normal",
-   sectionImage: "http://simpleicon.com/wp-content/uploads/apple.png",
-   optionDesc: [
-     "Small", 
-     "Medium", 
-     "Large"]},
-  {name: "Health", desc: "You need healthcare too.", options: [250, 500, 750], set: null, type: "normal",
+  {name: "Health", desc: "You need healthcare too.", options: [0, 52, 134], set: null, type: "normal",
    sectionImage: "http://simpleicon.com/wp-content/uploads/docter__nurse_1.png",
    optionDesc: [
-     "Small", 
-     "Medium", 
-     "Large"]},
-  {name: "Communications", desc: "Phone, internet, etc.", options: [50, 200, 400], set: null, type: "normal",
+     "No health insurance, you pay for all health related costs", 
+     "Health insurance for you through your employer but no health insurance for your family members", 
+     "Health insurance for you and your family through your employer"]},
+  {name: "Health Fact", desc: "18.5% of Mecklenburg residents do not have health insurance (under age 65).", options: [], set: null, type: "fact",
+   sectionImage: "http://simpleicon.com/wp-content/uploads/docter__nurse_1.png",
+   optionDesc: []},
+  {name: "Technology", desc: "Phone, internet, etc.", options: [0, 80, 220], set: null, type: "normal",
    sectionImage: "http://simpleicon.com/wp-content/uploads/mobile_phone.png",
    optionDesc: [
-     "Small", 
-     "Medium", 
-     "Large"]},
+     "No computer, no cell phone, TV with no cable", 
+     "No computer, 2 cell phones, TV with no cable", 
+     "Home computer, TV with cable, 2 smart phones"]},
+  {name: "Technology Fact", desc: "Technology Fact listed here. This will be a good one!", options: [], set: null, type: "fact",
+   sectionImage: "http://simpleicon.com/wp-content/uploads/mobile_phone.png",
+   optionDesc: []}
 ];
 
 let MenuItems = React.createClass({
@@ -158,7 +170,7 @@ let App = React.createClass({
   getInitialState () {
     return {
       activeItemIndex: null, // App starts without an Item selected
-      balance: 2500,
+      balance: 2000,
       page: 0, // This is order.
       diverged: false
     };
