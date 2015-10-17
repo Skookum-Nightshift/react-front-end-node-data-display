@@ -117,7 +117,10 @@ let MenuItems = React.createClass({
   
   disableUnvisited (item, index) {
     if (item.visited === true) {
-      return (<a href="#" onClick={this.handleItemClick.bind(this, index)}>{item.name}</a>);      
+      return (
+        <a href="#" onClick={this.handleItemClick.bind(this, index)}>{item.name}
+          {item.set ? <span>{item.set}</span>: "" }
+        </a>);
     } else {
       return (item.name);
     }
