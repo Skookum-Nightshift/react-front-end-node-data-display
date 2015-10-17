@@ -59,22 +59,6 @@
     "webpack": "^1.8.2",
     "webpack-dev-server": "^1.8.0",
     "websocket-rails-js": "jcgertig/websocket-rails-js#sub_protocols"
-  },
-  "devDependencies": {
-    "jest-cli": "0.4.1"
-  },
-  "jest": {
-    "scriptPreprocessor": "<rootDir>/jest-preprocessor",
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "jsx"
-    ],
-    "testFileExtensions": [
-      "js"
-    ]
   }
+  
 }
