@@ -3,16 +3,20 @@ import {Resolver} from 'react-resolver';
 
 
 let MenuItems = React.createClass({
-  
+
   handleItemClick (activeItemIndex) {
-     /* pass the index of the clicked LI to the parent Component's 
+     /* pass the index of the clicked LI to the parent Component's
      onActivate prop, which happens to be the handleItem method */
     this.props.onActivate(activeItemIndex);
   },
-  
+
   disableUnvisited (item, index) {
     if (item.visited === true) {
-      return (<a href="#" onClick={this.handleItemClick.bind(this, index)}>{item.name}</a>);      
+      return (
+        <a href="#" onClick={this.handleItemClick.bind(this, index)}>{item.name}
+          {item.set ? <span>{item.set}</span>: "" }
+        </a>
+      );
     } else {
       return (item.name);
     }
@@ -21,7 +25,7 @@ let MenuItems = React.createClass({
   renderMenuItems () {
     let activeItemIndex = this.props.activeItemIndex;
     // console.log(this.props.menuItems[activeItemIndex]);
-    
+
     return (
       this.props.menuItems.map((item, index) => // pass in each item in the array along with its index
         <li className={item.type != "normal" ? "hidden" : (index === activeItemIndex ? "bold" : null)}>
@@ -30,7 +34,7 @@ let MenuItems = React.createClass({
       )
     );
   },
-  
+
   render () {
     return (
       <div>
