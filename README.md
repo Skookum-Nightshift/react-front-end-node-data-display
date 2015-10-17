@@ -1,16 +1,19 @@
 # Povizio
 
-a web app for [United Way of Central Carolinas](http://www.uwcentralcarolinas.org/) to: create more awareness about poverty in Charlotte:
+a web app for [United Way of Central
+Carolinas](http://www.uwcentralcarolinas.org/) to: create more awareness about
+poverty in Charlotte:
 
 * create awareness about poverty using real Charlotte data
-* simulate tough choices made by those in poverty 
+* simulate tough choices made by those in poverty
 * give links to share, to donate, and volunteer
 
-Povizio is a play on words for poverty, visual awareness, and choices 
+Povizio is a play on words for poverty, visual awareness, and choices
 
 # React Base App
 
-This app uses [React](http://facebook.github.io/react/) and [Material UI](http://material-ui.com/#/)
+This app uses [React](http://facebook.github.io/react/) and
+[Material UI](http://material-ui.com/#/).
 
 # Setup
 
@@ -25,7 +28,7 @@ This app uses [React](http://facebook.github.io/react/) and [Material UI](http:/
 ## Components
 
 Components are the building blocks of your application. Think of them like Web
-Component, but better. They have clear compositional boundaries, care their CSS
+Component, but better. They have clear compositional boundaries, carry their CSS
 and behavior with them, and your application understands these dependencies so
 bundling for production is trivial.
 
