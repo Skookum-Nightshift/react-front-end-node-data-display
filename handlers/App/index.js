@@ -35,7 +35,7 @@ let appAreas = [
    optionDesc: [
      "Walk or bike everywhere.", 
      "Walk, bike, or take public transit.", 
-     "Own your own car."]},
+     "Own your own car. It's a beater"]},
   {name: "Transportation Fact", desc: "It takes the average Charlottean 30 minutes to travel to work, for workers age 16 years+, 2009-2013.", options: [], set: null, type: "fact",
    sectionImage: "http://simpleicon.com/wp-content/uploads/car_4.png",
    optionDesc: []},
