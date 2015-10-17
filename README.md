@@ -1,28 +1,28 @@
+# Povizio
+
+a web app for [United Way of Central Carolinas](http://www.uwcentralcarolinas.org/) to: create more awareness about poverty in Charlotte:
+
+* create awareness about poverty using real Charlotte data
+* simulate tough choices made by those in poverty 
+* give links to share, to donate, and volunteer
+
+Povizio is a play on words for poverty, visual awareness, and choices 
+
 # React Base App
 
-Welcome to this brave new world. This is a world of the future that also brings
-with us all of the things we learned in the past.
+This app uses [React](http://facebook.github.io/react/) and [Material UI](http://material-ui.com/#/)
 
-It may be a bit overwhelming if you try to understand all of it right out of the
-gate, though. This is a many layered architecture that sets you up for success
-at every level. It is highly opinionated, but attempts to hold these opinions
-loosely so that you can change it if you so desire.
-
-## Get Hacking
-
-* `npm install`
-* `npm start`
-* `open localhost:4000`
-
-## Generator commands
-
-### Setup
+# Setup
 
 * `git clone https://github.com/Skookum/generator-genreact.git`
-* `cd generator-genreact`
-* `npm link`
 
-### Components
+# Get Hacking
+
+* `npm install`
+* `npm start` or `npm run start-windows`
+* `open localhost:4000`
+
+## Components
 
 Components are the building blocks of your application. Think of them like Web
 Component, but better. They have clear compositional boundaries, care their CSS
