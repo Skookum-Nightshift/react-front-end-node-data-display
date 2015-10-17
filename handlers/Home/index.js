@@ -21,7 +21,7 @@ var Home = React.createClass({
 	render () {
 		return (
 			<div>
-        <RaisedButton label="Default" primary={true} />
+        <RaisedButton label="Povizio" backgroundColor="blue900"/>
 				<p><a href='#' onClick={this.handleClick}>Are we up and running?</a></p>
 				<h2>Check out the <a href="/app">Povizio engine.</a></h2>
 				<p>Just added interspersed setbacks. Can you spot it? Still need work to keep people from skipping ahead, require $ selections, etc.</p>

@@ -8,7 +8,7 @@
     "eslint": "eslint .",
     "suit": "node scripts/suit-conformance",
     "start": "export PORT=4000 && DEBUG=*,-babel node . & node server.js",
-	"start-windows": "set PORT=4000 && set DEBUG=*,-babel & start /b node index.js & node server.js",
+    "start-windows": "set PORT=4000 && set DEBUG=*,-babel & start /b node index.js & node server.js",
     "build": "node ./scripts/build && node ./dist/main.js",
     "test": "jest",
     "preinstall": "npm prune"
@@ -34,6 +34,7 @@
     "glob": "^5.0.3",
     "immutable": "^3.7.1",
     "isomorphic-fetch": "^2.0.1",
+    "material-ui": "^0.12.3",
     "node-noop": "0.0.1",
     "normalize.css": "^3.0.3",
     "object.assign": "^1.1.1",
