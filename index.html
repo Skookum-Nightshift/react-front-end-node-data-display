@@ -58,59 +58,333 @@
     <meta name="msapplication-config" content="http://app.herokuapp.com/meta/browserconfig.xml?v=yyyBYmXl7m">
     <meta name="theme-color" content="#ffffff">
     <!-- favicons end -->
-	
+
 	<!-- bootstrap test -->
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-	
+
 	<!-- Temporary holding for app CSS -->
 	<style>
-		body {
-		  font-family: Helvetica;  
-		}
+  /*!
+   * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
+   * Code licensed under the Apache License v2.0.
+   * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+   */
 
-		li {
-		  background-color: #FFF;
-		  -webkit-transition: background-color 1s;
-		  transition: background-color 1s;
-		}
+  /* Global Styles */
 
-		.bold {
-		  font-weight: bold;
-		}
+  html,
+  body {
+      width: 100%;
+      height: 100%;
+  }
 
-		.hidden {
-		  display: none;
-		}
+  body {
+      font-family: 'Fira Sans', sans-serif;
+  }
 
-		.activeOption {
-		  background-color: #FF0000;
-		}
+  .text-vertical-center {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      color: white;
+      font-weight: 700;
+  }
 
-		.sectionIcon {
-		  width: 200px;
-		}
+  .text-vertical-center h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 6em;
+      font-weight: 700;
+      color: white;
+  }
 
-        .button-options {
-          margin-right: 10px;
-          display: inline;
-        }
+  /* Custom Button Styles */
+
+  .btn-dark {
+      border-radius: 0;
+      color: #fff;
+      background-color: #ff9900;
+  }
+
+  .btn-dark:hover,
+  .btn-dark:focus,
+  .btn-dark:active {
+      color: #fff;
+      background-color: #9098d3;
+  }
+
+  .btn-cus {
+      color: #fff;
+      background-color: #9098d3;
+  }
+
+  .btn-light {
+      border-radius: 0;
+      color: #333;
+      background-color: rgb(255,255,255);
+  }
+
+  .btn-light:hover,
+  .btn-light:focus,
+  .btn-light:active {
+      color: #333;
+      background-color: rgba(255,255,255,0.8);
+  }
+
+  /* Custom Horizontal Rule */
+
+  hr.small {
+      max-width: 100px;
+  }
+
+  /* Side Menu */
+
+  #sidebar-wrapper {
+      z-index: 1000;
+      position: fixed;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      margin-right: -250px;
+      overflow-y: auto;
+      background: #222;
+      -webkit-transition: all 0.4s ease 0s;
+      -moz-transition: all 0.4s ease 0s;
+      -ms-transition: all 0.4s ease 0s;
+      -o-transition: all 0.4s ease 0s;
+      transition: all 0.4s ease 0s;
+  }
+
+  .sidebar-nav {
+      position: absolute;
+      top: 0;
+      width: 250px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+
+  .sidebar-nav li {
+      text-indent: 20px;
+      line-height: 40px;
+  }
+
+  .sidebar-nav li a {
+      display: block;
+      text-decoration: none;
+      color: #999;
+  }
+
+  .sidebar-nav li a:hover {
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255,255,255,0.2);
+  }
+
+  .sidebar-nav li a:active,
+  .sidebar-nav li a:focus {
+      text-decoration: none;
+  }
+
+  .sidebar-nav > .sidebar-brand {
+      height: 55px;
+      font-size: 18px;
+      line-height: 55px;
+  }
+
+  .sidebar-nav > .sidebar-brand a {
+      color: #999;
+  }
+
+  .sidebar-nav > .sidebar-brand a:hover {
+      color: #fff;
+      background: none;
+  }
+
+  #menu-toggle {
+      z-index: 1;
+      position: fixed;
+      top: 0;
+      right: 0;
+  }
+
+  #sidebar-wrapper.active {
+      right: 250px;
+      width: 250px;
+      -webkit-transition: all 0.4s ease 0s;
+      -moz-transition: all 0.4s ease 0s;
+      -ms-transition: all 0.4s ease 0s;
+      -o-transition: all 0.4s ease 0s;
+      transition: all 0.4s ease 0s;
+  }
+
+  .toggle {
+      margin: 5px 5px 0 0;
+  }
+
+  /* Header */
+
+  .header {
+      display: table;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(http://36.media.tumblr.com/adec2f102b2fc0457f041420e5ac93b3/tumblr_nmmglcTA9r1sk1us0o1_1280.jpg) no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
+
+  .padding-cus {
+      padding-top: 25px;
+  }
+
+  .padding1 {
+      padding-top: 10px;
+  }
+
+  /* About */
+
+  .about {
+      padding: 50px 0;
+  }
+
+  /* Services */
+
+  .services {
+      padding: 50px 0;
+  }
+
+  .service-item {
+      margin-bottom: 30px;
+  }
+
+  /* Callout */
+
+  .callout {
+      display: table;
+      width: 100%;
+      height: 400px;
+      color: #fff;
+      background: url(../img/callout.jpg) no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
+
+  /* Portfolio */
+
+  .portfolio {
+      padding: 50px 0;
+  }
+
+  .portfolio-item {
+      margin-bottom: 30px;
+  }
+
+  .img-portfolio {
+      margin: 0 auto;
+  }
+
+  .img-portfolio:hover {
+      opacity: 0.8;
+  }
+
+  /* Call to Action */
+
+  .call-to-action {
+      padding: 50px 0;
+  }
+
+  .call-to-action .btn {
+      margin: 10px;
+  }
+
+  /* Map */
+
+  .map {
+      height: 500px;
+  }
+
+  @media(max-width:768px) {
+      .map {
+          height: 75%;
+      }
+  }
+
+  /* Footer */
+
+  footer {
+      padding: 100px 0;
+  }
 	</style>
 
     <script id="__resolver__" async>var __resolver__ = †__resolver__†;</script>
     †head†
   </head>
   <body>
-    <div class="row">
-       <div class="col-md-4"></div>
-       <div class="col-md-4">
-           <div id="app" class="container">†react†</div>
-       </div>
-       <div class="col-md-4"></div>
-     </div>
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1 data-sr >Poviz.io</h1>
+            <h4>Poverty is hard and oftens leads to homelessness.</h4>
+            <h4>See the tough choices made every day by people living in poverty.</h4>
+            <h4>What will you sacrifice?</h4>
+            <bold><a href="https://projects.invisionapp.com/share/354ILXLBS#/screens" class="btn btn-dark btn-lg">Get Started</a></bold>
+            <p class="padding-cus"><b><small>Partnered with:</small></b></p>
+            <img src="img/uwcc.png"></img>
+            <p class="padding1"><small>United Way of Central Carolinas</small></p>
+        </div>
+    </header>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/2.3.2/scrollReveal.min.js"></script>
+    <script>
+
+      window.sr = new scrollReveal();
+
+    </script>
 
     <!-- Google Analytics -->
     <script>
