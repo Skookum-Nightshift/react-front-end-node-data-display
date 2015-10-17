@@ -1,7 +1,6 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 
-
 /**  
  * This should be moved to its own JSON file. The app follows the order of this array. 
  *
@@ -14,46 +13,98 @@ import {Resolver} from 'react-resolver';
  * type (string: normal, fact, setback, etc.) When set to "normal", the item name will appear in the drawer.
  * optionDesc: an array of strings, each coinciding with the earlier array of options.
  */
+ 
 let appAreas = [
-  {name: "Housing", desc: "Choose a housing budget.", options: [600, 700, 900], set: null, type: "normal",
+  {name: "Housing", desc: "What kind of home will you live in?", options: [700, 830, 950], set: null, type: "normal", visited: true,
    sectionImage: "http://simpleicon.com/wp-content/uploads/home-7.png",
    optionDesc: [
-     "1 bedroom, 1 bath apartment, unfurnished, no patio or yard, street parking, and stove only", 
-     "2 bedroom, 1 bath apartment, unfurnished, covered patio, 1 parking space, stove, and refrigerator", 
-     "3 bedroom, 11/2 bath house, unfurnished, small yard, 2 car garage, stove, refrigerator, and dishwasher"]},
-  {name: "Housing", desc: "Housing is expensive. This is a fact.", options: [], set: null, type: "fact",
+     "1 bedroom, 1 bath apartment, no patio or yard, street parking, and stove only", 
+     "2 bedroom, 1 bath apartment, covered patio, 1 parking space, stove, and refrigerator", 
+     "3 bedroom, 11/2 bath house, small yard, 2 car garage, stove, refrigerator, and dishwasher"]},
+  {name: "Housing Fact", desc: "Fair Market Rent for a 2 bedroom in Mecklenburg County is $831 a month. Nearly 50% of renters in Charlotte-Mecklenburg spend more than 30% of their income on housing.", options: [], set: null, type: "fact", visited: false,
    sectionImage: "http://simpleicon.com/wp-content/uploads/home-7.png",
    optionDesc: []},
-  {name: "Transportation", desc: "Choose a transportation budget.", options: [50, 100, 200], set: null, type: "normal",
+  {name: "Food", desc: "What's your food budget?", options: [80, 180, 280], set: null, type: "normal", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/curry.png",
+   optionDesc: [
+     "1 meal a day", 
+     "2 meals a day", 
+     "3 meals a day + snacks"]},
+  {name: "Food Fact", desc: "69,154 households receive food stamps in the Charlotte five county region.", options: [], set: null, type: "fact", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/pizza.png",
+   optionDesc: []},
+  {name: "Transportation", desc: "How will you get around?", options: [0, 80, 360], set: null, type: "normal", visited: false,
    sectionImage: "http://simpleicon.com/wp-content/uploads/car_4.png",
    optionDesc: [
-     "Small", 
-     "Medium", 
-     "Large"]},
-  {name: "Uh oh! (Example setBack)", desc: "Your dog got rabies. You need to take him to the vet before he goes on a rabid rampage!", 
-   options: [100, 200], set: null, type: "setback", visited: 0,
+     "Walk or bike everywhere", 
+     "Walk, bike, and public transit", 
+     "Have your own car, with a monthly payment"]},
+  {name: "Transportation Fact", desc: "It takes the average Charlottean 30 minutes to travel to work, for workers age 16 years+, 2009-2013.", options: [], set: null, type: "fact", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/car_11.png",
+   optionDesc: []},
+  {name: "Oh no!!", desc: "Your dog got rabies. You need to take him to the vet before he goes on a rabid rampage!", 
+   options: [100, 200], set: null, type: "setback", visited: false,
    sectionImage: "https://cdn3.iconfinder.com/data/icons/medical-5-1/512/rabies-512.png",
    optionDesc: [
-     "Cheaper medicine, but it could work.", 
+     "Cheap medicine. It might work.", 
      "Good medicine. Definitely will work."]},
-  {name: "Food", desc: "Choose a food budget.", options: [44, 66, 77], set: null, type: "normal",
-   sectionImage: "http://simpleicon.com/wp-content/uploads/apple.png",
-   optionDesc: [
-     "Small", 
-     "Medium", 
-     "Large"]},
-  {name: "Health", desc: "You need healthcare too.", options: [250, 500, 750], set: null, type: "normal",
+  {name: "Health", desc: "What kind of healthcare do you have?", options: [0, 52, 134], set: null, type: "normal", visited: false,
    sectionImage: "http://simpleicon.com/wp-content/uploads/docter__nurse_1.png",
    optionDesc: [
-     "Small", 
-     "Medium", 
-     "Large"]},
-  {name: "Communications", desc: "Phone, internet, etc.", options: [50, 200, 400], set: null, type: "normal",
+     "No health insurance", 
+     "Health insurance for you only", 
+     "Health insurance for you and your family"]},
+  {name: "Health Fact", desc: "18.5% of Mecklenburg residents do not have health insurance (under age 65).", options: [], set: null, type: "fact", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/stethoscope1.png",
+   optionDesc: []},
+  {name: "Technology", desc: "What type of electronics do you have?", options: [35, 80, 220], set: null, type: "normal", visited: false,
    sectionImage: "http://simpleicon.com/wp-content/uploads/mobile_phone.png",
    optionDesc: [
-     "Small", 
-     "Medium", 
-     "Large"]},
+     "1 cell phone", 
+     "2 cell phones, TV but no cable", 
+     "2 smart phones, TV with cable, home computer"]},
+  {name: "Technology Fact", desc: "Technology Fact listed here. This will be a good one!", options: [], set: null, type: "fact", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/tv_table.png",
+   optionDesc: []},
+  {name: "Oh no!!", desc: "Your daughter got sick. How will you handle the trip to the emergency room and medication?", 
+   options: [100, 140], set: null, type: "setback", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/ambulance1.png",
+   optionDesc: [
+     "Emergency room visit, no medication", 
+     "Emergency room plus medication"]},
+  {name: "Family Leisure", desc: "Choose your fun family outings and leisure time.", options: [0, 100, 200], set: null, type: "normal", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/fruit_basket.png",
+   optionDesc: [
+     "No family outings, maybe visiting local friends and family", 
+     "1 family activity, like a local park, picnic, bowling, or local music show", 
+     "2 family activities, like eating out, movies, or a concert"]},
+  {name: "Family Leisure Fact", desc: "Spending family time on leisure activities together is associated with greater emotional bonding, better communication, better school grades, and less behavioral problems. ", options: [], set: null, type: "fact", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/bowling_ball_2.png",
+   optionDesc: []},
+  {name: "Oh no!!", desc: "Your son wants to join the school soccer team.", 
+   options: [0, 80], set: null, type: "setback", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/football1.png",
+   optionDesc: [
+     "He does not participate", 
+     "Cleats, shin pads, uniform, and ball"]},
+  {name: "Laundry", desc: "Where will you do laundry?", options: [20, 30, 60], set: null, type: "normal", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/mobile_phone.png",
+   optionDesc: [
+     "Laundromat", 
+     "Shared laundry room", 
+     "Payment for your own washer and dryer"]},
+  {name: "Laundry Fact", desc: "A really good fact about Laundry and utilities.", options: [], set: null, type: "fact", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/mobile_phone.png",
+   optionDesc: []},
+  {name: "Savings", desc: "Do you have any money for savings or unexpected expenses?", options: [0, 100, 200], set: null, type: "normal", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/money-bag-4.png",
+   optionDesc: [
+     "Nothing left for savings after other expenses", 
+     "$20 for savings", 
+     "$100 for savings"]},
+  {name: "Savings Fact", desc: "A savings reserve is often unavailble for those in poverty.", options: [], set: null, type: "fact", visited: false,
+   sectionImage: "http://simpleicon.com/wp-content/uploads/money-5.png",
+   optionDesc: []}
 ];
 
 let MenuItems = React.createClass({
