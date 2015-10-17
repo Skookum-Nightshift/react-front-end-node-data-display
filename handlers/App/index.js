@@ -237,6 +237,7 @@ let App = React.createClass({
   render () {
     
     let selectedItem = appAreas[this.state.activeItemIndex]; // load the data
+    console.log(JSON.stringify(appAreas));
     
     return (
       <div>
