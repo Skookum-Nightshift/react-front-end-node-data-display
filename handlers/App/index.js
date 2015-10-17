@@ -162,6 +162,19 @@ let App = React.createClass({
   /**
    This generates everything between the drawer and the running balance.
    */
+  
+  nextButton (min, item) {
+      console.log("Your balance is: " + this.state.balance);
+      console.log("Your min is: " + min);
+      if (this.state.balance >= min && item.set === null) {
+        return <p>Please make a selection</p>;
+      } else if (this.state.balance >= min || item.set != null || item.type ==="fact") {
+        return <button type="button" onClick={this.setPage}>Next</button>;
+      } else {
+        return <p>You are out of money! You need to go back and adjust your monthly budget.</p>;
+      }
+    },
+
   cyclePage (item) {
     console.log("Page: " + this.state.page); // For debugging
     console.log("ActiveItemIndex: " + this.state.activeItemIndex); // For debugging
@@ -195,7 +208,7 @@ let App = React.createClass({
             handleBalance={this.handleBalance}
             balance={this.state.balance} 
             selectedItem={item} />
-          {(this.state.balance >= min || item.set != null || item.type === "fact") ? <button type="button" onClick={this.setPage}>Next</button> : <p>You are out of money! You need to go back and adjust your monthly budget.</p>}
+          {this.nextButton(min, item)}
         </div>
     );
   },
