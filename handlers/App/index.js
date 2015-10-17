@@ -1,6 +1,9 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 
+var MenuItems = require('./MenuItems');
+var Options = require('./Options');
+
 /**  
  * This should be moved to its own JSON file. The app follows the order of this array. 
  *
@@ -106,119 +109,6 @@ let appAreas = [
    sectionImage: "http://simpleicon.com/wp-content/uploads/money-5.png",
    optionDesc: []}
 ];
-
-let MenuItems = React.createClass({
-  
-  handleItemClick (activeItemIndex) {
-     /* pass the index of the clicked LI to the parent Component's 
-     onActivate prop, which happens to be the handleItem method */
-    this.props.onActivate(activeItemIndex);
-  },
-  
-  disableUnvisited (item, index) {
-    if (item.visited === true) {
-      return (
-        <a href="#" onClick={this.handleItemClick.bind(this, index)}>{item.name}
-          {item.set ? <span>{item.set}</span>: "" }
-        </a>);
-    } else {
-      return (item.name);
-    }
-  },
-
-  renderMenuItems () {
-    let activeItemIndex = this.props.activeItemIndex;
-    // console.log(this.props.menuItems[activeItemIndex]);
-    
-    return (
-      this.props.menuItems.map((item, index) => // pass in each item in the array along with its index
-        <li className={item.type != "normal" ? "hidden" : (index === activeItemIndex ? "bold" : null)}>
-          {this.disableUnvisited(item, index)}
-        </li>
-      )
-    );
-  },
-  
-  render () {
-    return (
-      <div>
-        <ul>{this.renderMenuItems()}</ul>
-        {this.props.children}
-      </div>
-    );
-  }
-});
-
-
-let Options = React.createClass({
-  
-  setBalance (item, cost, choice) {
-    let bal = this.props.balance;
-    
-    /**
-     * If the budget for the item has not been set, set it to the cost of
-     * the item clicked and deduct that from the budget. If it HAS been set
-     * and you're changing your choice, add the originally set amount back into 
-     * the budget, update the item's 'set' key, and deduct the newly selected
-     * amount from the budget. 
-     */
-    if (item['set'] === null) {
-      item['set'] = cost;
-      bal -= cost;
-    } else {
-      bal += item['set'];
-      item['set'] = cost;
-      bal -= cost;
-    }
-    
-    this.props.handleBalance(bal);
-  },
-  
-  renderOptionsDesc () {
-    let item = this.props.selectedItem;
-    let index = item.options.indexOf(item.set);
-
-    return (
-      <p>{item.optionDesc[index]}</p>
-    );
-  },
-  
-  renderOptions () {
-    let item = this.props.selectedItem;
-    
-    return (
-      item.options.map((cost, index) =>
-        
-        /** 
-         * When a selection is made, update the balance, set the class
-         * (to make the selection red), and then determine whether the selection
-         * should be disabled or not. If a selection has been made and the button's
-         * cost is less than the selection, it should always be enabled. You always
-         * want to allow people to decrease their budget. If no selection has been
-         * made, then disable whatever doesn't fit within their budget.
-         */
-        <button type="button" 
-                onClick={this.setBalance.bind(this, item, cost, index)}
-                className={cost === item.set ? "activeOption" : null}
-                disabled={(item.set != null && cost < item.set) ? 
-                          false : 
-                          (cost > this.props.balance ? true : false)}>
-          {cost}
-        </button>
-        
-      )
-    );
-  },  
-  
-  render () {
-    return (
-      <div>
-        {this.renderOptionsDesc()}
-        <div className="btn-group" role="group">{this.renderOptions()}</div>
-      </div>
-    );
-  }
-});
 
 
 let App = React.createClass({
