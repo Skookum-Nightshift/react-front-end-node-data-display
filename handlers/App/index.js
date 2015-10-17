@@ -115,19 +115,26 @@ let MenuItems = React.createClass({
     this.props.onActivate(activeItemIndex);
   },
   
+  disableUnvisited (item, index) {
+    if (item.visited === true) {
+      return (<a href="#" onClick={this.handleItemClick.bind(this, index)}>{item.name}</a>);      
+    } else {
+      return (item.name);
+    }
+  },
+
   renderMenuItems () {
     let activeItemIndex = this.props.activeItemIndex;
+    // console.log(this.props.menuItems[activeItemIndex]);
     
     return (
       this.props.menuItems.map((item, index) => // pass in each item in the array along with its index
         <li className={item.type != "normal" ? "hidden" : (index === activeItemIndex ? "bold" : null)}>
-        <a href="#" onClick={this.handleItemClick.bind(this, index)}>
-          {item.name}
-        </a>
+          {this.disableUnvisited(item, index)}
         </li>
       )
     );
-  },  
+  },
   
   render () {
     return (
@@ -267,6 +274,7 @@ let App = React.createClass({
      */
     if (!this.state.diverged) {
       item = appAreas[this.state.page-1];
+      item['visited'] = true;
     };
     
     return (
