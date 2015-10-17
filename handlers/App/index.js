@@ -43,7 +43,7 @@ let appAreas = [
    sectionImage: "http://simpleicon.com/wp-content/uploads/car_11.png",
    optionDesc: []},
   {name: "Oh no!!", desc: "Your dog got rabies. You need to take him to the vet before he goes on a rabid rampage!", 
-   options: [100, 200], set: null, type: "setback", visited: false,
+   options: [1000, 1200], set: null, type: "setback", visited: false,
    sectionImage: "https://cdn3.iconfinder.com/data/icons/medical-5-1/512/rabies-512.png",
    optionDesc: [
      "Cheap medicine. It might work.", 
@@ -223,9 +223,10 @@ let App = React.createClass({
   getInitialState () {
     return {
       activeItemIndex: null, // App starts without an Item selected
-      balance: 2500,
-      page: 0, // This is order.
-      diverged: false
+      balance: 2000,
+      page: 2, // This is order.
+      diverged: false,
+      budgetBusted: false,
     };
   },
   
@@ -255,8 +256,14 @@ let App = React.createClass({
   
   
   setPage () {
-    let page = this.state.page;    
-    this.setState({page: page + 1, diverged: false, activeItemIndex: page});
+    let page = this.state.page;
+
+    // If you diverge, return the user to the spot they were (don't iterate the page.)
+    if (this.state.diverged) {
+      this.setState({page: page, diverged: false, activeItemIndex: page});
+    } else {
+      this.setState({page: page + 1, diverged: false, activeItemIndex: page});  
+    }
   },
   
   /**
@@ -274,8 +281,15 @@ let App = React.createClass({
      */
     if (!this.state.diverged) {
       item = appAreas[this.state.page-1];
+      /**
+       * if you visit the item via Next (linear, non-diverged), then set the 
+       * item's visted flag to true so as to enable users to access that item 
+       * again later from the drawer.
+       */
       item['visited'] = true;
     };
+
+    let min = Math.min.apply(null, item.options);
     
     return (
         <div>
@@ -288,7 +302,7 @@ let App = React.createClass({
             handleBalance={this.handleBalance}
             balance={this.state.balance} 
             selectedItem={item} />
-          <button type="button" onClick={this.setPage}>Next</button>
+          {(this.state.balance >= min || item.set != null || item.type === "fact") ? <button type="button" onClick={this.setPage}>Next</button> : <p>You are out of money! You need to go back and adjust your monthly budget.</p>}
         </div>
     );
   },
@@ -296,7 +310,6 @@ let App = React.createClass({
   render () {
     
     let selectedItem = appAreas[this.state.activeItemIndex]; // load the data
-    console.log(JSON.stringify(appAreas));
     
     return (
       <div>
