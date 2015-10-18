@@ -122,7 +122,7 @@ let povertyData = [
     "set": null,
     "type": "setback",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/pills_1.png", "http://simpleicon.com/wp-content/uploads/ambulance1.png"],
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/stethoscope1.png", "http://simpleicon.com/wp-content/uploads/ambulance1.png"],
     "optionDesc": ["Emergency room visit, no medication", "Emergency room plus medication"]
 }, {
     "name": "Family Leisure",
@@ -149,7 +149,7 @@ let povertyData = [
     "set": null,
     "type": "setback",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/football1.png", "http://simpleicon.com/wp-content/uploads/sad.png"],
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/sad.png", "http://simpleicon.com/wp-content/uploads/football1.png"],
     "optionDesc": ["He does not participate", "Cleats, shin pads, uniform, and ball"]
 }, {
     "name": "Laundry",
@@ -167,7 +167,7 @@ let povertyData = [
     "set": null,
     "type": "fact",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/mobile_phone.png"],
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/washing_machine_1.png"],
     "optionDesc": []
 }, {
     "name": "Savings",
@@ -186,6 +186,15 @@ let povertyData = [
     "type": "fact",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/money-5.png"],
+    "optionDesc": []
+}, {
+    "name": "United Way Fact",
+    "desc": "United Way raised and gave $17 million to 154 charity programs that helped 284,000 people in the Charlotte area.",
+    "options": [],
+    "set": null,
+    "type": "fact",
+    "visited": false,
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/slide_share.png"],
     "optionDesc": []
 }]
 

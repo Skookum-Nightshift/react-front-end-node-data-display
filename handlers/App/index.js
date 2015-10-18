@@ -152,7 +152,7 @@ let App = React.createClass({
         <div>
             <AppBar
               iconElementRight={<FlatButton label={<FontAwesome name="dollar" size='2x'/>} toolTip="Budget" tooltipPosition="right" onClick={this.toggle} />}
-              title="Charmeck Povsim"
+              title="UWCC Poverty Sim"
               showMenuIconButton={false}/>
         </div>
         <div>
