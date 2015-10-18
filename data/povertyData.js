@@ -21,7 +21,7 @@ let povertyData = [{
     "set": null,
     "type": "normal",
     "visited": true,
-    "sectionImage": "http://simpleicon.com/wp-content/uploads/home-7.png",
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/home-1.png","http://simpleicon.com/wp-content/uploads/home-3.png","http://simpleicon.com/wp-content/uploads/home-7.png"],
     "optionDesc": ["1 bedroom, 1 bath apartment, no patio or yard, street parking, and stove only", "2 bedroom, 1 bath apartment, covered patio, 1 parking space, stove, and refrigerator", "3 bedroom, 11/2 bath house, small yard, 2 car garage, stove, refrigerator, and dishwasher"]
 }, {
     "name": "Housing Fact",
