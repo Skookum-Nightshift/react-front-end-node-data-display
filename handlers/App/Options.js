@@ -54,7 +54,7 @@ let Options = React.createClass({
                 className={cost === item.set ? "activeOption" : null}
                 disabled={(item.set != null && cost < item.set) ? 
                           false : 
-                          (cost > this.props.balance ? true : false)}>
+                          (cost > (this.props.balance + item.set) ? true : false)}>
           {cost}
         </button>
         
