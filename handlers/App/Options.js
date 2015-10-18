@@ -26,12 +26,19 @@ let Options = React.createClass({
     this.props.handleBalance(bal);
   },
   
-  renderOptionsDesc () {
+  renderOptionsDescAndImg () {
     let item = this.props.selectedItem;
     let index = item.options.indexOf(item.set);
 
     return (
-      <p>{item.optionDesc[index]}</p>
+      <div>
+        {index === -1 ? 
+          <img src={this.props.selectedItem.sectionImage[1]} className="sectionIcon" /> : 
+          <img src={this.props.selectedItem.sectionImage[index]} className="sectionIcon" />
+        }
+        <p>{this.props.selectedItem.desc}</p>
+        <p>{item.optionDesc[index]}</p>
+      </div>
     );
   },
   
@@ -65,7 +72,7 @@ let Options = React.createClass({
   render () {
     return (
       <div>
-        {this.renderOptionsDesc()}
+        {this.renderOptionsDescAndImg()}
         <div className="btn-group" role="group">{this.renderOptions()}</div>
       </div>
     );

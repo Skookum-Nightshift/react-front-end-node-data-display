@@ -93,9 +93,6 @@ let App = React.createClass({
     return (
         <div>
           <h3>{item.name}</h3>
-          <img src={item.sectionImage} className="sectionIcon" />
-
-          <p>{item.desc}</p>
 
           <Options 
             handleBalance={this.handleBalance}
