@@ -12,10 +12,20 @@ let MenuItems = React.createClass({
 
   disableUnvisited (item, index) {
     if (item.visited === true) {
+      let setItems = item.options.map((option) => {
+        return (
+          <li className={item.set === option ? "selected" : ''} >{option}</li>
+        );
+       });
       return (
-        <a href="#" onClick={this.handleItemClick.bind(this, index)}>{item.name}
-          {item.set ? <span>{item.set}</span>: "" }
-        </a>
+        <div className="menu-item">
+          <a href="#" onClick={this.handleItemClick.bind(this, index)}>{item.name}</a>
+          {item.set !== null ?
+            <ul>
+              {setItems}
+            </ul>
+          : ''}
+        </div>
       );
     } else {
       return (item.name);
