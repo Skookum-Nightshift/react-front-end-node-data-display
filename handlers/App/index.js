@@ -1,13 +1,56 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
+import injectTapEventPlugin from "react-tap-event-plugin";
+
+const ThemeManager = require('material-ui/lib/styles/theme-manager');
+const MyRawTheme = require('../../theme/rawTheme');
+const AppBar = require('material-ui/lib/app-bar');
+const LeftNav = require('material-ui/lib/left-nav');
+const RaisedButton = require('material-ui/lib/raised-button');
 
 let MenuItems = require('./MenuItems');
 let Options = require('./Options');
-let appAreas = require('../../data/povertyData');;
+let appAreas = require('../../data/povertyData');
+
+const menuItems = [
+  { 
+    text: 'Housing',
+    disabled: false
+  },
+  { 
+    text: 'Food', 
+    disabled: true
+  },
+  { 
+    text: 'Transportation', 
+    disabled: true
+  },
+  { 
+    text: 'Health', 
+    disabled: true
+  },
+  { 
+    text: 'Technology', 
+    disabled: true
+  },
+  { 
+    text: 'Family Leisure', 
+    disabled: true
+  },
+  { 
+    text: 'Laundry', 
+    disabled: true
+  },
+  { 
+    text: 'Savings', 
+    disabled: true},
+];
+
 let App = React.createClass({
 
   getInitialState () {
     return {
+      navOpen: false,
       activeItemIndex: null, // App starts without an Item selected
       balance: 2000,
       page: 2, // This is order.
@@ -15,6 +58,43 @@ let App = React.createClass({
       budgetBusted: false,
     };
   },
+
+  componentDidMount() {
+    injectTapEventPlugin();
+
+    if (!this.state.navOpen) {
+      this.refs.leftNav.close();
+    }
+  },
+
+  handleClick () {
+    alert('We\'re up and running, Dude!');
+  },
+
+  toggle () {
+    this.refs.leftNav.toggle();
+    this.setState({navOpen: true});
+  },
+
+  showOverlay() {
+    console.log('Hey');
+  },
+
+  closeNav() {
+    this.setState({ navOpen: false });
+    this.refs.leftNav.close();
+  },
+
+  //set up the theme
+  childContextTypes : {
+      muiTheme: React.PropTypes.object,
+    },
+
+    getChildContext() {
+      return {
+          muiTheme: ThemeManager.getMuiTheme(MyRawTheme),
+      };
+    },
   
 
   /**
@@ -62,7 +142,7 @@ let App = React.createClass({
       if (this.state.balance >= min && item.set === null) {
         return <p>Please make a selection</p>;
       } else if (this.state.balance >= min || item.set != null || item.type ==="fact") {
-        return <button type="button" onClick={this.setPage}>Next</button>;
+        return <RaisedButton label='next' onClick={this.setPage}/>;
       } else {
         return <p>You are out of money! You need to go back and adjust your monthly budget.</p>;
       }
@@ -112,7 +192,19 @@ let App = React.createClass({
     
     return (
       <div>
-        <h1>Charmeck PovSim</h1>
+        <div>
+            <AppBar
+            title="Charmeck Povsim"
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+            onLeftIconButtonTouchTap={this.toggle}/>
+        </div>
+        <div>
+          <RaisedButton label="test left nav" primary={true} onClick={this.toggle} />
+          <LeftNav ref="leftNav" menuItems={menuItems}
+            onNavOpen={this.showOverlay}
+            onChange={this.handleClick, 1, menuItems}/>
+          {this.state.navOpen ? <div className="LeftNavOverlay" docked={false} onClick={this.closeNav}></div> : ""}
+        </div>
       
         <div className="itemDrawer">
           <MenuItems 
@@ -125,7 +217,6 @@ let App = React.createClass({
         {selectedItem ? <div>{this.cyclePage(selectedItem)}</div> : null}
       
         <p>${this.state.balance}</p>
-        
       </div>
   )}
 })

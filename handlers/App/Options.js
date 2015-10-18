@@ -1,8 +1,23 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 
+const RaisedButton = require('material-ui/lib/raised-button');
+
+const ThemeManager = require('material-ui/lib/styles/theme-manager');
+const MyRawTheme = require('../../theme/rawTheme');
+
 
 let Options = React.createClass({
+
+  childContextTypes : {
+    muiTheme: React.PropTypes.object,
+  },
+
+  getChildContext() {
+    return {
+        muiTheme: ThemeManager.getMuiTheme(MyRawTheme),
+    };
+  },
   
   setBalance (item, cost, choice) {
     let bal = this.props.balance;
@@ -49,15 +64,17 @@ let Options = React.createClass({
          * want to allow people to decrease their budget. If no selection has been
          * made, then disable whatever doesn't fit within their budget.
          */
-        <button type="button" 
+        <span>
+        <RaisedButton 
+                primary={true}
                 onClick={this.setBalance.bind(this, item, cost, index)}
                 className={cost === item.set ? "activeOption" : null}
-                disabled={(item.set != null && cost < item.set) ? 
-                          false : 
-                          (cost > this.props.balance ? true : false)}>
-          {cost}
-        </button>
-        
+                disabled={(item.set != null && cost < item.set) ? false : (cost > this.props.balance ? true : false)}
+                label={cost}
+                style={{
+                  margin: '10px'
+                }}/>
+        </span>
       )
     );
   },  

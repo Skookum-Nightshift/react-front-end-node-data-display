@@ -7,10 +7,18 @@ const AppBar = require('material-ui/lib/app-bar');
 
 import injectTapEventPlugin from "react-tap-event-plugin";
 
+const ThemeManager = require('material-ui/lib/styles/theme-manager');
+const MyRawTheme = require('../../theme/rawTheme');
+
 const menuItems = [
-  { text: 'Get Started' },
-  { text: 'Customization' },
-  { text: 'Components' },
+  { text: 'Housing' },
+  { text: 'Food' },
+  { text: 'Transportation' },
+  { text: 'Health' },
+  { text: 'Technology' },
+  { text: 'Family Leisure' },
+  { text: 'Laundry' },
+  { text: 'Savings' },
   {
      text: 'Disabled',
      disabled: true
@@ -57,6 +65,16 @@ var Home = React.createClass({
 		this.refs.leftNav.close();
 	},
 
+	childContextTypes : {
+    	muiTheme: React.PropTypes.object,
+  	},
+
+  	getChildContext() {
+    	return {
+      		muiTheme: ThemeManager.getMuiTheme(MyRawTheme),
+    	};
+  	},
+
 	render () {
 		return (
 		<div classname="foo">
@@ -68,7 +86,7 @@ var Home = React.createClass({
 			<p><a href='#' onClick={this.handleClick}>Are we up and running?</a></p>
 			<h2>Check out the <a href="/app">Povizio engine.</a></h2>
 			<p>Just added interspersed setbacks. Can you spot it? Still need work to keep people from skipping ahead, require $ selections, etc.</p>
-		<RaisedButton label="test left nav" onClick={this.toggle} />
+		<RaisedButton label="test left nav" primary={true} onClick={this.toggle} />
 		<LeftNav ref="leftNav" menuItems={menuItems} onNavOpen={this.showOverlay}/>
 		{this.state.navOpen ? <div className="LeftNavOverlay" docked={false} onClick={this.closeNav}></div> : ""}
 		</div>
