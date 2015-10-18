@@ -41,16 +41,27 @@ let Options = React.createClass({
     this.props.handleBalance(bal);
   },
   
+  // If an option isn't selected, load the first or second as default
+  // depending on how many options
+  renderImg (item, index) {
+    if (index === -1) {
+      if (item.sectionImage.length < 2) {
+        return <img src={item.sectionImage[0]} className="sectionIcon" />;
+      } else {
+        return <img src={item.sectionImage[1]} className="sectionIcon" />;
+      }
+    } else {
+      return <img src={item.sectionImage[index]} className="sectionIcon" />;
+    }
+  },
+
   renderOptionsDescAndImg () {
     let item = this.props.selectedItem;
     let index = item.options.indexOf(item.set);
 
     return (
       <div>
-        {index === -1 ? 
-          <img src={this.props.selectedItem.sectionImage[1]} className="sectionIcon" /> : 
-          <img src={this.props.selectedItem.sectionImage[index]} className="sectionIcon" />
-        }
+        {this.renderImg(item, index)}
         <p>{this.props.selectedItem.desc}</p>
         <p>{item.optionDesc[index]}</p>
       </div>
