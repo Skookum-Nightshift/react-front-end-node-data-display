@@ -2,11 +2,14 @@ import React from 'react';
 import {Resolver} from 'react-resolver';
 import injectTapEventPlugin from "react-tap-event-plugin";
 
+const FontAwesome = require('react-fontawesome');
 const ThemeManager = require('material-ui/lib/styles/theme-manager');
 const MyRawTheme = require('../../theme/rawTheme');
 const AppBar = require('material-ui/lib/app-bar');
 const LeftNav = require('material-ui/lib/left-nav');
+const FlatButton = require('material-ui/lib/flat-button');
 const RaisedButton = require('material-ui/lib/raised-button');
+const IconButton = require('material-ui/lib/icon-button');
 
 let MenuItems = require('./MenuItems');
 let Options = require('./Options');
@@ -191,12 +194,11 @@ let App = React.createClass({
       <div>
         <div>
             <AppBar
+            iconElementRight={<FlatButton label={<FontAwesome name="dollar" size='2x'/>} toolTip="Budget" tooltipPosition="right" onClick={this.toggle} />}
             title="Charmeck Povsim"
-            iconClassNameRight="muidocs-icon-navigation-expand-more"
-            onLeftIconButtonTouchTap={this.toggle}/>
+            showMenuIconButton={false}/>
         </div>
         <div>
-          <RaisedButton label="test left nav" primary={true} onClick={this.toggle} />
           <LeftNav ref="leftNav" menuItems={menuItems}
             onNavOpen={this.showOverlay}
             onChange={this.handleClick, 1, menuItems}/>
