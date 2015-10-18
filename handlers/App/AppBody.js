@@ -11,10 +11,12 @@ let AppBody = React.createClass({
   nextButton (min, item) {
     console.log("Your balance is: " + this.props.balance);
     console.log("Your min is: " + min);
-    if (this.props.balance >= min && item.set === null) {
-      return <p>Please make a selection</p>;
+    if (this.props.appCompleted === true) {
+      return <RaisedButton label='Return to Summary' onClick={this.props.unDiverge} />;
+    } else if (this.props.balance >= min && item.set === null) {
+      return <RaisedButton label='Make a Choice' disabled={true} />;
     } else if (this.props.balance >= min || item.set != null || item.type ==="fact") {
-      return <RaisedButton label='next' onClick={this.props.setPage}/>;
+      return <RaisedButton label='next' onClick={this.props.setPage} />;
     } else {
       return <p>You are out of money! You need to go back and adjust your monthly budget.</p>;
     }
@@ -67,7 +69,17 @@ let AppBody = React.createClass({
           <p>The 2015 Federal Poverty Line for a family of four is $24,250 wage per year.</p>
           <RaisedButton label='Begin' onClick={this.props.showFirstQuestion} />
         </div>
-        );
+      );
+    } else if (this.props.appCompleted === true && this.props.diverged === false) {
+      return (
+        <div>
+          <h1>How did you fare?</h1>
+          <p>You had to make some hard choices! These are the choices of 1 in 5 families in Charlotte.</p>
+          <p>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p>
+          <RaisedButton linkButton={true} label='twitter' href="http://twitter.com/home?status=I%20completed%20the%20United%20Way%20Poverty%20Simulation%20and%20learned%20about%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%23povisio%20%23CLTaspires%20%40myUWCC" /> <RaisedButton linkButton={true} href="https://www.facebook.com/UWCentralCarolinas" label='facebook' /><br /><br />
+          <div><RaisedButton label='Get Involved' /></div>
+        </div>
+      );
     } else {
       return <div>{selectedItem ? <div>{this.cyclePage(selectedItem)}</div> : null}</div>;
     }
