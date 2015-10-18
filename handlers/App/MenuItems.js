@@ -38,7 +38,7 @@ let MenuItems = React.createClass({
 
     return (
       this.props.menuItems.map((item, index) => // pass in each item in the array along with its index
-        <li className={item.type != "normal" ? "hidden" : (index === activeItemIndex ? "bold" : null)}>
+        <li className={item.type !== "normal" ? "hidden" : (index === activeItemIndex ? "bold" : null)}>
           {this.disableUnvisited(item, index)}
         </li>
       )
