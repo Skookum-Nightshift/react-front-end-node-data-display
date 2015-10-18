@@ -122,7 +122,7 @@ let povertyData = [{
     "set": null,
     "type": "setback",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/ambulance1.png"],
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/pills_1.png", "http://simpleicon.com/wp-content/uploads/ambulance1.png"],
     "optionDesc": ["Emergency room visit, no medication", "Emergency room plus medication"]
 }, {
     "name": "Family Leisure",

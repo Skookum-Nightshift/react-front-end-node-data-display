@@ -9,7 +9,7 @@ const LeftNav = require('material-ui/lib/left-nav');
 const RaisedButton = require('material-ui/lib/raised-button');
 
 let MenuItems = require('./MenuItems');
-let Options = require('./Options');
+let AppBody = require('./AppBody');
 let appAreas = require('../../data/povertyData');
 
 const menuItems = [
@@ -95,7 +95,6 @@ let App = React.createClass({
           muiTheme: ThemeManager.getMuiTheme(MyRawTheme),
       };
     },
-  
 
   /**
    * Sets the state of activeItemIndex to the index of the clicked LI, forces a re-render.
@@ -119,8 +118,6 @@ let App = React.createClass({
     }
   },
   
-  
-  
   setPage () {
     let page = this.state.page;
 
@@ -136,53 +133,6 @@ let App = React.createClass({
    This generates everything between the drawer and the running balance.
    */
   
-  nextButton (min, item) {
-      console.log("Your balance is: " + this.state.balance);
-      console.log("Your min is: " + min);
-      if (this.state.balance >= min && item.set === null) {
-        return <p>Please make a selection</p>;
-      } else if (this.state.balance >= min || item.set != null || item.type ==="fact") {
-        return <RaisedButton label='next' onClick={this.setPage}/>;
-      } else {
-        return <p>You are out of money! You need to go back and adjust your monthly budget.</p>;
-      }
-    },
-
-  cyclePage (item) {
-    console.log("Page: " + this.state.page); // For debugging
-    console.log("ActiveItemIndex: " + this.state.activeItemIndex); // For debugging
-    console.log("Diverged: " + this.state.diverged); // For debugging
-    
-    /**
-     * By default, the item displayed is what you click on in the drawer.
-     * But if you're clicking Next (state is not diverged from order), then
-     * override that and set the item to the next page.
-     */
-    if (!this.state.diverged) {
-      item = appAreas[this.state.page-1];
-      /**
-       * if you visit the item via Next (linear, non-diverged), then set the 
-       * item's visted flag to true so as to enable users to access that item 
-       * again later from the drawer.
-       */
-      item['visited'] = true;
-    };
-
-    let min = Math.min.apply(null, item.options);
-    
-    return (
-        <div>
-          <h3>{item.name}</h3>
-
-          <Options 
-            handleBalance={this.handleBalance}
-            balance={this.state.balance} 
-            selectedItem={item} />
-          {this.nextButton(min, item)}
-        </div>
-    );
-  },
-  
   render () {
     
     let selectedItem = appAreas[this.state.activeItemIndex]; // load the data
@@ -190,7 +140,7 @@ let App = React.createClass({
     return (
       <div>
         <div>
-            <AppBar
+          <AppBar
             title="Charmeck Povsim"
             iconClassNameRight="muidocs-icon-navigation-expand-more"
             onLeftIconButtonTouchTap={this.toggle}/>
@@ -211,7 +161,15 @@ let App = React.createClass({
             menuItems={appAreas} />
         </div>
       
-        {selectedItem ? <div>{this.cyclePage(selectedItem)}</div> : null}
+        <AppBody 
+          selectedItem={selectedItem} 
+          menuItems={appAreas} 
+          handleBalance={this.handleBalance} 
+          diverged={this.state.diverged} 
+          page={this.state.page}
+          balance={this.state.balance}
+          activeItemIndex={this.state.activeItemIndex} 
+          setPage={this.setPage} />
       
         <p>${this.state.balance}</p>
       </div>
