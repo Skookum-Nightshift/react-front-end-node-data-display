@@ -11,12 +11,12 @@
  * optionDesc: an array of strings, each coinciding with the earlier array of options.
  *
  * To DO
- * change the image based on option selected.
  * make this into a pure JSON gile
  * get better icons
  */
 
-let povertyData = [{
+let povertyData = [
+{
     "name": "Housing",
     "desc": "What kind of home will you live in?",
     "options": [700, 830, 950],

@@ -55,11 +55,25 @@ let AppBody = React.createClass({
     );
   },
 
+  beginOrEnd (selectedItem) {
+    if (this.props.activeItemIndex === null) {
+      return (
+        <div>
+          <h1>How to Play...</h1>
+          <p>Povizio, fo-shiz-io. We will get some text all up in here.</p>
+          <RaisedButton label='Begin' onClick={this.props.showFirstQuestion} />
+        </div>
+        );
+    } else {
+      return <div>{selectedItem ? <div>{this.cyclePage(selectedItem)}</div> : null}</div>;
+    }
+  },
+
   render () {
     let selectedItem = this.props.selectedItem;
 
     return (
-      <div>{selectedItem ? <div>{this.cyclePage(selectedItem)}</div> : null}</div>
+      <div>{this.beginOrEnd(selectedItem)}</div>
     )
   }
 })

@@ -131,6 +131,10 @@ let App = React.createClass({
       this.setState({page: page + 1, diverged: false, activeItemIndex: page});  
     }
   },
+
+  showFirstQuestion () {
+    this.setState({page: 2, activeItemIndex: 0, diverged: true});
+  },
   
   /**
    This generates everything between the drawer and the running balance.
@@ -138,6 +142,9 @@ let App = React.createClass({
   
   render () {
     
+    console.log(this.state.page);
+    console.log(this.state.activeItemIndex);
+
     let selectedItem = appAreas[this.state.activeItemIndex]; // load the data
     
     return (
@@ -171,7 +178,8 @@ let App = React.createClass({
           page={this.state.page}
           balance={this.state.balance}
           activeItemIndex={this.state.activeItemIndex} 
-          setPage={this.setPage} />
+          setPage={this.setPage} 
+          showFirstQuestion={this.showFirstQuestion}/>
       
         <p>${this.state.balance}</p>
       </div>
