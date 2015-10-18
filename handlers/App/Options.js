@@ -18,16 +18,16 @@ let Options = React.createClass({
         muiTheme: ThemeManager.getMuiTheme(MyRawTheme),
     };
   },
-  
+
   setBalance (item, cost, choice) {
     let bal = this.props.balance;
-    
+
     /**
      * If the budget for the item has not been set, set it to the cost of
      * the item clicked and deduct that from the budget. If it HAS been set
-     * and you're changing your choice, add the originally set amount back into 
+     * and you're changing your choice, add the originally set amount back into
      * the budget, update the item's 'set' key, and deduct the newly selected
-     * amount from the budget. 
+     * amount from the budget.
      */
     if (item['set'] === null) {
       item['set'] = cost;
@@ -37,10 +37,10 @@ let Options = React.createClass({
       item['set'] = cost;
       bal -= cost;
     }
-    
+
     this.props.handleBalance(bal);
   },
-  
+
   // If an option isn't selected, load the first or second as default
   // depending on how many options
   renderImg (item, index) {
@@ -67,14 +67,14 @@ let Options = React.createClass({
       </div>
     );
   },
-  
+
   renderOptions () {
     let item = this.props.selectedItem;
-    
+
     return (
       item.options.map((cost, index) =>
-        
-        /** 
+
+        /**
          * When a selection is made, update the balance, set the class
          * (to make the selection red), and then determine whether the selection
          * should be disabled or not. If a selection has been made and the button's
@@ -83,20 +83,20 @@ let Options = React.createClass({
          * made, then disable whatever doesn't fit within their budget.
          */
         <span>
-        <RaisedButton 
+        <RaisedButton
                 primary={true}
                 onClick={this.setBalance.bind(this, item, cost, index)}
                 className={cost === item.set ? "activeOption" : null}
-                disabled={(item.set != null && cost < item.set) ? false : (cost > this.props.balance ? true : false)}
-                label={"$"+cost}
+                disabled={(item.set !== null && cost < item.set) ? false : (cost > this.props.balance ? true : false)}
+                label={"$ " + cost}
                 style={{
                   margin: '10px'
                 }}/>
         </span>
       )
     );
-  },  
-  
+  },
+
   render () {
     return (
       <div>
