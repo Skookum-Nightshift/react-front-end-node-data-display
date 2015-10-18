@@ -60,7 +60,11 @@ let AppBody = React.createClass({
       return (
         <div>
           <h1>How to Play...</h1>
-          <p>Povizio, fo-shiz-io. We will get some text all up in here.</p>
+          <p>Assume you’re a parent. You and your spouse both work. You have a 9 year old daughter and 14 year old son.</p>
+          <p>Experience the tough choices of 1 in 5 families live in Charlotte-Mecklenburg.</p>
+          <img src="http://simpleicon.com/wp-content/uploads/meeting.png" alt="family of 4" width="200px"/>
+          <p>A North Carolina family of four must earn $52,275 a year to afford basic living necessities.</p>
+          <p>The 2015 Federal Poverty Line for a family of four is $24,250 wage per year.</p>
           <RaisedButton label='Begin' onClick={this.props.showFirstQuestion} />
         </div>
         );

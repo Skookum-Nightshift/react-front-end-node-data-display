@@ -19,12 +19,12 @@ let povertyData = [
 {
     "name": "Housing",
     "desc": "What kind of home will you live in?",
-    "options": [700, 830, 950],
+    "options": [750, 820, 950],
     "set": null,
     "type": "normal",
     "visited": true,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/building-3.png","http://simpleicon.com/wp-content/uploads/home-6.png","http://simpleicon.com/wp-content/uploads/home-3.png"],
-    "optionDesc": ["1 bedroom, 1 bath apartment, no patio or yard, street parking, and stove only", "2 bedroom, 1 bath apartment, covered patio, 1 parking space, stove, and refrigerator", "3 bedroom, 11/2 bath house, small yard, 2 car garage, stove, refrigerator, and dishwasher"]
+    "optionDesc": ["1 bedroom, 1 bath apartment, utilities, no patio or yard, street parking, and stove only", "2 bedroom, 1 bath apartment, utilities, covered patio, 1 parking space, stove, and refrigerator", "3 bedroom, 11/2 bath house, utilities, small yard, 2 car garage, stove, refrigerator, and dishwasher"]
 }, {
     "name": "Housing Fact",
     "desc": "Fair Market Rent for a 2 bedroom in Mecklenburg County is $831 a month. Nearly 50% of renters in Charlotte-Mecklenburg spend more than 30% of their income on housing.",
@@ -37,7 +37,7 @@ let povertyData = [
 }, {
     "name": "Food",
     "desc": "What's your food budget?",
-    "options": [80, 180, 280],
+    "options": [120, 240, 360],
     "set": null,
     "type": "normal",
     "visited": false,
