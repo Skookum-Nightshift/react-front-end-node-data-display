@@ -87,7 +87,7 @@ let Options = React.createClass({
                 primary={true}
                 onClick={this.setBalance.bind(this, item, cost, index)}
                 className={cost === item.set ? "activeOption" : null}
-                disabled={(item.set !== null && cost < item.set) ? false : (cost > this.props.balance ? true : false)}
+                disabled={(item.set !== null && cost < item.set) ? false : (cost > (this.props.balance + item.set) ? true : false)}
                 label={"$ " + cost}
                 style={{
                   margin: '10px'

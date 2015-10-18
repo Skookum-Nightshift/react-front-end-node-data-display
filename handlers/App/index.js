@@ -59,6 +59,7 @@ let App = React.createClass({
       page: 2, // This is order.
       diverged: false,
       budgetBusted: false,
+      completed: false,
     };
   },
 
@@ -125,7 +126,9 @@ let App = React.createClass({
     let page = this.state.page;
 
     // If you diverge, return the user to the spot they were (don't iterate the page.)
-    if (this.state.diverged) {
+    if (page === appAreas.length) {
+      this.setState({completed: true});
+    } else if (this.state.diverged) {
       this.setState({page: page, diverged: false, activeItemIndex: page});
     } else {
       this.setState({page: page + 1, diverged: false, activeItemIndex: page});  
@@ -134,6 +137,14 @@ let App = React.createClass({
 
   showFirstQuestion () {
     this.setState({page: 2, activeItemIndex: 0, diverged: true});
+  },
+
+  setToCompleted () {
+    this.setState({completed: true});
+  },
+
+  unDiverge () {
+    this.setState({diverged: false});
   },
   
   /**
@@ -179,7 +190,10 @@ let App = React.createClass({
           balance={this.state.balance}
           activeItemIndex={this.state.activeItemIndex} 
           setPage={this.setPage} 
-          showFirstQuestion={this.showFirstQuestion}/>
+          showFirstQuestion={this.showFirstQuestion}
+          appCompleted={this.state.completed} 
+          unDiverge={this.unDiverge} 
+          setToCompleted={this.setToCompleted} />
       
         <p>${this.state.balance}</p>
       </div>

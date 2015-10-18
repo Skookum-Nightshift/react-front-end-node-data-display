@@ -19,7 +19,7 @@ let povertyData = [
 {
     "name": "Housing",
     "desc": "What kind of home will you live in?",
-    "options": [700, 830, 950],
+    "options": [700, 830, 1050],
     "set": null,
     "type": "normal",
     "visited": true,
