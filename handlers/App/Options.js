@@ -84,10 +84,11 @@ let Options = React.createClass({
          */
         <span>
         <RaisedButton
-                primary={true}
+                primary={(item.set !== null && cost === item.set) ? true : false} 
                 onClick={this.setBalance.bind(this, item, cost, index)}
                 className={cost === item.set ? "activeOption" : null}
                 disabled={(item.set !== null && cost < item.set) ? false : (cost > (this.props.balance + item.set) ? true : false)}
+                secondary={(item.set !== null && cost === item.set) ? false : true} 
                 label={"$ " + cost}
                 style={{
                   margin: '10px'
