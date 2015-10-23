@@ -64,6 +64,7 @@ let Options = React.createClass({
         {this.renderImg(item, index)}
         <p>{this.props.selectedItem.desc}</p>
         <p>{item.optionDesc[index]}</p>
+        <p>{(item.options.length > 0 && index !== -1) ? ("This costs: $" + item.options[index]) : null}</p>
       </div>
     );
   },
@@ -89,7 +90,7 @@ let Options = React.createClass({
                 className={cost === item.set ? "activeOption" : null}
                 disabled={(item.set !== null && cost < item.set) ? false : (cost > (this.props.balance + item.set) ? true : false)}
                 secondary={(item.set !== null && cost === item.set) ? false : true} 
-                label={"$ " + cost}
+                label={item.optionShort[index]}
                 style={{
                   margin: '10px'
                 }}/>

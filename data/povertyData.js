@@ -24,6 +24,7 @@ let povertyData = [
     "type": "normal",
     "visited": true,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/building-3.png","http://simpleicon.com/wp-content/uploads/home-6.png","http://simpleicon.com/wp-content/uploads/home-3.png"],
+    "optionShort": ["1br/1ba", "2br/1ba", "3br/1.5ba"],
     "optionDesc": ["1 bedroom, 1 bath apartment, utilities, no patio or yard, street parking, and stove only", "2 bedroom, 1 bath apartment, utilities, covered patio, 1 parking space, stove, and refrigerator", "3 bedroom, 11/2 bath house, utilities, small yard, 2 car garage, stove, refrigerator, and dishwasher"]
 }, {
     "name": "Housing Fact",
@@ -33,6 +34,7 @@ let povertyData = [
     "type": "fact",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/home-7.png"],
+    "optionShort": [],
     "optionDesc": []
 }, {
     "name": "Food",
@@ -42,6 +44,7 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/plate__spoon.png","http://simpleicon.com/wp-content/uploads/pizza_1.png","http://simpleicon.com/wp-content/uploads/burger.png"],
+    "optionShort": ["1 meal/day", "2 meals/day", "3 meals/day"],
     "optionDesc": ["1 meal a day", "2 meals a day", "3 meals a day + snacks"]
 }, {
     "name": "Food Fact",
@@ -51,6 +54,7 @@ let povertyData = [
     "type": "fact",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/pizza.png"],
+    "optionShort": [],
     "optionDesc": []
 }, {
     "name": "Transportation",
@@ -60,6 +64,7 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/bicycle.png","http://simpleicon.com/wp-content/uploads/train.png","http://simpleicon.com/wp-content/uploads/car_4.png"],
+    "optionShort": ["Walk/bike", "Public Transportation", "Car"],
     "optionDesc": ["Walk or bike everywhere", "Walk, bike, and public transit", "Have your own car, with a monthly payment"]
 }, {
     "name": "Transportation Fact",
@@ -69,6 +74,7 @@ let povertyData = [
     "type": "fact",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/car_11.png"],
+    "optionShort": [],
     "optionDesc": []
 }, {
     "name": "Oh no!!",
@@ -78,6 +84,7 @@ let povertyData = [
     "type": "setback",
     "visited": false,
     "sectionImage": ["https://cdn3.iconfinder.com/data/icons/medical-5-1/512/rabies-512.png", "https://cdn1.iconfinder.com/data/icons/health-care-2/512/mad_dog-512.png"],
+    "optionShort": ["Hope for the best", "Get good medicine"],
     "optionDesc": ["Cheap medicine. It might work.", "Good medicine. Definitely will work."]
 }, {
     "name": "Health",
@@ -87,6 +94,7 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/nurse1.png","http://simpleicon.com/wp-content/uploads/surgeon_1.png","http://simpleicon.com/wp-content/uploads/docter__nurse_1.png"],
+    "optionShort": ["None", "You Only", "Family Plan"],
     "optionDesc": ["No health insurance", "Health insurance for you only", "Health insurance for you and your family"]
 }, {
     "name": "Health Fact",
@@ -96,6 +104,7 @@ let povertyData = [
     "type": "fact",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/stethoscope1.png"],
+    "optionShort": [],
     "optionDesc": []
 }, {
     "name": "Technology",
@@ -105,6 +114,7 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/mobile_phone.png","http://simpleicon.com/wp-content/uploads/iphone-landscape-portrait.png","http://simpleicon.com/wp-content/uploads/lcd_1.png"],
+    "optionShort": ["cell phone", "cell phones/TV", "cell phones/cable/pc"],
     "optionDesc": ["1 cell phone", "2 cell phones, TV but no cable", "2 smart phones, TV with cable, home computer"]
 }, {
     "name": "Technology Fact",
@@ -114,6 +124,7 @@ let povertyData = [
     "type": "fact",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/tv_table.png"],
+    "optionShort": [],
     "optionDesc": []
 }, {
     "name": "Oh no!!",
@@ -123,6 +134,7 @@ let povertyData = [
     "type": "setback",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/stethoscope1.png", "http://simpleicon.com/wp-content/uploads/ambulance1.png"],
+    "optionShort": ["ER Only", "ER & Meds"],
     "optionDesc": ["Emergency room visit, no medication", "Emergency room plus medication"]
 }, {
     "name": "Family Leisure",
@@ -132,6 +144,7 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/fruit_basket.png","http://simpleicon.com/wp-content/uploads/music-note-8.png","http://simpleicon.com/wp-content/uploads/film.png"],
+    "optionShort": ["No Fun", "1 Activity", "2 Activities"],
     "optionDesc": ["No family outings, maybe visiting local friends and family", "1 family activity, like a local park, picnic, bowling, or local music show", "2 family activities, like eating out, movies, or a concert"]
 }, {
     "name": "Family Leisure Fact",
@@ -141,6 +154,7 @@ let povertyData = [
     "type": "fact",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/bowling_ball_2.png"],
+    "optionShort": [],
     "optionDesc": []
 }, {
     "name": "Oh no!!",
@@ -150,6 +164,7 @@ let povertyData = [
     "type": "setback",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/sad.png", "http://simpleicon.com/wp-content/uploads/football1.png"],
+    "optionShort": ["No", "Yes"],
     "optionDesc": ["He does not participate", "Cleats, shin pads, uniform, and ball"]
 }, {
     "name": "Laundry",
@@ -159,6 +174,7 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/shop-4.png","http://simpleicon.com/wp-content/uploads/backet.png","http://simpleicon.com/wp-content/uploads/washing_machine.png"],
+    "optionShort": ["Laundromat", "Shared Laundry Room", "Own Washer/Dryer"],
     "optionDesc": ["Laundromat", "Shared laundry room", "Payment for your own washer and dryer"]
 }, {
     "name": "Laundry Fact",
@@ -168,6 +184,7 @@ let povertyData = [
     "type": "fact",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/washing_machine_1.png"],
+    "optionShort": [],
     "optionDesc": []
 }, {
     "name": "Savings",
@@ -177,6 +194,7 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/coin-money-7.png","http://simpleicon.com/wp-content/uploads/money-7.png","http://simpleicon.com/wp-content/uploads/money-bag-4.png"],
+    "optionShort": ["None", "$20", "$100"],
     "optionDesc": ["Nothing left for savings after other expenses", "$20 for savings", "$100 for savings"]
 }, {
     "name": "Savings Fact",
@@ -186,6 +204,7 @@ let povertyData = [
     "type": "fact",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/money-5.png"],
+    "optionShort": [],
     "optionDesc": []
 }, {
     "name": "United Way Fact",
@@ -195,6 +214,7 @@ let povertyData = [
     "type": "fact",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/slide_share.png"],
+    "optionShort": [],
     "optionDesc": []
 }]
 
