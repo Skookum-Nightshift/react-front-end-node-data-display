@@ -24,7 +24,7 @@ let povertyData = [
     "type": "normal",
     "visited": true,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/building-3.png","http://simpleicon.com/wp-content/uploads/home-6.png","http://simpleicon.com/wp-content/uploads/home-3.png"],
-    "optionShort": ["1br/1ba", "2br/1ba", "3br/1.5ba"],
+    "optionShort": ["1 bedroom studio", "2 bedroom apartment", "3 bedroom home"],
     "optionDesc": ["1 bedroom, 1 bath apartment, utilities, no patio or yard, street parking, and stove only", "2 bedroom, 1 bath apartment, utilities, covered patio, 1 parking space, stove, and refrigerator", "3 bedroom, 11/2 bath house, utilities, small yard, 2 car garage, stove, refrigerator, and dishwasher"]
 }, {
     "name": "Housing Fact",
@@ -38,13 +38,13 @@ let povertyData = [
     "optionDesc": []
 }, {
     "name": "Food",
-    "desc": "What's your food budget?",
+    "desc": "How many meals do you eat a day?",
     "options": [120, 240, 360],
     "set": null,
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/plate__spoon.png","http://simpleicon.com/wp-content/uploads/pizza_1.png","http://simpleicon.com/wp-content/uploads/burger.png"],
-    "optionShort": ["1 meal/day", "2 meals/day", "3 meals/day"],
+    "optionShort": ["1 meal a day", "2 meals a day", "3 meals a day"],
     "optionDesc": ["1 meal a day", "2 meals a day", "3 meals a day + snacks"]
 }, {
     "name": "Food Fact",
@@ -64,7 +64,7 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/bicycle.png","http://simpleicon.com/wp-content/uploads/train.png","http://simpleicon.com/wp-content/uploads/car_4.png"],
-    "optionShort": ["Walk/bike", "Public Transportation", "Car"],
+    "optionShort": ["Walk or bike", "Public Transit", "Your own Car"],
     "optionDesc": ["Walk or bike everywhere", "Walk, bike, and public transit", "Have your own car, with a monthly payment"]
 }, {
     "name": "Transportation Fact",
@@ -84,7 +84,7 @@ let povertyData = [
     "type": "setback",
     "visited": false,
     "sectionImage": ["https://cdn3.iconfinder.com/data/icons/medical-5-1/512/rabies-512.png", "https://cdn1.iconfinder.com/data/icons/health-care-2/512/mad_dog-512.png"],
-    "optionShort": ["Hope for the best", "Get good medicine"],
+    "optionShort": ["Budget medicine", "Good medicine"],
     "optionDesc": ["Cheap medicine. It might work.", "Good medicine. Definitely will work."]
 }, {
     "name": "Health",
@@ -114,11 +114,11 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/mobile_phone.png","http://simpleicon.com/wp-content/uploads/iphone-landscape-portrait.png","http://simpleicon.com/wp-content/uploads/lcd_1.png"],
-    "optionShort": ["cell phone", "cell phones/TV", "cell phones/cable/pc"],
+    "optionShort": ["1 cell phone", "2 cell phones and TV", "Cell phones, cable TV, and Laptop"],
     "optionDesc": ["1 cell phone", "2 cell phones, TV but no cable", "2 smart phones, TV with cable, home computer"]
 }, {
     "name": "Technology Fact",
-    "desc": "Technology Fact listed here. This will be a good one!",
+    "desc": "Technology is important for leisure and communicating with your fiends and family.",
     "options": [],
     "set": null,
     "type": "fact",
@@ -128,23 +128,23 @@ let povertyData = [
     "optionDesc": []
 }, {
     "name": "Oh no!!",
-    "desc": "Your daughter got sick. How will you handle the trip to the emergency room and medication?",
+    "desc": "Your daughter got sick. How will you handle the trip to the hospital?",
     "options": [100, 140],
     "set": null,
     "type": "setback",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/stethoscope1.png", "http://simpleicon.com/wp-content/uploads/ambulance1.png"],
-    "optionShort": ["ER Only", "ER & Meds"],
+    "optionShort": ["Emergency room Only", "Emergency room and Medication"],
     "optionDesc": ["Emergency room visit, no medication", "Emergency room plus medication"]
 }, {
     "name": "Family Leisure",
-    "desc": "Choose your fun family outings and leisure time.",
+    "desc": "How many fun family outings will you have this month?",
     "options": [0, 100, 200],
     "set": null,
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/fruit_basket.png","http://simpleicon.com/wp-content/uploads/music-note-8.png","http://simpleicon.com/wp-content/uploads/film.png"],
-    "optionShort": ["No Fun", "1 Activity", "2 Activities"],
+    "optionShort": ["None", "1 Activity, like bowling", "2 Activities, like the movies"],
     "optionDesc": ["No family outings, maybe visiting local friends and family", "1 family activity, like a local park, picnic, bowling, or local music show", "2 family activities, like eating out, movies, or a concert"]
 }, {
     "name": "Family Leisure Fact",
@@ -178,7 +178,7 @@ let povertyData = [
     "optionDesc": ["Laundromat", "Shared laundry room", "Payment for your own washer and dryer"]
 }, {
     "name": "Laundry Fact",
-    "desc": "A really good fact about Laundry and utilities.",
+    "desc": "Basic chores, like laundry can be difficult for those in poverty, with limited budgets and transportation.",
     "options": [],
     "set": null,
     "type": "fact",
@@ -188,17 +188,17 @@ let povertyData = [
     "optionDesc": []
 }, {
     "name": "Savings",
-    "desc": "Do you have any money for savings or unexpected expenses?",
+    "desc": "Do you have any savings for unexpected expenses?",
     "options": [0, 100, 200],
     "set": null,
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/coin-money-7.png","http://simpleicon.com/wp-content/uploads/money-7.png","http://simpleicon.com/wp-content/uploads/money-bag-4.png"],
-    "optionShort": ["None", "$20", "$100"],
-    "optionDesc": ["Nothing left for savings after other expenses", "$20 for savings", "$100 for savings"]
+    "optionShort": ["None", "$100", "$200"],
+    "optionDesc": ["Nothing left for savings after other expenses", "Tiny savings", "Small savings"]
 }, {
     "name": "Savings Fact",
-    "desc": "A savings reserve is often unavailble for those in poverty.",
+    "desc": "A savings reserve is often unavailble for those in poverty. Some familes are one crisis away (car breakdown or medical bill) from loosing their home.",
     "options": [],
     "set": null,
     "type": "fact",
