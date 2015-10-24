@@ -1,23 +1,21 @@
+/** @flow */
+
+require('./styles.css');
+
 import React from 'react';
-import {Resolver} from 'react-resolver';
+var {PropTypes} = React;
 
-const RaisedButton = require('material-ui/lib/raised-button');
+import RaisedButton from 'material-ui/lib/raised-button';
 
-const ThemeManager = require('material-ui/lib/styles/theme-manager');
-const MyRawTheme = require('../../theme/rawTheme');
+class Options extends React.Component {
 
+  constructor () {
+    super();
 
-let Options = React.createClass({
-
-  childContextTypes : {
-    muiTheme: React.PropTypes.object,
-  },
-
-  getChildContext() {
-    return {
-        muiTheme: ThemeManager.getMuiTheme(MyRawTheme),
-    };
-  },
+    this.setBalance = this.setBalance.bind(this);
+    this.renderOptionsDescAndImg = this.renderOptionsDescAndImg.bind(this);
+    this.renderOptions = this.renderOptions.bind(this);
+  }
 
   setBalance (item, cost, choice) {
     let bal = this.props.balance;
@@ -39,7 +37,7 @@ let Options = React.createClass({
     }
 
     this.props.handleBalance(bal);
-  },
+  }
 
   // If an option isn't selected, load the first or second as default
   // depending on how many options
@@ -53,7 +51,7 @@ let Options = React.createClass({
     } else {
       return <img src={item.sectionImage[index]} className="sectionIcon" />;
     }
-  },
+  }
 
   renderOptionsDescAndImg () {
     let item = this.props.selectedItem;
@@ -67,7 +65,7 @@ let Options = React.createClass({
         <p>{(item.options.length > 0 && index !== -1) ? ("This costs: $" + item.options[index]) : null}</p>
       </div>
     );
-  },
+  }
 
   renderOptions () {
     let item = this.props.selectedItem;
@@ -97,7 +95,7 @@ let Options = React.createClass({
         </span>
       )
     );
-  },
+  }
 
   render () {
     return (
@@ -107,10 +105,10 @@ let Options = React.createClass({
       </div>
     );
   }
-});
+}
 
-
-
-Options.displayName = 'Options';
+Options.propTypes = {
+  id: PropTypes.any.isRequired,
+};
 
 export default Options;

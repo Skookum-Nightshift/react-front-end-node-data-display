@@ -1,14 +1,25 @@
+/** @flow */
+
+require('./styles.css');
+
 import React from 'react';
-import {Resolver} from 'react-resolver';
+var {PropTypes} = React;
 
+class MenuItems extends React.Component {
 
-let MenuItems = React.createClass({
+  constructor () {
+    super();
+
+    this.handleItemClick = this.handleItemClick.bind(this);
+    this.disableUnvisited = this.disableUnvisited.bind(this);
+    this.renderMenuItems = this.renderMenuItems.bind(this);
+  }
 
   handleItemClick (activeItemIndex) {
      /* pass the index of the clicked LI to the parent Component's
      onActivate prop, which happens to be the handleItem method */
     this.props.onActivate(activeItemIndex);
-  },
+  }
 
   disableUnvisited (item, index) {
     if (item.visited === true) {
@@ -30,7 +41,7 @@ let MenuItems = React.createClass({
     } else {
       return (item.name);
     }
-  },
+  }
 
   renderMenuItems () {
     let activeItemIndex = this.props.activeItemIndex;
@@ -43,7 +54,7 @@ let MenuItems = React.createClass({
         </li>
       )
     );
-  },
+  }
 
   render () {
     return (
@@ -53,9 +64,10 @@ let MenuItems = React.createClass({
       </div>
     );
   }
-});
+}
 
-
-MenuItems.displayName = 'MenuItems';
+MenuItems.propTypes = {
+  id: PropTypes.any.isRequired,
+};
 
 export default MenuItems;

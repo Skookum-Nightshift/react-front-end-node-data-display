@@ -3,10 +3,17 @@ import {Resolver} from 'react-resolver';
 
 const RaisedButton = require('material-ui/lib/raised-button');
 
-let Options = require('./Options');
+import Options from 'Options';
 
+class AppBody extends React.Component {
 
-let AppBody = React.createClass({
+  constructor () {
+    super();
+
+    this.nextButton = this.nextButton.bind(this);
+    this.cyclePage = this.cyclePage.bind(this);
+    this.beginOrEnd = this.beginOrEnd.bind(this);
+  }
 
   nextButton (min, item) {
     console.log("Your balance is: " + this.props.balance);
@@ -20,7 +27,7 @@ let AppBody = React.createClass({
     } else {
       return <p>You are out of money! You need to go back and adjust your monthly budget.</p>;
     }
-  },
+  }
 
   cyclePage (item) {
     console.log("Page: " + this.props.page); // For debugging
@@ -55,7 +62,7 @@ let AppBody = React.createClass({
           {this.nextButton(min, item)}
         </div>
     );
-  },
+  }
 
   beginOrEnd (selectedItem) {
     if (this.props.activeItemIndex === null) {
@@ -83,7 +90,7 @@ let AppBody = React.createClass({
     } else {
       return <div>{selectedItem ? <div>{this.cyclePage(selectedItem)}</div> : null}</div>;
     }
-  },
+  }
 
   render () {
     let selectedItem = this.props.selectedItem;
@@ -92,7 +99,7 @@ let AppBody = React.createClass({
       <div>{this.beginOrEnd(selectedItem)}</div>
     )
   }
-})
+}
 
 
 AppBody.displayName = 'AppBody';

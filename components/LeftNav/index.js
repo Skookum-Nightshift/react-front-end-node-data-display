@@ -3,7 +3,7 @@
 require('./styles.css');
 
 import React from 'react';
-import MenuItems from '../../handlers/App/MenuItems';
+import MenuItems from 'MenuItems';
 var {PropTypes} = React;
 
 class LeftNav extends React.Component {

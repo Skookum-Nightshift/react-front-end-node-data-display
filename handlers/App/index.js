@@ -2,6 +2,9 @@ import React from 'react';
 import {Resolver} from 'react-resolver';
 import injectTapEventPlugin from "react-tap-event-plugin";
 import LeftNav from 'LeftNav';
+import MenuItems from 'MenuItems';
+import AppBody from 'AppBody';
+import appAreas from '../../data/povertyData';
 
 const FontAwesome = require('react-fontawesome');
 const ThemeManager = require('material-ui/lib/styles/theme-manager');
@@ -11,9 +14,10 @@ const FlatButton = require('material-ui/lib/flat-button');
 const RaisedButton = require('material-ui/lib/raised-button');
 const IconButton = require('material-ui/lib/icon-button');
 
-let MenuItems = require('./MenuItems');
-let AppBody = require('./AppBody');
-let appAreas = require('../../data/povertyData');
+// let MenuItems = require('./MenuItems');
+// let AppBody = require('./AppBody');
+// let appAreas = require('../../data/povertyData');
+
 let App = React.createClass({
 
   getInitialState () {
@@ -51,13 +55,13 @@ let App = React.createClass({
   //set up the theme
   childContextTypes : {
       muiTheme: React.PropTypes.object,
-    },
+  },
 
-    getChildContext() {
-      return {
-          muiTheme: ThemeManager.getMuiTheme(MyRawTheme),
-      };
-    },
+  getChildContext() {
+    return {
+        muiTheme: ThemeManager.getMuiTheme(MyRawTheme),
+    };
+  },
 
   /**
    * Sets the state of activeItemIndex to the index of the clicked LI, forces a re-render.
