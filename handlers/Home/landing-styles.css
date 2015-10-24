@@ -1,0 +1,168 @@
+/** @define Home; use strict */
+@import 'normalize.css';
+
+.Home {
+
+}
+
+#app {
+	width: 100%;
+	height: 100%;
+}
+
+.AppBase {
+	width: 100%;
+	height: 100%;
+}
+
+.column-landing {
+  width: 100%;
+  height: 100%;
+  float: left;
+  padding: 1em;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(http://36.media.tumblr.com/adec2f102b2fc0457f041420e5ac93b3/tumblr_nmmglcTA9r1sk1us0o1_1280.jpg) no-repeat center center scroll;
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.column-landing .container {
+  text-align: center;
+  height: 100%;
+  padding: 5px;
+  position: relative;
+}
+
+.column-landing .vertical-align-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.column-landing .vertical-align {
+  display: table-cell;
+  color: white;
+  font-weight: 700;
+}
+
+.column-landing .vertical-align--middle {
+  vertical-align: middle;
+}
+
+.column-landing .vertical-align--middle h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 6em;
+  font-weight: 700;
+  color: white;
+}
+
+.column-landing .vertical-align--bottom {
+  vertical-align: bottom;
+}
+
+/*
+ * Presentational stuff
+ */
+
+.column-landing a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.column-landing .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.column-landing .btn-group-lg>.btn, .column-landing .btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+
+.column-landing .btn-dark {
+  border-radius: 0;
+  color: #fff;
+  background-color: #ff9900;
+}
+
+.column-landing .btn-dark:hover,
+.column-landing .btn-dark:focus,
+.column-landing .btn-dark:active {
+  color: #fff;
+  background-color: #9098d3;
+}
+
+.column-landing h1, .column-landing h2, .column-landing h3, .column-landing h4, .column-landing h5, .column-landing h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+.column-landing h1, .column-landing h2, .column-landing h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.column-landing h4, .column-landing h5, .column-landing h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.column-landing h4 {
+  font-size: 18px;
+}
+
+.column-landing p {
+  margin: 0 0 10px;
+}
+
+.column-landing small { 
+  font-size: 85%;
+}
+
+.column-landing .padding-cus {
+  padding-top: 25px;
+}
+
+.column-landing .padding1 {
+    padding-top: 10px;
+}
+
+body, html {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
