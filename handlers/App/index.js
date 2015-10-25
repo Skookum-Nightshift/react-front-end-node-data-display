@@ -152,7 +152,7 @@ let App = React.createClass({
           unDiverge={this.unDiverge} 
           setToCompleted={this.setToCompleted} />
       
-        <p>${this.state.balance}</p>
+        <p style={{"paddingLeft": "24px"}}>${this.state.balance}</p>
       </div>
   )}
 })

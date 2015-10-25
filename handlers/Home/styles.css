@@ -4,3 +4,35 @@
 .Home {
 
 }
+
+/* temp coloring for selected option in drawer */
+.selected {
+  color: red;
+}
+
+
+/* other */
+#app {
+	width: 100%;
+	height: 100%;
+}
+
+.AppBase {
+	width: 100%;
+	height: 100%;
+}
+
+body, html {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

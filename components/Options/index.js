@@ -90,7 +90,7 @@ class Options extends React.Component {
                 secondary={(item.set !== null && cost === item.set) ? false : true} 
                 label={item.optionShort[index]}
                 style={{
-                  margin: '10px'
+                  margin: '0 10px 10px 0'
                 }}/>
         </span>
       )

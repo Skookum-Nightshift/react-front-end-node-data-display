@@ -6,3 +6,10 @@
 
 .Options-child.is-state {}
 
+.sectionIcon {
+  width: 200px;
+}
+
+.hidden {
+    display: none;
+}

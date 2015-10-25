@@ -5,22 +5,12 @@
 
 }
 
-#app {
-	width: 100%;
-	height: 100%;
-}
-
-.AppBase {
-	width: 100%;
-	height: 100%;
-}
-
 .column-landing {
   width: 100%;
   height: 100%;
   float: left;
   padding: 1em;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(http://36.media.tumblr.com/adec2f102b2fc0457f041420e5ac93b3/tumblr_nmmglcTA9r1sk1us0o1_1280.jpg) no-repeat center center scroll;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(http://povsim-staging.herokuapp.com/public/img/splashbg.jpg) no-repeat center center scroll;
   webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -150,19 +140,3 @@
 .column-landing .padding1 {
     padding-top: 10px;
 }
-
-body, html {
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-div {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
