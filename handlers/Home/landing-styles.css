@@ -140,3 +140,10 @@
 .column-landing .padding1 {
     padding-top: 10px;
 }
+
+/* Fix display on smaller devices */
+@media all and (max-width: 500px) {
+  .column-landing .vertical-align--middle h1 {
+    font-size: 3em;
+  } 
+}
