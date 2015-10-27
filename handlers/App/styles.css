@@ -1,0 +1,48 @@
+/** @define App; use strict */
+@import 'normalize.css';
+
+.App {
+
+}
+
+.appWrapper {
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  justify-content: center;
+}
+
+.appWrapper, .appBar, .appBody, .balance {
+	flex: 1 100%;
+}
+
+.appBody, .balance {
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+@media all and (min-width: 800px) {
+	.appBody, .balance  { 
+		flex: 0 800px; 
+		padding: 0px 24px;
+	}
+	
+	.appBody { 
+		border-style: none solid;
+		border-width: 1px;
+	}
+
+	.balance {
+		border-style: none solid solid solid;
+		border-width: 1px;
+	}
+}

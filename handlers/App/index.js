@@ -14,6 +14,8 @@ const FlatButton = require('material-ui/lib/flat-button');
 const RaisedButton = require('material-ui/lib/raised-button');
 const IconButton = require('material-ui/lib/icon-button');
 
+require('./styles.css');
+
 // let MenuItems = require('./MenuItems');
 // let AppBody = require('./AppBody');
 // let appAreas = require('../../data/povertyData');
@@ -122,8 +124,8 @@ let App = React.createClass({
     let selectedItem = appAreas[this.state.activeItemIndex]; // load the data
     
     return (
-      <div>
-        <div>
+      <div className="appWrapper">
+        <div className="appBar">
             <AppBar
               iconElementRight={<FlatButton label={<FontAwesome name="dollar" size='2x'/>} toolTip="Budget" tooltipPosition="right" onClick={this.toggle} />}
               title="UWCC Poverty Sim"
@@ -152,7 +154,9 @@ let App = React.createClass({
           unDiverge={this.unDiverge} 
           setToCompleted={this.setToCompleted} />
       
-        <p style={{"paddingLeft": "24px"}}>${this.state.balance}</p>
+        <div className="balance">
+          <p>Your balance is: ${this.state.balance}</p>
+        </div>
       </div>
   )}
 })

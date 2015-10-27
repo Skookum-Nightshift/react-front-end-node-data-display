@@ -96,7 +96,7 @@ class AppBody extends React.Component {
     let selectedItem = this.props.selectedItem;
 
     return (
-      <div style={{"paddingLeft": "24px"}}>{this.beginOrEnd(selectedItem)}</div>
+      <div className="appBody" style={{"paddingLeft": "24px", "paddingRight": "24px"}}>{this.beginOrEnd(selectedItem)}</div>
     )
   }
 }
