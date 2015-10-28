@@ -61,8 +61,8 @@ class Options extends React.Component {
       <div>
         {this.renderImg(item, index)}
         <p>{this.props.selectedItem.desc}</p>
-        <p>{item.optionDesc[index]}</p>
-        <p>{(item.options.length > 0 && index !== -1) ? ("This costs: $" + item.options[index]) : null}</p>
+        {/* <p>{item.optionDesc[index]}</p>
+        <p>{(item.options.length > 0 && index !== -1) ? ("This costs: $" + item.options[index]) : null}</p> */}
       </div>
     );
   }
@@ -82,14 +82,19 @@ class Options extends React.Component {
          * made, then disable whatever doesn't fit within their budget.
          */
         <span>
-        <RaisedButton
-                primary={(item.set !== null && cost === item.set) ? true : false} 
-                onClick={this.setBalance.bind(this, item, cost, index)}
-                className={cost === item.set ? "activeOption" : null}
-                disabled={(item.set !== null && cost < item.set) ? false : (cost > (this.props.balance + item.set) ? true : false)}
-                secondary={(item.set !== null && cost === item.set) ? false : true} 
-                label={item.optionShort[index]}
-                style={{'marginBottom': '10px'}}/><br />
+          <RaisedButton
+            primary={(item.set !== null && cost === item.set) ? true : false} 
+            onClick={this.setBalance.bind(this, item, cost, index)}
+            className={cost === item.set ? "activeOption" : null}
+            disabled={(item.set !== null && cost < item.set) ? false : (cost > (this.props.balance + item.set) ? true : false)}
+            secondary={(item.set !== null && cost === item.set) ? false : true} 
+            label={item.optionShort[index]}
+            style={{'marginBottom': '8px'}}/><br />
+            {(item.set !== null && cost == item.set) ? 
+              <div className="accordionDesc">
+                {item.optionDesc[index]} - <span style={{'color': 'red'}}>Cost: ${item.options[index]}</span>
+              </div> : null
+            }
         </span>
       )
     );
