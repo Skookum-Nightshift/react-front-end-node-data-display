@@ -15,10 +15,9 @@ var Home = React.createClass({
 		  <div className="container">
 		    <div className="vertical-align-wrap">
 		      <div className="vertical-align vertical-align--middle">
-		        <h1 data-sr>Poviz.io</h1>
-		            <h4>Poverty is hard and oftens leads to homelessness.</h4>
-		            <h4>See the tough choices made every day by people living in poverty.</h4>
-		            <h4>What will you sacrifice?</h4>
+		        <h1 data-sr>Paycheck<br />to<br />Paycheck</h1>
+		            <h4>See the tough choices made by those in poverty.</h4>
+		            <h4>What would you choose?</h4>
 		            <bold>
 		              <a href="/app" className="btn btn-dark btn-lg">Get Started</a>
 		            </bold>
