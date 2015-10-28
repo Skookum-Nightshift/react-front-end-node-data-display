@@ -18,14 +18,14 @@
 let povertyData = [
 {
     "name": "Housing",
-    "desc": "What kind of home will you live in?",
-    "options": [750, 820, 950],
+    "desc": "What kind of home do you live in?",
+    "options": [950, 820, 750],
     "set": null,
     "type": "normal",
     "visited": true,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/building-3.png","http://simpleicon.com/wp-content/uploads/home-6.png","http://simpleicon.com/wp-content/uploads/home-3.png"],
-    "optionShort": ["1 bedroom studio", "2 bedroom apartment", "3 bedroom home"],
-    "optionDesc": ["1 bedroom, 1 bath apartment, utilities, no patio or yard, street parking, and stove only", "2 bedroom, 1 bath apartment, utilities, covered patio, 1 parking space, stove, and refrigerator", "3 bedroom, 11/2 bath house, utilities, small yard, 2 car garage, stove, refrigerator, and dishwasher"]
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/home-3.png", "http://simpleicon.com/wp-content/uploads/home-6.png", "http://simpleicon.com/wp-content/uploads/building-3.png"],
+    "optionShort": ["3 bedroom home", "2 bedroom apartment", "1 bedroom studio"],
+    "optionDesc": ["3 bedroom, 11/2 bath house, utilities, small yard, 2 car garage, stove, refrigerator, and dishwasher", "2 bedroom, 1 bath apartment, utilities, covered patio, 1 parking space, stove, and refrigerator", "1 bedroom, 1 bath apartment, utilities, no patio or yard, street parking, and stove only"]
 }, {
     "name": "Housing Fact",
     "desc": "Fair Market Rent for a 2 bedroom in Mecklenburg County is $831 a month. Nearly 50% of renters in Charlotte-Mecklenburg spend more than 30% of their income on housing.",
@@ -39,13 +39,13 @@ let povertyData = [
 }, {
     "name": "Food",
     "desc": "How many meals do you eat a day?",
-    "options": [120, 240, 360],
+    "options": [360, 240, 120],
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/plate__spoon.png","http://simpleicon.com/wp-content/uploads/pizza_1.png","http://simpleicon.com/wp-content/uploads/burger.png"],
-    "optionShort": ["1 meal a day", "2 meals a day", "3 meals a day"],
-    "optionDesc": ["1 meal a day", "2 meals a day", "3 meals a day + snacks"]
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/burger.png", "http://simpleicon.com/wp-content/uploads/pizza_1.png","http://simpleicon.com/wp-content/uploads/plate__spoon.png"],
+    "optionShort": ["3 meals a day", "2 meals a day", "1 meal a day"],
+    "optionDesc": ["3 meals a day + snacks", "2 meals a day", "1 meal a day"]
 }, {
     "name": "Food Fact",
     "desc": "69,154 households receive food stamps in the Charlotte five county region.",
@@ -58,14 +58,14 @@ let povertyData = [
     "optionDesc": []
 }, {
     "name": "Transportation",
-    "desc": "How will you get around?",
-    "options": [0, 80, 360],
+    "desc": "How do you get around?",
+    "options": [360, 80, 0],
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/bicycle.png","http://simpleicon.com/wp-content/uploads/train.png","http://simpleicon.com/wp-content/uploads/car_4.png"],
-    "optionShort": ["Walk or bike", "Public Transit", "Your own Car"],
-    "optionDesc": ["Walk or bike everywhere", "Walk, bike, and public transit", "Have your own car, with a monthly payment"]
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/car_4.png", "http://simpleicon.com/wp-content/uploads/train.png", "http://simpleicon.com/wp-content/uploads/bicycle.png"],
+    "optionShort": ["Car", "Public Transit", "Walk or bike"],
+    "optionDesc": ["Have your own car, with a monthly payment", "Walk, bike, and public transit", "Walk or bike everywhere"]
 }, {
     "name": "Transportation Fact",
     "desc": "It takes the average Charlottean 30 minutes to travel to work, for workers age 16 years+, 2009-2013.",
@@ -79,23 +79,23 @@ let povertyData = [
 }, {
     "name": "Oh no!!",
     "desc": "Your dog got rabies. You need to take him to the vet before he goes on a rabid rampage!",
-    "options": [100, 120],
+    "options": [120, 100],
     "set": null,
     "type": "setback",
     "visited": false,
-    "sectionImage": ["https://cdn3.iconfinder.com/data/icons/medical-5-1/512/rabies-512.png", "https://cdn1.iconfinder.com/data/icons/health-care-2/512/mad_dog-512.png"],
-    "optionShort": ["Budget medicine", "Good medicine"],
-    "optionDesc": ["Cheap medicine. It might work.", "Good medicine. Definitely will work."]
+    "sectionImage": ["https://cdn1.iconfinder.com/data/icons/health-care-2/512/mad_dog-512.png", "https://cdn3.iconfinder.com/data/icons/medical-5-1/512/rabies-512.png"],
+    "optionShort": ["Good medicine", "Budget medicine"],
+    "optionDesc": ["Good medicine. Definitely will work.", "Cheap medicine. It might work."]
 }, {
     "name": "Health",
     "desc": "What kind of healthcare do you have?",
-    "options": [0, 52, 134],
+    "options": [134, 52, 0],
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/nurse1.png","http://simpleicon.com/wp-content/uploads/surgeon_1.png","http://simpleicon.com/wp-content/uploads/docter__nurse_1.png"],
-    "optionShort": ["None", "You Only", "Family Plan"],
-    "optionDesc": ["No health insurance", "Health insurance for you only", "Health insurance for you and your family"]
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/docter__nurse_1.png", "http://simpleicon.com/wp-content/uploads/surgeon_1.png", "http://simpleicon.com/wp-content/uploads/nurse1.png"],
+    "optionShort": ["Family Plan", "You Only", "None"],
+    "optionDesc": ["Health insurance for you and your family", "Health insurance for you only", "No health insurance"]
 }, {
     "name": "Health Fact",
     "desc": "18.5% of Mecklenburg residents do not have health insurance (under age 65).",
@@ -109,13 +109,13 @@ let povertyData = [
 }, {
     "name": "Technology",
     "desc": "What type of electronics do you have?",
-    "options": [35, 80, 220],
+    "options": [220, 80, 35],
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/mobile_phone.png","http://simpleicon.com/wp-content/uploads/iphone-landscape-portrait.png","http://simpleicon.com/wp-content/uploads/lcd_1.png"],
-    "optionShort": ["1 cell phone", "2 cell phones and TV", "Cell phones, cable TV, and Laptop"],
-    "optionDesc": ["1 cell phone", "2 cell phones, TV but no cable", "2 smart phones, TV with cable, home computer"]
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/lcd_1.png", "http://simpleicon.com/wp-content/uploads/iphone-landscape-portrait.png", "http://simpleicon.com/wp-content/uploads/mobile_phone.png"],
+    "optionShort": ["Smartphones, cable TV, laptop", "2 cell phones and TV", "1 cell phone"],
+    "optionDesc": ["2 smart phones, TV with cable, home computer", "2 cell phones, TV but no cable", "1 cell phone"]
 }, {
     "name": "Technology Fact",
     "desc": "Technology is important for leisure and communicating with your fiends and family.",
@@ -129,23 +129,23 @@ let povertyData = [
 }, {
     "name": "Oh no!!",
     "desc": "Your daughter got sick. How will you handle the trip to the hospital?",
-    "options": [100, 140],
+    "options": [140, 100],
     "set": null,
     "type": "setback",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/stethoscope1.png", "http://simpleicon.com/wp-content/uploads/ambulance1.png"],
-    "optionShort": ["Emergency room Only", "Emergency room and Medication"],
-    "optionDesc": ["Emergency room visit, no medication", "Emergency room plus medication"]
+    "optionShort": ["Emergency room and Medication", "Emergency room Only"],
+    "optionDesc": ["Emergency room plus medication", "Emergency room visit, no medication"]
 }, {
     "name": "Family Leisure",
-    "desc": "How many fun family outings will you have this month?",
-    "options": [0, 100, 200],
+    "desc": "How many fun outings for your family this month?",
+    "options": [200, 100, 0],
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/fruit_basket.png","http://simpleicon.com/wp-content/uploads/music-note-8.png","http://simpleicon.com/wp-content/uploads/film.png"],
-    "optionShort": ["None", "1 Activity, like bowling", "2 Activities, like the movies"],
-    "optionDesc": ["No family outings, maybe visiting local friends and family", "1 family activity, like a local park, picnic, bowling, or local music show", "2 family activities, like eating out, movies, or a concert"]
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/film.png", "http://simpleicon.com/wp-content/uploads/music-note-8.png", "http://simpleicon.com/wp-content/uploads/fruit_basket.png"],
+    "optionShort": ["2 Activities", "1 Activity", "None"],
+    "optionDesc": ["2 family activities, like eating out, movies, or a concert", "1 family activity, like a picnic, bowling, or local music show", "No family outings, maybe visiting nearby family, or a local park"]
 }, {
     "name": "Family Leisure Fact",
     "desc": "Spending family time on leisure activities together is associated with greater emotional bonding, better communication, better school grades, and less behavioral problems. ",
@@ -157,25 +157,25 @@ let povertyData = [
     "optionShort": [],
     "optionDesc": []
 }, {
-    "name": "Oh no!!",
+    "name": "Can I play??",
     "desc": "Your son wants to join the school soccer team.",
-    "options": [0, 80],
+    "options": [80, 0],
     "set": null,
     "type": "setback",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/sad.png", "http://simpleicon.com/wp-content/uploads/football1.png"],
-    "optionShort": ["No", "Yes"],
-    "optionDesc": ["He does not participate", "Cleats, shin pads, uniform, and ball"]
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/football1.png", "http://simpleicon.com/wp-content/uploads/football.png"],
+    "optionShort": ["Yes", "No"],
+    "optionDesc": ["Cleats, shin pads, uniform, and ball", "He does not participate"]
 }, {
     "name": "Laundry",
-    "desc": "Where will you do laundry?",
-    "options": [20, 30, 60],
+    "desc": "Where do you do laundry?",
+    "options": [60, 30, 20],
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/shop-4.png","http://simpleicon.com/wp-content/uploads/backet.png","http://simpleicon.com/wp-content/uploads/washing_machine.png"],
-    "optionShort": ["Laundromat", "Shared Laundry Room", "Own Washer/Dryer"],
-    "optionDesc": ["Laundromat", "Shared laundry room", "Payment for your own washer and dryer"]
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/washing_machine.png","http://simpleicon.com/wp-content/uploads/backet.png","http://simpleicon.com/wp-content/uploads/shop-4.png"],
+    "optionShort": ["Your own Washer/Dryer", "Shared Laundry Room", "Laundromat"],
+    "optionDesc": ["Payment for your own washer and dryer in your home", "Shared laundry room in your complex", "Laundromat that you can walk to, and you have to wait around"]
 }, {
     "name": "Laundry Fact",
     "desc": "Basic chores, like laundry can be difficult for those in poverty, with limited budgets and transportation.",
@@ -189,13 +189,13 @@ let povertyData = [
 }, {
     "name": "Savings",
     "desc": "Do you have any savings for unexpected expenses?",
-    "options": [0, 100, 200],
+    "options": [200, 100, 0],
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/coin-money-7.png","http://simpleicon.com/wp-content/uploads/money-7.png","http://simpleicon.com/wp-content/uploads/money-bag-4.png"],
-    "optionShort": ["None", "$100", "$200"],
-    "optionDesc": ["Nothing left for savings after other expenses", "Tiny savings", "Small savings"]
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/money-bag-4.png","http://simpleicon.com/wp-content/uploads/money-7.png", "http://simpleicon.com/wp-content/uploads/coin-money-7.png"],
+    "optionShort": ["$200", "$100", "None"],
+    "optionDesc": ["Small savings, for vacations or house projects", "Tiny savings, for clothes and shopping", "Nothing left for savings after other expenses"]
 }, {
     "name": "Savings Fact",
     "desc": "A savings reserve is often unavailble for those in poverty. Some familes are one crisis away (car breakdown or medical bill) from loosing their home.",
