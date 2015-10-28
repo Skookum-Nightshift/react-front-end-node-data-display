@@ -13,3 +13,7 @@
 .hidden {
     display: none;
 }
+
+.btn-group button {
+	min-width: 272px;
+}

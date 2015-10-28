@@ -1,6 +1,8 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 
+require('./styles.css');
+
 const RaisedButton = require('material-ui/lib/raised-button');
 
 import Options from 'Options';
@@ -59,7 +61,9 @@ class AppBody extends React.Component {
             handleBalance={this.props.handleBalance}
             balance={this.props.balance} 
             selectedItem={item} />
-          {this.nextButton(min, item)}
+          <div id="actionButton">
+            {this.nextButton(min, item)}
+          </div>
         </div>
     );
   }
@@ -67,7 +71,7 @@ class AppBody extends React.Component {
   beginOrEnd (selectedItem) {
     if (this.props.activeItemIndex === null) {
       return (
-        <div>
+        <div id="beginState">
           <h1>How to Play...</h1>
           <p>Assume you’re a parent. You and your spouse both work. You have a 9 year old daughter and 14 year old son.</p>
           <p>Experience the tough choices of 1 in 5 families live in Charlotte-Mecklenburg.</p>
@@ -79,7 +83,7 @@ class AppBody extends React.Component {
       );
     } else if (this.props.appCompleted === true && this.props.diverged === false) {
       return (
-        <div>
+        <div id="endState">
           <h1>How did you fare?</h1>
           <p>You had to make some hard choices! These are the choices of 1 in 5 families in Charlotte.</p>
           <p>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p>

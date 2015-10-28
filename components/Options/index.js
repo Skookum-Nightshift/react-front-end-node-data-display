@@ -89,9 +89,7 @@ class Options extends React.Component {
                 disabled={(item.set !== null && cost < item.set) ? false : (cost > (this.props.balance + item.set) ? true : false)}
                 secondary={(item.set !== null && cost === item.set) ? false : true} 
                 label={item.optionShort[index]}
-                style={{
-                  margin: '0 10px 10px 0'
-                }}/>
+                style={{'marginBottom': '10px'}}/><br />
         </span>
       )
     );

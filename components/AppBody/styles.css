@@ -5,3 +5,10 @@
 .AppBody-child {}
 
 .AppBody-child.is-state {}
+
+
+#actionButton button, 
+#beginState button,
+#endState button {
+	min-width: 272px;
+}
