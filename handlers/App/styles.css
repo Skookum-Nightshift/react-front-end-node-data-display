@@ -5,7 +5,41 @@
 
 }
 
-.appWrapper {
+/* appBar Styling */
+#appBar {
+  background-color: #ff9900;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  display: flex;
+  min-height: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+#appBar h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 64px;
+}
+
+#appBar a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#appBar .fa {
+	font-size: 22pt;
+}
+
+#menuButton {
+	margin-top: 16px;
+	margin-right: 19px;
+	margin-left: auto;
+}
+
+/* Flexbox layout */
+#appWrapper {
 	display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -18,7 +52,7 @@
   justify-content: center;
 }
 
-.appWrapper, .appBar, .appBody, .balance {
+#appWrapper, #appBarContainer, .appBody, .balance {
 	flex: 1 100%;
 }
 

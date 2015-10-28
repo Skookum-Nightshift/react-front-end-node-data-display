@@ -124,12 +124,14 @@ let App = React.createClass({
     let selectedItem = appAreas[this.state.activeItemIndex]; // load the data
     
     return (
-      <div className="appWrapper">
-        <div className="appBar">
-            <AppBar
-              iconElementRight={<FlatButton label={<FontAwesome name="dollar" size='2x'/>} toolTip="Budget" tooltipPosition="right" onClick={this.toggle} />}
-              title="UWCC Poverty Sim"
-              showMenuIconButton={false}/>
+      <div id="appWrapper">
+        <div id="appBarContainer">
+          <div id="appBar">
+            <h1>UWCC Poverty Sim</h1>
+            <div id="menuButton">
+              <a href="#" onClick={this.toggle}><FontAwesome name="dollar"/></a>
+            </div>
+          </div>
         </div>
         <div>
           <LeftNav ref="leftNav" open={this.state.navOpen}
