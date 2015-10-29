@@ -127,7 +127,7 @@ let App = React.createClass({
       <div id="appWrapper">
         <div id="appBarContainer">
           <div id="appBar">
-            <h1>UWCC Poverty Sim</h1>
+            <h1>Paycheck to Paycheck</h1>
             <div id="menuButton">
               <a href="#" onClick={this.toggle}><FontAwesome name="dollar"/></a>
             </div>

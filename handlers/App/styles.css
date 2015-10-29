@@ -23,6 +23,19 @@
   line-height: 64px;
 }
 
+/*Adjust long app names in h1 on smaller devices*/
+@media (max-width: 340px) {
+	#appBar h1 {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 270px) {
+	#appBar h1 {
+		display: none;
+	}
+}
+
 #appBar a {
 	text-decoration: none;
 	color: #fff;
