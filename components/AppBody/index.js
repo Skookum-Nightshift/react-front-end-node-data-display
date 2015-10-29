@@ -60,7 +60,9 @@ class AppBody extends React.Component {
           <Options 
             handleBalance={this.props.handleBalance}
             balance={this.props.balance} 
-            selectedItem={item} />
+            selectedItem={item}
+            page={this.props.page}
+            activeItemIndex={this.props.activeItemIndex} />
           <div id="actionButton">
             {this.nextButton(min, item)}
           </div>

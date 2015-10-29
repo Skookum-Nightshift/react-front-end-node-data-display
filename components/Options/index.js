@@ -86,7 +86,7 @@ class Options extends React.Component {
             primary={(item.set !== null && cost === item.set) ? true : false} 
             onClick={this.setBalance.bind(this, item, cost, index)}
             className={cost === item.set ? "activeOption" : null}
-            disabled={(item.set !== null && cost < item.set) ? false : (cost > (this.props.balance + item.set) ? true : false)}
+            disabled={(cost > (this.props.balance + item.set) || (item.type === "setback" && item.visited === true && (this.props.page - 1) > this.props.activeItemIndex)) ? true : false}
             secondary={(item.set !== null && cost === item.set) ? false : true} 
             label={item.optionShort[index]}
             style={{'marginBottom': '8px'}}/><br />

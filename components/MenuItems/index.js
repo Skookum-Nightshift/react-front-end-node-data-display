@@ -49,7 +49,7 @@ class MenuItems extends React.Component {
 
     return (
       this.props.menuItems.map((item, index) => // pass in each item in the array along with its index
-        <li className={item.type !== "normal" ? "hidden" : (index === activeItemIndex ? "bold" : null)}>
+        <li className={(item.type === "normal" || (item.type === "setback" && item.visited === true)) ? (index === activeItemIndex ? "bold" : null) : "hidden"}>
           {this.disableUnvisited(item, index)}
         </li>
       )
