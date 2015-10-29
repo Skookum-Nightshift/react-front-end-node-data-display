@@ -78,8 +78,13 @@
 }
 
 @media all and (min-width: 800px) {
-	.appBody, .balance  { 
+	.appBody { 
 		flex: 0 800px; 
+		padding: 0px 24px;
+	}
+
+	.balance {
+		flex: 1 100%;
 		padding: 0px 24px;
 	}
 	
