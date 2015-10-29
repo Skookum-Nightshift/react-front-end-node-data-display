@@ -6,9 +6,16 @@
 
 .AppBody-child.is-state {}
 
+.btn-group span > div:nth-child(1),
+#actionButton > div, 
+#beginState > div {
+	width: 98%;
+}
 
-#actionButton button, 
-#beginState button,
-#endState button {
-	min-width: 272px;
+@media all and (min-width: 414px) {
+	.btn-group span > div:nth-child(1),
+	#actionButton > div, 
+	#beginState > div { 
+		width: 350px;
+	}
 }

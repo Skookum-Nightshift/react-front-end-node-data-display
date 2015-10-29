@@ -14,10 +14,6 @@
     display: none;
 }
 
-.btn-group button {
-	min-width: 272px;
-}
-
 .accordionDesc {
 	margin-bottom: 8px;
 	font-size: .8em;
