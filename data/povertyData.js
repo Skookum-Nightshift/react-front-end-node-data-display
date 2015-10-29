@@ -17,6 +17,17 @@
 
 let povertyData = [
 {
+    "name": "Federal Poverty",
+    "desc": "The 2015 Federal Poverty Line for a family of four is $24,250 per year. A North Carolina family of four must earn $52,275 a year for basic living necessities. That's a big difference!",
+    "options": [],
+    "set": null,
+    "type": "fact",
+    "visited": false,
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/bar-chart-down-3.png"],
+    "optionShort": [],
+    "optionDesc": []
+},
+{
     "name": "Housing",
     "desc": "What kind of home do you live in?",
     "options": [950, 820, 750],
