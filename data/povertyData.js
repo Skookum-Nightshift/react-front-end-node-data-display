@@ -30,7 +30,7 @@ let povertyData = [
 {
     "name": "Housing",
     "desc": "What kind of home do you live in?",
-    "options": [950, 820, 750],
+    "options": [1240, 880, 790],
     "set": null,
     "type": "normal",
     "visited": true,
@@ -50,13 +50,13 @@ let povertyData = [
 }, {
     "name": "Food",
     "desc": "How many meals do you eat a day?",
-    "options": [360, 240, 120],
+    "options": [410, 280, 160],
     "set": null,
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/burger.png", "http://simpleicon.com/wp-content/uploads/pizza_1.png","http://simpleicon.com/wp-content/uploads/plate__spoon.png"],
     "optionShort": ["3 meals a day", "2 meals a day", "1 meal a day"],
-    "optionDesc": ["3 meals a day + snacks", "2 meals a day", "1 meal a day"]
+    "optionDesc": ["3 meals a day and snacks, so you're satisfied", "2 meals a day, a bit hungry during the day", "1 meal a day, your family is hungry most of the time, it's hard to condentrate at work and school"]
 }, {
     "name": "Food Fact",
     "desc": "69,154 households receive food stamps in the Charlotte five county region.",
@@ -88,15 +88,15 @@ let povertyData = [
     "optionShort": [],
     "optionDesc": []
 }, {
-    "name": "Oh no!!",
-    "desc": "Your dog got rabies. You need to take him to the vet before he goes on a rabid rampage!",
-    "options": [120, 100],
+    "name": "New Clothes??",
+    "desc": "Your daughter is growing so quick! She needs some bigger clothes.",
+    "options": [160, 40],
     "set": null,
     "type": "setback",
     "visited": false,
-    "sectionImage": ["https://cdn1.iconfinder.com/data/icons/health-care-2/512/mad_dog-512.png", "https://cdn3.iconfinder.com/data/icons/medical-5-1/512/rabies-512.png"],
-    "optionShort": ["Good medicine", "Budget medicine"],
-    "optionDesc": ["Good medicine. Definitely will work.", "Cheap medicine. It might work."]
+    "sectionImage": ["http://simpleicon.com/wp-content/uploads/shopping_trolley_7.png", "http://simpleicon.com/wp-content/uploads/t_shirt.png"],
+    "optionShort": ["Shop for new clothes", "Hand-me-downs"],
+    "optionDesc": ["4 new sets of stylish pants and shirts", "2 sets of hand-me-down or used clothing, nothing like her friends' clothes"]
 }, {
     "name": "Health",
     "desc": "What kind of healthcare do you have?",
@@ -138,15 +138,15 @@ let povertyData = [
     "optionShort": [],
     "optionDesc": []
 }, {
-    "name": "Oh no!!",
-    "desc": "Your daughter got sick. How will you handle the trip to the hospital?",
+    "name": "Ugg, sick!!",
+    "desc": "Your spouse got pretty sick. How do you handle the trip to the hospital?",
     "options": [140, 100],
     "set": null,
     "type": "setback",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/stethoscope1.png", "http://simpleicon.com/wp-content/uploads/ambulance1.png"],
     "optionShort": ["Emergency room and Medication", "Emergency room Only"],
-    "optionDesc": ["Emergency room plus medication", "Emergency room visit, no medication"]
+    "optionDesc": ["Emergency room plus medication, better in now time", "Emergency room visit, but no medication, maybe miss some work, and earn less this month"]
 }, {
     "name": "Family Leisure",
     "desc": "How many fun outings for your family this month?",

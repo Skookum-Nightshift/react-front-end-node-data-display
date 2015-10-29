@@ -75,7 +75,7 @@ class AppBody extends React.Component {
       return (
         <div id="beginState">
           <h1>How to Play...</h1>
-          <p>Assume you’re a parent. You work. Your spouse works part-time. You have a 9 year old daughter and 14 year old son.</p>
+          <p>Assume you’re a parent. You work. Your spouse works part-time. You have a 7 year old daughter and 12 year old son.</p>
           <img src="http://simpleicon.com/wp-content/uploads/meeting.png" alt="family of 4" className="sectionIcon" />
           <p>Stay within your limited monthly budget.</p>
           <p>Experience the tough choices of 1 in 5 families in Charlotte.</p>
