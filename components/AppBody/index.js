@@ -89,8 +89,12 @@ class AppBody extends React.Component {
           <h1>How did you fare?</h1>
           <p>You had to make some hard choices! These are the choices of 1 in 5 families in Charlotte.</p>
           <p>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p>
-          <a href="https://www.facebook.com/UWCentralCarolinas"><div className="social"><FontAwesome name="facebook" size="5x"/></div></a>
-          <a href="http://twitter.com/home?status=I%20completed%20the%20United%20Way%20Poverty%20Simulation%20and%20learned%20about%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%23povisio%20%23CLTaspires%20%40myUWCC"><div className="social"><FontAwesome name="twitter" size="5x"/></div></a>
+          <a href="https://www.facebook.com/UWCentralCarolinas">
+            <div className="social"><FontAwesome name="facebook" size="5x"/></div>
+          </a>
+          <a href="https://twitter.com/home?status=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%40myUWCC%20http%3A//bit.ly/1Rjfrwm">
+            <div className="social"><FontAwesome name="twitter" size="5x"/></div>
+          </a>
           <br />
           <br /> 
           <div id="getInvolved"><button className="button selected">Get Involved</button></div>
