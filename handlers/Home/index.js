@@ -23,12 +23,13 @@ var Home = React.createClass({
 		            </bold>
 		            <p className="padding-cus"><b><small>Partnered with:</small></b></p>
 		            <img src="public/img/uwcc.jpg" />
-		      </div>
+		            <br />
+		            <div className="fb-share-button" data-href="https://povsim-staging.herokuapp.com/" data-layout="button_count"/>
+	              </div>
 		    </div>
 		  </div>
 		</div>
-		);
-	}
+                      );	}
 });
 
 Home.displayName = 'Home';

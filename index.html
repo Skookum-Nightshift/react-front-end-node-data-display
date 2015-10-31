@@ -14,19 +14,14 @@
     <meta name="description" content="Short descrption of your site" />
     <meta name="revisit-after" content="30 days">
 
-    <!-- open graph -->
-    <meta property="og:title" content="Title">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Short descrption of your site">
-    <meta property="og:url" content="http://app.herokuapp.com">
-    <meta property="og:image" content="http://app.herokuapp.com/meta/apple-touch-icon-76x76.png?v=yyyBYmXl7m">
-    <meta property="og:image:width" content="76">
-    <meta property="og:image:height" content="76">
-    <meta property="og:image" content="http://app.herokuapp.com/meta/apple-touch-icon-57x57.png?v=yyyBYmXl7m">
-    <meta property="og:image:width" content="57">
-    <meta property="og:image:height" content="57">
-    <!-- end open graph -->
 
+    <!-- You can use open graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+    <meta property="og:url"           content="http://povsim-staging.herokuapp.com/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Paycheck to Paycheck" />
+    <meta property="og:description"   content="Experience the tough choices of 1 in 5 in Charlotte." />
+    <meta property="og:image"         content="http://povsim-staging.herokuapp.com/public/img/uwcc.jpg" />
     <!-- twiter card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@title" />
@@ -68,6 +63,15 @@
   </head>
   <body>
     <div id="app" class="container">†react†</div>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
     <!-- Script for landing h1 fly-in effect -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/2.3.2/scrollReveal.min.js"></script>
