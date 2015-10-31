@@ -5,8 +5,6 @@ require('./styles.css');
 import React from 'react';
 var {PropTypes} = React;
 
-import RaisedButton from 'material-ui/lib/raised-button';
-
 class Options extends React.Component {
 
   constructor () {
@@ -61,8 +59,6 @@ class Options extends React.Component {
       <div>
         {this.renderImg(item, index)}
         <p>{this.props.selectedItem.desc}</p>
-        {/* <p>{item.optionDesc[index]}</p>
-        <p>{(item.options.length > 0 && index !== -1) ? ("This costs: $" + item.options[index]) : null}</p> */}
       </div>
     );
   }
@@ -83,7 +79,6 @@ class Options extends React.Component {
          */
         <span>
           <button
-            //primary={(item.set !== null && cost === item.set) ? true : false} 
             onClick={this.setBalance.bind(this, item, cost, index)}
             className={cost === item.set ? "button selected" : "button unselected"}
             disabled={(cost > (this.props.balance + item.set) || (item.type === "setback" && item.visited === true && (this.props.page - 1) > this.props.activeItemIndex)) ? true : false}

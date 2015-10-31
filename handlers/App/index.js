@@ -1,20 +1,14 @@
 import React from 'react/addons';
 import {Resolver} from 'react-resolver';
-import injectTapEventPlugin from "react-tap-event-plugin";
 import MenuItems from 'MenuItems';
 import AppBody from 'AppBody';
 import appAreas from '../../data/povertyData';
 
 const FontAwesome = require('react-fontawesome');
-const ThemeManager = require('material-ui/lib/styles/theme-manager');
-const MyRawTheme = require('../../theme/rawTheme');
-const AppBar = require('material-ui/lib/app-bar');
-const FlatButton = require('material-ui/lib/flat-button');
-const RaisedButton = require('material-ui/lib/raised-button');
-const IconButton = require('material-ui/lib/icon-button');
 
 let {CSSTransitionGroup} = React.addons;
 require('./styles.css');
+
 let App = React.createClass({
 
   getInitialState () {
@@ -26,21 +20,6 @@ let App = React.createClass({
       diverged: false,
       budgetBusted: false,
       completed: false,
-    };
-  },
-
-  componentDidMount() {
-    injectTapEventPlugin();
-  },
-
-  //set up the theme
-  childContextTypes : {
-      muiTheme: React.PropTypes.object,
-  },
-
-  getChildContext() {
-    return {
-        muiTheme: ThemeManager.getMuiTheme(MyRawTheme),
     };
   },
 

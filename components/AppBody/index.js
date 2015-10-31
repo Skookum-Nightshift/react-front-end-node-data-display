@@ -3,7 +3,6 @@ import {Resolver} from 'react-resolver';
 
 require('./styles.css');
 
-const RaisedButton = require('material-ui/lib/raised-button');
 const FontAwesome = require('react-fontawesome');
 
 import Options from 'Options';

@@ -46,7 +46,6 @@ class MenuItems extends React.Component {
 
   renderMenuItems () {
     let activeItemIndex = this.props.activeItemIndex;
-    // console.log(this.props.menuItems[activeItemIndex]);
 
     return (
       this.props.menuItems.map((item, index) => // pass in each item in the array along with its index
