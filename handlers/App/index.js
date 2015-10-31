@@ -129,7 +129,7 @@ let App = React.createClass({
           <div id="appBar">
             <h1>Paycheck to Paycheck</h1>
             <div id="menuButton">
-              <a href="#" onClick={this.toggle}><FontAwesome name="dollar"/></a>
+              <a href="#" onClick={this.toggle}><FontAwesome name="bars"/></a>
             </div>
           </div>
         </div>

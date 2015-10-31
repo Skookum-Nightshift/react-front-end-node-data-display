@@ -77,6 +77,33 @@
 	display: none;
 }
 
+p {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #606060;
+  text-align: center;
+}
+
+.social {
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  background-color: #9098d3;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+i {
+  padding: 10px;
+}
+
+.fa-facebook {
+  margin-left: 25px;
+}
+
 @media all and (min-width: 800px) {
 	.appBody { 
 		flex: 0 800px; 

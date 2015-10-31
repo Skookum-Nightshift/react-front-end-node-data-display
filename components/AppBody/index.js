@@ -4,6 +4,7 @@ import {Resolver} from 'react-resolver';
 require('./styles.css');
 
 const RaisedButton = require('material-ui/lib/raised-button');
+const FontAwesome = require('react-fontawesome');
 
 import Options from 'Options';
 
@@ -21,11 +22,11 @@ class AppBody extends React.Component {
     console.log("Your balance is: " + this.props.balance);
     console.log("Your min is: " + min);
     if (this.props.appCompleted === true) {
-      return <RaisedButton label='Return to Summary' onClick={this.props.unDiverge} />;
+      return <button className="button next" onClick={this.props.unDiverge}>Return to Summary</button>;
     } else if (this.props.balance >= min && item.set === null) {
-      return <RaisedButton label='Make a Choice' disabled={true} />;
+      return <button className="button" disabled={true}>Make a Choice</button>;
     } else if (this.props.balance >= min || item.set != null || item.type ==="fact") {
-      return <RaisedButton label='next' onClick={this.props.setPage} />;
+      return <button className="button next" onClick={this.props.setPage}>next</button>;
     } else {
       return <p>You are out of money! You need to go back and adjust your monthly budget.</p>;
     }
@@ -80,7 +81,7 @@ class AppBody extends React.Component {
           <p>Stay within your limited monthly budget.</p>
           <p>Experience the tough choices of 1 in 5 families in Charlotte.</p>
           <br />
-          <RaisedButton label='Begin' onClick={this.props.showFirstQuestion} />
+          <button className="button next" onClick={this.props.showFirstQuestion}>Begin</button>
         </div>
       );
     } else if (this.props.appCompleted === true && this.props.diverged === false) {
@@ -89,8 +90,11 @@ class AppBody extends React.Component {
           <h1>How did you fare?</h1>
           <p>You had to make some hard choices! These are the choices of 1 in 5 families in Charlotte.</p>
           <p>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p>
-          <RaisedButton linkButton={true} label='twitter' target="_blank" href="http://twitter.com/home?status=I%20completed%20the%20United%20Way%20Poverty%20Simulation%20and%20learned%20about%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%23povisio%20%23CLTaspires%20%40myUWCC" /> <RaisedButton linkButton={true} href="https://www.facebook.com/UWCentralCarolinas" target="_blank" label='facebook' /><br /><br />
-          <div id="getInvolved"><RaisedButton label='Get Involved' /></div>
+          <a href="https://www.facebook.com/UWCentralCarolinas"><div className="social"><FontAwesome name="facebook" size="5x"/></div></a>
+          <a href="http://twitter.com/home?status=I%20completed%20the%20United%20Way%20Poverty%20Simulation%20and%20learned%20about%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%23povisio%20%23CLTaspires%20%40myUWCC"><div className="social"><FontAwesome name="twitter" size="5x"/></div></a>
+          <br />
+          <br /> 
+          <div id="getInvolved"><button className="button selected">Get Involved</button></div>
         </div>
       );
     } else {

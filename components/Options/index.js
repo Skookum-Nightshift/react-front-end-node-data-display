@@ -82,14 +82,14 @@ class Options extends React.Component {
          * made, then disable whatever doesn't fit within their budget.
          */
         <span>
-          <RaisedButton
-            primary={(item.set !== null && cost === item.set) ? true : false} 
+          <button
+            //primary={(item.set !== null && cost === item.set) ? true : false} 
             onClick={this.setBalance.bind(this, item, cost, index)}
-            className={cost === item.set ? "activeOption" : null}
+            className={cost === item.set ? "button selected" : "button unselected"}
             disabled={(cost > (this.props.balance + item.set) || (item.type === "setback" && item.visited === true && (this.props.page - 1) > this.props.activeItemIndex)) ? true : false}
-            secondary={(item.set !== null && cost === item.set) ? false : true} 
-            label={item.optionShort[index]}
-            style={{'marginBottom': '8px'}}/><br />
+            style={{'marginBottom': '8px'}} > {item.optionShort[index]}
+            </button>
+            <br />
             {(item.set !== null && cost == item.set) ? 
               <div className="accordionDesc">
                 {item.optionDesc[index]} - <span style={{'color': 'red'}}>Cost: ${item.options[index]}</span>
