@@ -39,7 +39,7 @@ let App = React.createClass({
   // Don't let the balance get below 0
   handleBalance (balance) {
     if (balance < 0) {
-      console.log('no way!')
+      console.log('Balance went below 0! That is not right!')
     } else {
       this.setState({balance}); 
     }
@@ -84,9 +84,6 @@ let App = React.createClass({
   
   render () {
     
-    console.log(this.state.page);
-    console.log(this.state.activeItemIndex);
-
     let selectedItem = appAreas[this.state.activeItemIndex]; // load the data
     
     return (
