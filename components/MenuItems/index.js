@@ -22,18 +22,32 @@ class MenuItems extends React.Component {
     this.props.closeModalMenu();
   }
 
+  // If an option isn't selected, load the first or second as default
+  // depending on how many options
+  renderImg (item, index) {
+    if (index === -1) {
+      if (item.sectionImage.length < 2) {
+        return <img src={item.sectionImage[0]} className="sectionIcon" />;
+      } else {
+        return <img src={item.sectionImage[1]} className="sectionIcon" />;
+      }
+    } else {
+      return <img src={item.sectionImage[index]} className="sectionIcon" />;
+    }
+  }
+
   disableUnvisited (item, index) {
     if (item.visited === true) {
       let setItems = item.options.map((option) => {
         return (
-          <li className={item.set === option ? "selected" : ''} >{option}</li>
+          <li className={item.set === option ? "navselected menuOptionListItem" : 'navunselected menuOptionListItem'} >{option}</li>
         );
        });
       return (
         <div className="menu-item">
-          <a href="#" onClick={this.handleItemClick.bind(this, index)}>{item.name}</a>
+          <a href="#" onClick={this.handleItemClick.bind(this, index)}>{this.renderImg(item, index)}</a>
           {item.set !== null ?
-            <ul>
+            <ul className="menuOptionList">
               {setItems}
             </ul>
           : ''}
@@ -49,9 +63,9 @@ class MenuItems extends React.Component {
 
     return (
       this.props.menuItems.map((item, index) => // pass in each item in the array along with its index
-        <li className={(item.type === "normal" || (item.type === "setback" && item.visited === true)) ? (index === activeItemIndex ? "bold" : null) : "hidden"}>
+        <div className={(item.type === "normal" || (item.type === "setback" && item.visited === true)) ? (index === activeItemIndex ? "bold" : null) : "hidden"}>
           {this.disableUnvisited(item, index)}
-        </li>
+        </div>
       )
     );
   }

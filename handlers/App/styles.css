@@ -38,7 +38,7 @@ body.modalOpen {
 .modalDiv {
   position: fixed;
   overflow: auto;
-  text-align: center;
+  text-align: left;
   top: 0;
   left: 0;
   bottom: 0;
