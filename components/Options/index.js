@@ -58,7 +58,7 @@ class Options extends React.Component {
     return (
       <div>
         {this.renderImg(item, index)}
-        <p>{this.props.selectedItem.desc}</p>
+        <p className="options-desc">{this.props.selectedItem.desc}</p>
       </div>
     );
   }
@@ -82,12 +82,11 @@ class Options extends React.Component {
             onClick={this.setBalance.bind(this, item, cost, index)}
             className={cost === item.set ? "button selected" : "button unselected"}
             disabled={(cost > (this.props.balance + item.set) || (item.type === "setback" && item.visited === true && (this.props.page - 1) > this.props.activeItemIndex)) ? true : false}
-            style={{'marginBottom': '8px'}} > {item.optionShort[index]}
-            </button>
+            >{item.optionShort[index]}</button>
             <br />
-            {(item.set !== null && cost == item.set) ? 
+            {(item.set !== null && cost == item.set) ?
               <div className="accordionDesc">
-                {item.optionDesc[index]} - <span style={{'color': 'red'}}>Cost: ${item.options[index]}</span>
+                {item.optionDesc[index]} - <span className="cost">Cost: ${item.options[index]}</span>
               </div> : null
             }
         </span>
