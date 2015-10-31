@@ -19,6 +19,7 @@ class MenuItems extends React.Component {
      /* pass the index of the clicked LI to the parent Component's
      onActivate prop, which happens to be the handleItem method */
     this.props.onActivate(activeItemIndex);
+    this.props.closeModalMenu();
   }
 
   disableUnvisited (item, index) {
@@ -58,9 +59,16 @@ class MenuItems extends React.Component {
 
   render () {
     return (
-      <div>
-        <ul>{this.renderMenuItems()}</ul>
-        {this.props.children}
+      <div id="animatedModal" className="animated modalDiv">
+        <div id="closebt-container" className="close-animatedModal">
+          <img className="closebt" src="public/animatedModal/closebt.svg" onClick={this.props.closeModalMenu} />
+        </div>
+        <div className="modal-container">
+          <div className="modal-body">
+            <ul>{this.renderMenuItems()}</ul>
+            {this.props.children}
+          </div>
+        </div>
       </div>
     );
   }

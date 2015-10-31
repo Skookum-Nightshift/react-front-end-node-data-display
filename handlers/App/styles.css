@@ -5,10 +5,80 @@
 
 }
 
+/* animatedModal Styling */
+.noOverflow {
+  overflow: hidden;
+  height: 100%;
+}
+
+#closebt-container {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.closebt {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.closebt:hover {
+  transform: rotate(90deg);
+}
+
+body.modalOpen {
+  overflow: hidden;
+}
+
+.modalDiv {
+  position: fixed;
+  overflow: auto;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  z-index: 900;
+  background-color: #9098d3;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.modal-container {
+  position: relative;
+  margin-top: 38px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-body {
+    opacity: 1;
+    display: block;
+    transform: scaleX(1) scaleY(1);
+    transform-origin: 50% 50% 0px;
+    flex: 0 272px;
+}
+
 /* appBar Styling */
 #appBar {
   background-color: #ff9900;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   min-height: 64px;
   padding-left: 24px;
@@ -114,16 +184,4 @@ i {
 		flex: 1 100%;
 		padding: 0px 24px;
 	}
-	
-	/*
-	.appBody { 
-		border-style: none solid;
-		border-width: 1px;
-	}
-
-	.balance {
-		border-style: none solid solid solid;
-		border-width: 1px;
-	}
-	*/
 }

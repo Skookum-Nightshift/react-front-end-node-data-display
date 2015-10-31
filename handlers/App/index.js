@@ -1,7 +1,6 @@
-import React from 'react';
+import React from 'react/addons';
 import {Resolver} from 'react-resolver';
 import injectTapEventPlugin from "react-tap-event-plugin";
-import LeftNav from 'LeftNav';
 import MenuItems from 'MenuItems';
 import AppBody from 'AppBody';
 import appAreas from '../../data/povertyData';
@@ -14,12 +13,8 @@ const FlatButton = require('material-ui/lib/flat-button');
 const RaisedButton = require('material-ui/lib/raised-button');
 const IconButton = require('material-ui/lib/icon-button');
 
+let {CSSTransitionGroup} = React.addons;
 require('./styles.css');
-
-// let MenuItems = require('./MenuItems');
-// let AppBody = require('./AppBody');
-// let appAreas = require('../../data/povertyData');
-
 let App = React.createClass({
 
   getInitialState () {
@@ -36,22 +31,6 @@ let App = React.createClass({
 
   componentDidMount() {
     injectTapEventPlugin();
-  },
-
-  handleClick () {
-    alert('We\'re up and running, Dude!');
-  },
-
-  toggle () {
-    this.setState({navOpen: true});
-  },
-
-  showOverlay() {
-    console.log('Hey');
-  },
-
-  closeNav() {
-    this.setState({ navOpen: false });
   },
 
   //set up the theme
@@ -111,6 +90,14 @@ let App = React.createClass({
   unDiverge () {
     this.setState({diverged: false});
   },
+
+  openModalMenu () {
+    this.setState({navOpen: true});
+  },
+
+  closeModalMenu () {
+    this.setState({navOpen: false});
+  },
   
   /**
    This generates everything between the drawer and the running balance.
@@ -124,22 +111,14 @@ let App = React.createClass({
     let selectedItem = appAreas[this.state.activeItemIndex]; // load the data
     
     return (
-      <div id="appWrapper">
+      <div id="appWrapper" className={this.state.navOpen === true ? "noOverflow" : null}>
         <div id="appBarContainer">
           <div id="appBar">
             <h1>Paycheck to Paycheck</h1>
             <div id="menuButton">
-              <a href="#" onClick={this.toggle}><FontAwesome name="bars"/></a>
+              <a href="#" onClick={this.openModalMenu}><FontAwesome name="bars"/></a>
             </div>
           </div>
-        </div>
-        <div>
-          <LeftNav ref="leftNav" open={this.state.navOpen}
-            onActivate={this.handleItem}  // give the MenuItems component access to this.handleItem via this.props.onActivate
-            activeItemIndex={this.state.activeItemIndex}  // give the MenuItems component the ability to pass things to App's state
-            diverged={this.state.diverged}
-            menuItems={appAreas} />
-          {this.state.navOpen ? <div className="LeftNavOverlay" docked={false} onClick={this.closeNav}></div> : ""}
         </div>
 
         <AppBody 
@@ -159,6 +138,19 @@ let App = React.createClass({
         <div className="balance">
           <p>Your balance is: ${this.state.balance}</p>
         </div>
+
+        <CSSTransitionGroup 
+          transitionName="modalTransition" 
+          transitionEnterTimeout={600} 
+          transitionLeaveTimeout={600}>
+          {this.state.navOpen === true ?
+            <MenuItems 
+              closeModalMenu={this.closeModalMenu} 
+              onActivate={this.handleItem} 
+              activeItemIndex={this.state.activeItemIndex} 
+              menuItems={appAreas} />
+          : null}
+        </CSSTransitionGroup>
       </div>
   )}
 })
