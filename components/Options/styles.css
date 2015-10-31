@@ -1,3 +1,4 @@
+/** NEW **/
 /** @define Options; use strict */
 
 .Options {}
@@ -10,62 +11,7 @@
   width: 150px;
 }
 
-.hidden {
-    display: none;
-}
-
 .accordionDesc {
 	margin-bottom: 8px;
 	font-size: .8em;
-}
-
-.button {
-  margin: auto;
-  width: 275px;
-  /*height: 30px;
-  line-height: 30px; */
-  text-align: center;
-  border-radius: 6px;
-  cursor: pointer;
-  border: 4px solid black;
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.next {
-  color: #ffffff;
-  background: #ff9900;
-  border: 4px solid #ff9900;
-}
-
-.next:hover {
-  background: #ffad32;
-}
-
-.selected {
-  color: #ffffff;
-  background: #9098d3;
-  border: 4px solid #9098d3;
-}
-
-.selected:hover {
-  background: #b7bce2;
-}
-
-.unselected {
-  color: #9098d3;
-  background: #ffffff;
-  border: 4px solid #9098d3;
-}
-
-.unselected:hover {
-  color: #ffffff;
-  background: #b7bce2;
-}
-
-.disabled {
-  color: #cccccc;
-  background: #fff;
-  border: 4px solid #cccccc;
 }
