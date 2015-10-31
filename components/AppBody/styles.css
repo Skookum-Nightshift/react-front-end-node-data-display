@@ -18,17 +18,16 @@
 }
 
 .button {
-  margin: auto;
-  width: 100%;
-  /*height: 30px;
-  line-height: 30px; */
-  text-align: center;
   border-radius: 3px;
-  cursor: pointer;
   border: 3px solid black;
+  cursor: pointer;
   font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
   font-size: 14px;
+  font-weight: 500;
+  margin: auto auto 8px;
+  outline: none;
+  text-align: center;
+  width: 100%;
 }
 
 .next {
