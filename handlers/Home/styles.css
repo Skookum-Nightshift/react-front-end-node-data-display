@@ -22,9 +22,14 @@ div {
 
 .menu-item {
   width: 500px;
-  height: 30px;
-  line-height: 30px;
+  height: 50px;
+  line-height: 50px;
   text-align: left;
+  /*border: 1px solid black;*/
+}
+
+.menu-item img {
+  vertical-align: middle;
 }
 
 .menuOptionList {
@@ -37,24 +42,28 @@ div {
   height: 30px;
   width: 60px;
   line-height: 30px;
+  vertical-align: middle;
+  margin-right: 6px;
+  border-radius: 3px;
+  text-align: center;
 }
 
 .navselected {
   color: #ff9900;
   background: #ffffff;
-  border: 4px solid #ffffff;
+  border: 3px solid #ffffff;
 }
 
 .navunselected {
   color: #ffffff;
   background: #9098d3;
-  border: 4px solid #ffffff;
+  border: 3px solid #ffffff;
 }
 
 .navdisabled {
   color: #cccccc;
   background: #9098d3;
-  border: 4px solid #cccccc;
+  border: 3px solid #cccccc;
 }
 
 /* other */
