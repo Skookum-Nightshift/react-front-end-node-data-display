@@ -6,10 +6,130 @@
 
 .MenuItems-child.is-state {}
 
+/* animatedModal Styling */
+.noOverflow {
+  overflow: hidden;
+  height: 100%;
+}
+
+#closebt-container {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin-top: 26px;
+	-webkit-filter: invert(1);
+  filter: invert(1);
+ }
+
+.closebt {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.closebt:hover {
+  transform: rotate(90deg);
+}
+
+body.modalOpen {
+  overflow: hidden;
+}
+
+.modalDiv {
+  position: fixed;
+  overflow: auto;
+  text-align: left;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  z-index: 900;
+  background-color: #9098d3;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.modal-container {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: -8px;
+}
+
+.modal-body {
+    opacity: 1;
+    display: block;
+    transform: scaleX(1) scaleY(1);
+    transform-origin: 50% 50% 0px;
+    flex: 0 272px;
+}
+
 .menuIcon {
   width: 30px;
 }
+.menu-item {
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  /*border: 1px solid black;*/
+}
 
-.testIndex {
-	background-color: red;
+.menu-item img {
+  vertical-align: middle;
+  padding-right: 12px;
+}
+
+.menuOptionList {
+  display: inline;
+}
+
+.menuOptionListItem {
+  display: inline-block;
+  list-style-type: none;
+  height: 26px;
+  width: 60px;
+  line-height: 28px;
+  vertical-align: middle;
+  margin-right: 6px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 12pt;
+}
+
+.navselected {
+  color: #ff9900;
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  font-weight: bold;
+}
+
+.navunselected {
+  color: #ffffff;
+  background: #9098d3;
+  border: 3px solid #ffffff;
+}
+
+.navdisabled {
+  color: #cccccc;
+  background: #9098d3;
+  border: 3px solid #cccccc;
+}
+
+#animatedModal ul {
+	padding: 0px;
+}
+
+#animatedModal img {
+	-webkit-filter: invert(1);
+  filter: invert(1);
 }

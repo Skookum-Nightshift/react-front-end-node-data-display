@@ -54,7 +54,7 @@ class MenuItems extends React.Component {
   getListItem (item) {
     let setItems = item.options.map((option) => {
       return (
-        <li className={item.set === option ? "navselected menuOptionListItem" : 'navunselected menuOptionListItem'}>{option}</li>
+        <li className={item.set === option ? "navselected menuOptionListItem" : 'navunselected menuOptionListItem'}>${option}</li>
       );
      });
     return (
