@@ -92,7 +92,7 @@
 }
 
 .column-landing .btn-dark {
-  border-radius: 0;
+  border-radius: 3px;
   color: #fff;
   background-color: #ff9900;
 }
@@ -131,6 +131,7 @@
 
 .column-landing small { 
   font-size: 85%;
+  color: #aaa;
 }
 
 .column-landing .padding-cus {
