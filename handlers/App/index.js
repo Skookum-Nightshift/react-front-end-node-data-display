@@ -124,7 +124,9 @@ let App = React.createClass({
               closeModalMenu={this.closeModalMenu} 
               onActivate={this.handleItem} 
               activeItemIndex={this.state.activeItemIndex} 
-              menuItems={appAreas} />
+              menuItems={appAreas}
+              page={this.state.page}
+              balance={this.state.balance} />
           : null}
         </CSSTransitionGroup>
       </div>

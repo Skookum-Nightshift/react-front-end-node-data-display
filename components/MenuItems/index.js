@@ -13,6 +13,7 @@ class MenuItems extends React.Component {
     this.handleItemClick = this.handleItemClick.bind(this);
     this.disableUnvisited = this.getListItem.bind(this);
     this.renderMenuItems = this.renderMenuItems.bind(this);
+    this.setButtonState = this.setButtonState.bind(this);
   }
 
   handleItemClick (activeItemIndex) {
@@ -51,10 +52,20 @@ class MenuItems extends React.Component {
     }
   }
 
+  setButtonState (cost, item) {
+    if (cost > (this.props.balance + item.set) || (item.type === "setback" && item.visited === true && (this.props.page - 1) > this.props.activeItemIndex)) {
+      return "navdisabled menuOptionListItem";
+    } else if (item.set === cost) {
+      return "navselected menuOptionListItem";
+    } else {
+      return "navunselected menuOptionListItem";
+    }
+  }
+
   getListItem (item) {
     let setItems = item.options.map((option) => {
       return (
-        <li className={item.set === option ? "navselected menuOptionListItem" : 'navunselected menuOptionListItem'}>${option}</li>
+        <li className={this.setButtonState(option, item)}>${option}</li>
       );
      });
     return (
