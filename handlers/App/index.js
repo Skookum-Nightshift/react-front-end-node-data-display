@@ -20,6 +20,7 @@ let App = React.createClass({
       diverged: false,
       budgetBusted: false,
       completed: false,
+      getInvolved: false,
     };
   },
 
@@ -66,6 +67,14 @@ let App = React.createClass({
     this.setState({completed: true});
   },
 
+  setGetInvolved () {
+    this.setState({getInvolved: true});
+  },
+
+  setSocialShare () {
+    this.setState({getInvolved: false});
+  },
+
   unDiverge () {
     this.setState({diverged: false});
   },
@@ -108,6 +117,9 @@ let App = React.createClass({
           setPage={this.setPage} 
           showFirstQuestion={this.showFirstQuestion}
           appCompleted={this.state.completed} 
+          getInvolved={this.state.getInvolved}
+          setGetInvolved={this.setGetInvolved}
+          setSocialShare={this.setSocialShare} 
           unDiverge={this.unDiverge} 
           setToCompleted={this.setToCompleted} />
       
