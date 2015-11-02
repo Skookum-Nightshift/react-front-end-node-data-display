@@ -56,10 +56,10 @@ let povertyData = [
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/burger.png", "http://simpleicon.com/wp-content/uploads/pizza_1.png","http://simpleicon.com/wp-content/uploads/plate__spoon.png"],
     "optionShort": ["3 meals a day", "2 meals a day", "1 meal a day"],
-    "optionDesc": ["You're family is satisfied with 3 meals a day and snacks.", "Your family is a bit hungry during the day.", "Your family is hungry most of the time. It's hard to concentrate at work and school."]
+    "optionDesc": ["Your family is satisfied with 3 meals a day and snacks.", "Your family is a bit hungry during the day.", "Your family is hungry most of the time. It's hard to concentrate at work and school."]
 }, {
     "name": "Food Fact",
-    "desc": "69,154 households receive food stamps in the Charlotte five county region.",
+    "desc": "69,154 households receive food stamps in the Charlotte five-county region.",
     "options": [],
     "set": null,
     "type": "fact",
@@ -75,7 +75,7 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/car_4.png", "http://simpleicon.com/wp-content/uploads/train.png", "http://simpleicon.com/wp-content/uploads/bicycle.png"],
-    "optionShort": ["Car", "Public Transit", "Walk or bike"],
+    "optionShort": ["Car", "Public transit", "Walk or bike"],
     "optionDesc": ["You have your own car and insurance. It's easy to get around.", "Walk, bike, and public transit. The train and bus schedules can be tricky.", "Walk or bike everywhere. Inconvenient, espeically in cold and rainy weather."]
 }, {
     "name": "Transportation Fact",
@@ -89,14 +89,14 @@ let povertyData = [
     "optionDesc": []
 }, {
     "name": "New Clothes??",
-    "desc": "Your daughter is growing so quick! She needs some bigger clothes.",
+    "desc": "Your daughter is growing so quickly! She needs some bigger clothes.",
     "options": [160, 40],
     "set": null,
     "type": "setback",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/shopping_trolley_7.png", "http://simpleicon.com/wp-content/uploads/t_shirt.png"],
     "optionShort": ["Shop for new clothes", "Hand-me-downs"],
-    "optionDesc": ["4 sets of new and stylish pants and shirts.", "2 sets of hand-me-down or used clothing. Nothing like her friends' clothes."]
+    "optionDesc": ["4 sets of new and stylish pants and shirts.", "2 sets of hand-me-down or used clothing (nothing like her friends'.) clothes."]
 }, {
     "name": "Your Health Insurance",
     "desc": "What kind of healthcare do you have?",
@@ -105,7 +105,7 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/docter__nurse_1.png", "http://simpleicon.com/wp-content/uploads/surgeon_1.png", "http://simpleicon.com/wp-content/uploads/nurse1.png"],
-    "optionShort": ["Family Plan", "You Only", "None"],
+    "optionShort": ["Family plan", "You only", "None"],
     "optionDesc": ["Health insurance for you and your family.", "Health insurance for you only.", "No health insurance. You pay all medical expenses out of pocket."]
 }, {
     "name": "Health Fact",
@@ -129,7 +129,7 @@ let povertyData = [
     "optionDesc": ["2 smart phones, TV with cable, home computer. Plenty of entertainment and leisure.", "2 cell phones and a TV, but no cable.", "1 cell phone and no TV or electronics for play."]
 }, {
     "name": "Technology Fact",
-    "desc": "Technology is important for leisure and communicating with your fiends and family.",
+    "desc": "Technology is important for leisure and communicating with your friends and family.",
     "options": [],
     "set": null,
     "type": "fact",
@@ -138,15 +138,15 @@ let povertyData = [
     "optionShort": [],
     "optionDesc": []
 }, {
-    "name": "Ugg, sick!!",
+    "name": "Ugh, sick!!",
     "desc": "Your spouse got pretty sick. How do you handle the trip to the hospital?",
     "options": [140, 100],
     "set": null,
     "type": "setback",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/stethoscope1.png", "http://simpleicon.com/wp-content/uploads/ambulance1.png"],
-    "optionShort": ["Emergency room and Medication", "Emergency room Only"],
-    "optionDesc": ["Emergency room plus medication, better in now time", "Emergency room visit, but no medication, maybe miss some work, and earn less this month"]
+    "optionShort": ["Emergency room and medication", "Emergency room only"],
+    "optionDesc": ["Emergency room plus medication, better in no time.", "Emergency room visit but no medication. You may miss some work and earn less this month."]
 }, {
     "name": "Your Family Leisure",
     "desc": "How many fun outings for your family this month?",
@@ -159,7 +159,7 @@ let povertyData = [
     "optionDesc": ["2 family activities, like eating out, movies, or a concert", "1 family activity, like a picnic, bowling, or local music show", "No family outings, maybe visiting nearby family, or a local park."]
 }, {
     "name": "Family Leisure Fact",
-    "desc": "Spending family time on leisure activities together is associated with greater emotional bonding, better communication, better school grades, and less behavioral problems. ",
+    "desc": "Spending family time on leisure activities together is associated with greater emotional bonding, better communication, better school grades, and fewer behavioral problems.",
     "options": [],
     "set": null,
     "type": "fact",
@@ -185,11 +185,11 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/washing_machine.png","http://simpleicon.com/wp-content/uploads/backet.png","http://simpleicon.com/wp-content/uploads/shop-4.png"],
-    "optionShort": ["Your own Washer/Dryer", "Shared Laundry Room", "Laundromat"],
-    "optionDesc": ["Payment for your own washer and dryer in your home.", "Shared laundry room in your complex.", "Laundromat that you can walk to, and you have to wait around."]
+    "optionShort": ["Your own washer/dryer", "Shared laundry room", "Laundromat"],
+    "optionDesc": ["Payment for your own washer and dryer in your home", "Shared laundry room in your complex", "Laundromat that you can walk to, and you have to wait around"]
 }, {
     "name": "Laundry Fact",
-    "desc": "Basic chores, like laundry can be difficult for those in poverty, with limited budgets and transportation.",
+    "desc": "Basic chores like laundry can be difficult for those in poverty, with limited budgets and transportation.",
     "options": [],
     "set": null,
     "type": "fact",
@@ -209,7 +209,7 @@ let povertyData = [
     "optionDesc": ["Small savings, for vacations or house projects", "Tiny savings, for clothes and shopping", "Nothing left for savings after other expenses."]
 }, {
     "name": "Savings Fact",
-    "desc": "A savings reserve is often unavailable for those in poverty. Some familes are one crisis away (car breakdown or medical bill) from loosing their home.",
+    "desc": "A savings reserve is often unavailable for those in poverty. Some families are one crisis away (car breakdown or medical bill) from losing their homes.",
     "options": [],
     "set": null,
     "type": "fact",

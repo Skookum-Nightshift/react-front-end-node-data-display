@@ -11,7 +11,8 @@ class MenuItems extends React.Component {
     super();
 
     this.handleItemClick = this.handleItemClick.bind(this);
-    this.disableUnvisited = this.getListItem.bind(this);
+    this.setButtonState - this.setButtonState.bind(this);
+    this.getListItem = this.getListItem.bind(this);
     this.renderMenuItems = this.renderMenuItems.bind(this);
   }
 
@@ -35,36 +36,48 @@ class MenuItems extends React.Component {
     }
   }
 
-  linkVisited (item) {
-    // We must get the index of the item from the unfiltered list to make the links 
-    // in the filtered list activate the appropriate item when clicked.
-    let unfilteredItemIndex = this.props.menuItems.indexOf(item);
-
-    if (item.visited === true) {
-      return (
-        <a href="#" onClick={this.handleItemClick.bind(this, unfilteredItemIndex)}>
-          {this.renderImg(item)}
-        </a>
-      );
+  setButtonState (cost, item) {
+    if (cost > (this.props.balance + item.set) || (item.type === "setback" && item.visited === true && (this.props.page - 1) > this.props.activeItemIndex)) {
+      return "navdisabled menuOptionListItem";
+    } else if (item.set === cost) {
+      return "navselected menuOptionListItem";
     } else {
-      return (<img src={item.sectionImage[0]} className="menuIcon" />);
+      return "navunselected menuOptionListItem";
     }
   }
 
   getListItem (item) {
+    // We must get the index of the item from the unfiltered list to make the links 
+    // in the filtered list activate the appropriate item when clicked.
+    let unfilteredItemIndex = this.props.menuItems.indexOf(item);
+
     let setItems = item.options.map((option) => {
       return (
-        <li className={item.set === option ? "navselected menuOptionListItem" : 'navunselected menuOptionListItem'}>{option}</li>
+        <li className={this.setButtonState(option, item)}>${option}</li>
       );
      });
-    return (
-      <div className="menu-item">
-        {this.linkVisited(item)}
-        <ul className="menuOptionList">
-          {setItems}
-        </ul>
-      </div>
-    );
+    
+    if (item.visited === true) {
+      return (
+        <a href="#" onClick={this.handleItemClick.bind(this, unfilteredItemIndex)}>
+          <div className="menu-item">
+            {this.renderImg(item)}
+            <ul className="menuOptionList">
+              {setItems}
+            </ul>
+          </div>
+        </a>
+      );
+    } else {
+      return (
+        <div className="menu-item">
+          {this.renderImg(item)}
+          <ul className="menuOptionList">
+            {setItems}
+          </ul>
+        </div>
+      );
+    }
   }
 
   // TODO: (bugfix) The bold/test index class application has a bug. It doesn't apply to the 
