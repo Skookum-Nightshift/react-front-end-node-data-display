@@ -7,6 +7,16 @@
 
 .AppBody-child.is-state {}
 
+.appBodyTransition-enter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 .btn-group span > div:nth-child(1),
 #actionButton > div, 
 #beginState > div {
@@ -68,24 +78,16 @@
   border: 3px solid #cccccc;
 }
 
-@media all and (min-width: 414px) {
-  .btn-group span > div:nth-child(1),
-  #actionButton > div, 
-  #beginState > div { 
-    width: 350px;
-  }
-
-  .button {
-    width: 325px;
-  }
-}
-
 p {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: #606060;
   text-align: center;
+}
+
+#beginState p, #endState p {
+  display: inline-block;
 }
 
 .social {
@@ -111,4 +113,21 @@ i {
 #endState a {
   display: inline-block;
   margin: 10px;
+}
+
+@media all and (min-width: 414px) {
+  .btn-group span > div:nth-child(1),
+  #actionButton > div, 
+  #beginState > div { 
+    width: 350px;
+  }
+
+  .button {
+    width: 325px;
+  }
+
+  #beginState p, #endState p {
+    width: 325px;
+    display: inline-block;
+  }
 }

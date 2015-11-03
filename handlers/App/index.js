@@ -123,10 +123,6 @@ let App = React.createClass({
           unDiverge={this.unDiverge} 
           setToCompleted={this.setToCompleted} />
       
-        <div className="balance">
-          <p>Your balance is: ${this.state.balance}</p>
-        </div>
-
         <CSSTransitionGroup 
           transitionName="modalTransition" 
           transitionEnterTimeout={600} 

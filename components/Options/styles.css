@@ -14,7 +14,6 @@
 .options-desc {
   margin: 0 auto 10px;
   text-align: justify;
-  width: 325px;
 }
 
 .sectionIcon {
@@ -28,7 +27,16 @@
   font-size: 12px;
   margin: -8px auto 8px;
   padding: 5px;
-  width: 300px;
+  width: 92%;
 }
 
 
+@media all and (min-width: 414px) {
+  .options-desc {
+    width: 325px;
+  }
+
+  .accordionDesc {
+    width: 300px;
+  }
+}

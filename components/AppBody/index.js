@@ -55,7 +55,8 @@ class AppBody extends React.Component {
     let min = Math.min.apply(null, item.options);
     
     return (
-      <div>
+      <CSSTransitionGroup transitionName="appBodyTransition" transitionEnterTimeout={600} transitionLeaveTimeout={600}>
+      <div key={item.name} className="animated">
         <h1>{item.name}</h1>
 
         <Options 
@@ -67,7 +68,11 @@ class AppBody extends React.Component {
         <div id="actionButton">
           {this.nextButton(min, item)}
         </div>
+        <div className="balance">
+          <p>Your balance is: ${this.props.balance}</p>
+        </div>
       </div>
+      </CSSTransitionGroup>
     );
   }
 
@@ -76,10 +81,10 @@ class AppBody extends React.Component {
       return (
         <div id="beginState">
           <h1>How to Play...</h1>
-          <p style={{"width": "325px", "display": "inline-block"}}>Assume you’re a parent. You work. Your spouse works part-time. You have a 7 year old daughter and 12 year old son.</p><br />
-          <img src="http://simpleicon.com/wp-content/uploads/meeting.png" alt="family of 4" className="sectionIcon" />
-          <p>Stay within your limited monthly budget.</p>
-          <p>Experience the tough choices of 1 in 5 families in Charlotte.</p>
+          <p>Assume you’re a parent. You work. Your spouse works part-time. You have a 7 year old daughter and 12 year old son.</p><br />
+          <img src="http://simpleicon.com/wp-content/uploads/meeting.png" alt="family of 4" className="sectionIcon" /><br />
+          <p>Stay within your limited monthly budget.<br />
+          <br />Experience the tough choices of 1 in 5 families in Charlotte.</p>
           <br />
           <button className="button next" onClick={this.props.showFirstQuestion}>Begin</button>
         </div>
@@ -88,8 +93,8 @@ class AppBody extends React.Component {
       return (
         <div id="endState">
           <h1>How did you fare?</h1>
-          <p style={{"width": "325px", "display": "inline-block"}}>You had to make some hard choices! These are the choices of 1 in 5 families in Charlotte.</p><br />
-          <p style={{"width": "325px", "display": "inline-block"}}>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p><br />
+          <p>You had to make some hard choices! These are the choices of 1 in 5 families in Charlotte.</p><br />
+          <p>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p><br />
           <a href="https://www.facebook.com/dialog/feed?app_id=928451220563474&link=http://povsim-staging.herokuapp.com/&picture=http://povsim-staging.herokuapp.com/public/img/uncc_logo2.png&name=Paycheck%20to%20Paycheck&description=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families.&redirect_uri=http://povsim-staging.herokuapp.com/">
             <div className="social"><FontAwesome name="facebook" size="5x"/></div>
           </a>
@@ -106,7 +111,7 @@ class AppBody extends React.Component {
         <div id="endState">
           <h1>Get Involved!</h1>
           <p>Click something below to get involved!</p>
-          <p style={{"width": "325px", "display": "inline-block"}}>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p><br />
+          <p>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p><br />
           
           <a href="http://www.uwcentralcarolinas.org/invest" id="donate" className="button selected">Donate!</a><br />
           
@@ -126,7 +131,14 @@ class AppBody extends React.Component {
     let selectedItem = this.props.selectedItem;
 
     return (
-      <div className="appBody" style={{"paddingLeft": "24px", "paddingRight": "24px"}}>{this.beginOrEnd(selectedItem)}</div>
+      <div className="appBody" style={{"paddingLeft": "24px", "paddingRight": "24px"}}>
+        {this.beginOrEnd(selectedItem)}
+        {(this.props.appCompleted === true && this.props.diverged === false) ? 
+          <div className="balance">
+            <p>Your balance is: ${this.props.balance}</p>
+          </div>
+        : null}
+      </div>
 
     )
   }
