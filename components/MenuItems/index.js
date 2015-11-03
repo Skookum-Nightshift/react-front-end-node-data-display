@@ -57,7 +57,7 @@ class MenuItems extends React.Component {
       );
      });
     
-    if (item.visited === true) {
+    if (item.visited && item.set) {
       return (
         <a href="#" onClick={this.handleItemClick.bind(this, unfilteredItemIndex)}>
           <div className="menu-item">
