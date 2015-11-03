@@ -106,7 +106,7 @@ class AppBody extends React.Component {
           <h1>Get Involved!</h1>
           <p>Click something below to get involved!</p>
           <p>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p>
-          <a href="https://www.facebook.com/UWCentralCarolinas">
+          <a href="https://www.facebook.com/dialog/feed?app_id=928451220563474&link=http://povsim-staging.herokuapp.com/&picture=http://povsim-staging.herokuapp.com/public/img/uncc_logo2.png&name=Paycheck%20to%20Paycheck&description=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families.&redirect_uri=http://povsim-staging.herokuapp.com/">
             <div className="social"><FontAwesome name="facebook" size="5x"/></div>
           </a>
           <a href="https://twitter.com/home?status=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%40myUWCC%20http%3A//bit.ly/1Rjfrwm">
