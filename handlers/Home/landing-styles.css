@@ -1,8 +1,12 @@
 /** @define Home; use strict */
 @import 'normalize.css';
 
-.Home {
-
+html {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6)), url(http://povsim-staging.herokuapp.com/public/img/splashbg.jpg) no-repeat center center fixed;
+  webkit-background-size: cover;
+    -moz-background-size: cover;
+      -o-background-size: cover;
+         background-size: cover;
 }
 
 .column-landing {
@@ -10,11 +14,6 @@
   height: 100%;
   float: left;
   padding: 1em;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(http://povsim-staging.herokuapp.com/public/img/splashbg.jpg) no-repeat center center scroll;
-  webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
 }
 
 .column-landing .container {
