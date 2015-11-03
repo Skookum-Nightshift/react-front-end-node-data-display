@@ -15,7 +15,8 @@ class Options extends React.Component {
     this.renderOptions = this.renderOptions.bind(this);
   }
 
-  setBalance (item, cost, choice) {
+  setBalance (item, cost, choice, event) {
+    console.log(event);
     event.stopPropagation(); // prevent tap on mobile devices from bleeding through transition
     let bal = this.props.balance;
 
