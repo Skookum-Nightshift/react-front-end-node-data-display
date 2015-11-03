@@ -48,7 +48,7 @@
   font-size: 60pt;
   font-weight: 700;
   color: white;
-  text-align: left;
+  text-align: center;
 }
 
 .column-landing .vertical-align--bottom {
@@ -89,7 +89,7 @@
 
 .column-landing .btn-group-lg>.btn, .column-landing .btn-lg {
   padding: 10px 16px;
-  font-size: 36pt:;
+  font-size: 36pt;
   line-height: 1.3333333;
   border-radius: 5px;
 }
@@ -171,6 +171,7 @@
 @media all and (max-width: 500px) {
   .column-landing .vertical-align--middle h1 {
     font-size: 3em;
+    text-align: center;
   } 
 
   .text-block {
