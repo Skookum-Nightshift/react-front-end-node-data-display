@@ -107,19 +107,7 @@ i {
   margin-left: 25px;
 }
 
-#endState {
-  display: inline-block;
-  /*margin: 10px;*/
-  width: 325px;
-}
-
-#beginState {
-  display: inline-block;
-  /*margin: 10px;*/
-  width: 325px;
-}
-
-a {
+#endState a {
   display: inline-block;
   margin: 10px;
 }
