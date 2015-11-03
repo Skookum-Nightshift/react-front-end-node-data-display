@@ -8,7 +8,7 @@
     "eslint": "eslint .",
     "suit": "node scripts/suit-conformance",
     "start": "export PORT=4000 && DEBUG=*,-babel node . & node server.js",
-	"start-windows": "set PORT=4000 && set DEBUG=*,-babel & start /b node index.js & node server.js",
+    "start-windows": "set PORT=4000 && set DEBUG=*,-babel & start /b node index.js & node server.js",
     "build": "node ./scripts/build && node ./dist/main.js",
     "test": "jest",
     "preinstall": "npm prune"
@@ -41,10 +41,11 @@
     "react": "^0.13.2",
     "react-cookie": "^0.3.4",
     "react-dropzone": "^1.2.4",
+    "react-fontawesome": "^0.3.3",
     "react-hot-loader": "^1.2.4",
     "react-resolver": "iamdustan/react-resolver#expose-client-data-dist",
     "react-router": "^0.13.2",
-    "react-tap-event-plugin": "^0.1.6",
+    "react-tap-event-plugin": "^0.1.8",
     "react-tween-state": "0.0.5",
     "rework": "^1.0.1",
     "rework-suit-conformance": "^0.4.2",
@@ -59,22 +60,5 @@
     "webpack": "^1.8.2",
     "webpack-dev-server": "^1.8.0",
     "websocket-rails-js": "jcgertig/websocket-rails-js#sub_protocols"
-  },
-  "devDependencies": {
-    "jest-cli": "0.4.1"
-  },
-  "jest": {
-    "scriptPreprocessor": "<rootDir>/jest-preprocessor",
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "jsx"
-    ],
-    "testFileExtensions": [
-      "js"
-    ]
   }
 }

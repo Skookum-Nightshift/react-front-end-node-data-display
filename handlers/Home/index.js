@@ -1,20 +1,35 @@
+/** @flow */
+'use strict';
+
+require('./landing-styles.css');
+require('./styles.css');
+
 import React from 'react';
 import {Resolver} from 'react-resolver';
 
 var Home = React.createClass({
-	handleClick () {
-		alert('We\'re up and running, Dude!');
-	},
-	
+
 	render () {
 		return (
-			<div>
-				<p><a href='#' onClick={this.handleClick}>Are we up and running?</a></p>
-				<h2>Check out the <a href="/app">Povizio engine.</a></h2>
-				<p>Just added interspersed setbacks. Can you spot it? Still need work to keep people from skipping ahead, require $ selections, etc.</p>
-			</div>
-		);
-	}
+		<div className="column-landing">
+		  <div className="container">
+		    <div className="vertical-align-wrap">
+		      <div className="vertical-align vertical-align--middle">
+		        <h1 data-sr>Paycheck<br />to<br />Paycheck</h1>
+		            <h4>See the tough choices made by those in poverty.</h4>
+		            <h4>What would you choose?</h4>
+		            <bold>
+		              <a href="/app" className="btn btn-dark btn-lg">Get Started</a>
+		            </bold>
+		            <p className="padding-cus"><b><small>Partnered with:</small></b></p>
+		            <img src="public/img/uwcc.jpg" />
+		            <br />
+		            <div className="fb-share-button" data-href="https://povsim-staging.herokuapp.com/" data-layout="button_count"/>
+	              </div>
+		    </div>
+		  </div>
+		</div>
+                      );	}
 });
 
 Home.displayName = 'Home';

@@ -1,0 +1,34 @@
+/** NEW **/
+/** @define Options; use strict */
+
+.cost {
+  color: #606060;
+}
+
+.Options {}
+
+.Options-child {}
+
+.Options-child.is-state {}
+
+.options-desc {
+  margin: 0 auto 10px;
+  text-align: justify;
+  width: 325px;
+}
+
+.sectionIcon {
+  width: 150px;
+}
+
+.accordionDesc {
+  background-color: #ffad32;
+  /*border-radius: 0 0 10px 10px;*/
+  color: #fff;
+  font-size: 12px;
+  margin: -8px auto 8px;
+  padding: 5px;
+  width: 300px;
+}
+
+

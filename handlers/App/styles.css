@@ -1,0 +1,121 @@
+/** @define App; use strict */
+@import 'normalize.css';
+
+.App {
+
+}
+
+/* appBar Styling */
+#appBar {
+  background-color: #ff9900;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-height: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+#appBar h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 64px;
+}
+
+/*Adjust long app names in h1 on smaller devices*/
+@media (max-width: 340px) {
+	#appBar h1 {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 270px) {
+	#appBar h1 {
+		display: none;
+	}
+}
+
+#appBar a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#appBar .fa {
+	font-size: 22pt;
+}
+
+#menuButton {
+	margin-top: 16px;
+	margin-right: 19px;
+	margin-left: auto;
+}
+
+/* Flexbox layout */
+#appWrapper {
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  justify-content: center;
+}
+
+#appWrapper, #appBarContainer, .appBody, .balance {
+	flex: 1 100%;
+}
+
+.appBody, .balance {
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+p {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #606060;
+  text-align: center;
+}
+
+.social {
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  background-color: #9098d3;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+i {
+  padding: 10px;
+}
+
+.fa-facebook {
+  margin-left: 25px;
+}
+
+@media all and (min-width: 800px) {
+	.appBody { 
+		flex: 0 800px; 
+		padding: 0px 24px;
+	}
+
+	.balance {
+		flex: 1 100%;
+		padding: 0px 24px;
+	}
+}

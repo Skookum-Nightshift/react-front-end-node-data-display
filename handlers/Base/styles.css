@@ -1,2 +1,12 @@
 /** @define AppBase; use strict */
 @import 'normalize.css';
+
+.LeftNavOverlay {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9;
+}
