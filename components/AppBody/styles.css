@@ -7,6 +7,17 @@
 
 .AppBody-child.is-state {}
 
+.appBodyTransition-enter.appBodyTransition-enter-active {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+}
+
+.appBodyTransition-leave.appBodyTransition-leave-active {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+}
+
+
 .appBodyTransition-enter {
   position: absolute;
   left: 0;
