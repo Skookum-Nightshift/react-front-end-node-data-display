@@ -63,7 +63,7 @@ class MenuItems extends React.Component {
           <div className="menu-item">
             {this.renderImg(item)}
             <ul className="menuOptionList">
-              {setItems}
+              <li className="navselected menuOptionListItem">{item.optionShort[item.options.indexOf(item.set)]}</li>
             </ul>
           </div>
         </a>
@@ -73,7 +73,7 @@ class MenuItems extends React.Component {
         <div className="menu-item">
           {this.renderImg(item)}
           <ul className="menuOptionList">
-            {setItems}
+            <li className="navdisabled menuOptionListItem">{item.name}</li>
           </ul>
         </div>
       );

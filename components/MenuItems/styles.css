@@ -97,7 +97,8 @@ body.modalOpen {
   display: inline-block;
   list-style-type: none;
   height: 26px;
-  width: 60px;
+  /* width: 60px; */
+  width: 207px;
   line-height: 28px;
   vertical-align: middle;
   margin-right: 6px;

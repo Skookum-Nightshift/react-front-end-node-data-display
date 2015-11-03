@@ -5,17 +5,6 @@ Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
 
 Copyright (c) 2015 Daniel Eden
-
-*****************************************Povizio Instructions******************************************
-Current modal enter class is .zoomIn
-Current modal leave class is .zoomOut
-
-Those are currently changed below to .modalTransition-enter and .modalTransition-leave, respectively.
-
-To switch to another animation, change the aforementioned class names back to whatever they were before 
-and change the new class names to .modalTransition-enter and .modalTransition-leave.
-
-This could be made a lot cleaner with Sass' @extend
 */
 
 .animated {

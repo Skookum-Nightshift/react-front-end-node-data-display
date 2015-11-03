@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react/addons';
 import {Resolver} from 'react-resolver';
 
+let {CSSTransitionGroup} = React.addons;
 require('./styles.css');
 
 const FontAwesome = require('react-fontawesome');
@@ -54,19 +55,19 @@ class AppBody extends React.Component {
     let min = Math.min.apply(null, item.options);
     
     return (
-        <div>
-          <h1>{item.name}</h1>
+      <div>
+        <h1>{item.name}</h1>
 
-          <Options 
-            handleBalance={this.props.handleBalance}
-            balance={this.props.balance} 
-            selectedItem={item}
-            page={this.props.page}
-            activeItemIndex={this.props.activeItemIndex} />
-          <div id="actionButton">
-            {this.nextButton(min, item)}
-          </div>
+        <Options 
+          handleBalance={this.props.handleBalance}
+          balance={this.props.balance} 
+          selectedItem={item}
+          page={this.props.page}
+          activeItemIndex={this.props.activeItemIndex} />
+        <div id="actionButton">
+          {this.nextButton(min, item)}
         </div>
+      </div>
     );
   }
 
@@ -127,6 +128,7 @@ class AppBody extends React.Component {
 
     return (
       <div className="appBody" style={{"paddingLeft": "24px", "paddingRight": "24px"}}>{this.beginOrEnd(selectedItem)}</div>
+
     )
   }
 }
