@@ -10,13 +10,11 @@
 .appBodyTransition-enter.appBodyTransition-enter-active {
   -webkit-animation-delay: .5s;
   animation-delay: .5s;
-  z-index: -1;
 }
 
 .appBodyTransition-leave.appBodyTransition-leave-active {
   -webkit-animation-delay: .5s;
   animation-delay: .5s;
-  z-index: 10;
 }
 
 

@@ -16,6 +16,7 @@ class Options extends React.Component {
   }
 
   setBalance (item, cost, choice) {
+    event.stopPropagation(); // prevent tap on mobile devices from bleeding through transition
     let bal = this.props.balance;
 
     /**
