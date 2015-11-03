@@ -44,6 +44,7 @@
   color: #ffffff;
   background: #9098d3;
   border: 3px solid #9098d3;
+  text-decoration: none;
 }
 
 .selected:hover {

@@ -90,7 +90,7 @@ class AppBody extends React.Component {
           <h1>How did you fare?</h1>
           <p style={{"width": "325px", "display": "inline-block"}}>You had to make some hard choices! These are the choices of 1 in 5 families in Charlotte.</p><br />
           <p style={{"width": "325px", "display": "inline-block"}}>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p><br />
-          <a href="https://www.facebook.com/UWCentralCarolinas">
+          <a href="https://www.facebook.com/dialog/feed?app_id=928451220563474&link=http://povsim-staging.herokuapp.com/&picture=http://povsim-staging.herokuapp.com/public/img/uncc_logo2.png&name=Paycheck%20to%20Paycheck&description=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families.&redirect_uri=http://povsim-staging.herokuapp.com/">
             <div className="social"><FontAwesome name="facebook" size="5x"/></div>
           </a>
           <a href="https://twitter.com/home?status=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%40myUWCC%20http%3A//bit.ly/1Rjfrwm">
@@ -107,8 +107,11 @@ class AppBody extends React.Component {
           <h1>Get Involved!</h1>
           <p>Click something below to get involved!</p>
           <p style={{"width": "325px", "display": "inline-block"}}>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p><br />
-          <button id="donate" className="button selected">Donate!</button><br />
-          <button id="volunteer" className="button selected">Volunteer!</button>
+          
+          <a href="http://www.uwcentralcarolinas.org/invest" id="donate" className="button selected">Donate!</a><br />
+          
+          <a href="http://www.uwcentralcarolinas.org/give" id="volunteer" className="button selected">Volunteer!</a>
+          
           <br />
           <br /> 
           <div id="getInvolved"><button className="button selected" onClick={this.props.setSocialShare}>Share this!</button></div>
