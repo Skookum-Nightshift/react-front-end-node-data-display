@@ -16,21 +16,19 @@ var Home = React.createClass({
 		    <div className="vertical-align-wrap">
 		      <div className="vertical-align vertical-align--middle">
 		      	<div className="text-block">
-			        <h1 data-sr>Paycheck</h1>
-			        <h1>to</h1>
-			        <h1>Paycheck</h1>
-			        <h3>Brought to you by the United Way <br /> of Centeral Carolina</h3>
-		            <h4>See the tough choices made by those in poverty. <br /> What would you choose?</h4>
+			        <h1 data-sr>Paycheck to Paycheck</h1>
+			        <h3>Brought to you by United Way of Central Carolinas</h3>
+	            <h4>See the tough choices made by those in poverty. What would you choose?</h4>
 		      	</div>
 		      		<br />
-		            <bold>
-		              <a href="/app" className="btn btn-dark btn-lg">Get Started</a>
-		            </bold>
-		            <p className="padding-cus"><b><small>Partnered with:</small></b></p>
-		            <img src="public/img/uwcc.jpg" />
-		            <br />
-		            <div className="fb-share-button" data-href="https://povsim-staging.herokuapp.com/" data-layout="button_count"/>
-	              </div>
+	            <bold>
+	              <a href="/app" className="btn btn-dark btn-lg">Get Started</a>
+	            </bold>
+	            <p className="padding-cus"><b><small>Partnered with:</small></b></p>
+	            <img src="public/img/uwcc.jpg" />
+	            <br />
+	            <div className="fb-share-button" data-href="https://povsim-staging.herokuapp.com/" data-layout="button_count"/>
+              </div>
 		    </div>
 		  </div>
 		</div>

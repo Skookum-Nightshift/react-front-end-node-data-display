@@ -164,6 +164,7 @@
   border: 5pt solid #ff9900;
   display: inline-block;
   margin: auto;
+  width: 475px;
 }
 
 /* Fix display on smaller devices */
@@ -171,4 +172,8 @@
   .column-landing .vertical-align--middle h1 {
     font-size: 3em;
   } 
+
+  .text-block {
+    width: auto;
+  }
 }
