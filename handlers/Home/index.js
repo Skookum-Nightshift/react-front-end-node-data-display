@@ -15,9 +15,14 @@ var Home = React.createClass({
 		  <div className="container">
 		    <div className="vertical-align-wrap">
 		      <div className="vertical-align vertical-align--middle">
-		        <h1 data-sr>Paycheck<br />to<br />Paycheck</h1>
-		            <h4>See the tough choices made by those in poverty.</h4>
-		            <h4>What would you choose?</h4>
+		      	<div className="text-block">
+			        <h1 data-sr>Paycheck</h1>
+			        <h1>to</h1>
+			        <h1>Paycheck</h1>
+			        <h3>Brought to you by the United Way <br /> of Centeral Carolina</h3>
+		            <h4>See the tough choices made by those in poverty. <br /> What would you choose?</h4>
+		      	</div>
+		      		<br />
 		            <bold>
 		              <a href="/app" className="btn btn-dark btn-lg">Get Started</a>
 		            </bold>

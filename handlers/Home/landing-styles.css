@@ -43,10 +43,12 @@
 
 .column-landing .vertical-align--middle h1 {
   margin: 0;
-  padding: 0;
-  font-size: 4em;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 60pt;
   font-weight: 700;
   color: white;
+  text-align: left;
 }
 
 .column-landing .vertical-align--bottom {
@@ -66,8 +68,9 @@
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
+  margin-top: 8%;
+  font-size: 36pt;
+  font-weight: 600;
   line-height: 1.42857143;
   text-align: center;
   white-space: nowrap;
@@ -81,18 +84,18 @@
   user-select: none;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .column-landing .btn-group-lg>.btn, .column-landing .btn-lg {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 36pt:;
   line-height: 1.3333333;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 .column-landing .btn-dark {
-  border-radius: 3px;
+  border-radius: 5px;
   color: #fff;
   background-color: #ff9900;
 }
@@ -109,10 +112,11 @@
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
+  text-align: left;
 }
 
 .column-landing h1, .column-landing h2, .column-landing h3 {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -121,8 +125,22 @@
   margin-bottom: 10px;
 }
 
+.column-landing h3 {
+  color: #ff9900;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-weight: 500;
+  font-size: 20pt;
+  line-height: 24pt;
+}
+
 .column-landing h4 {
-  font-size: 18px;
+  font-size: 14pt;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  line-height: 16.8pt;
+  font-weight: 400;
 }
 
 .column-landing p {
@@ -140,6 +158,12 @@
 
 .column-landing .padding1 {
     padding-top: 10px;
+}
+
+.text-block {
+  border: 5pt solid #ff9900;
+  display: inline-block;
+  margin: auto;
 }
 
 /* Fix display on smaller devices */
