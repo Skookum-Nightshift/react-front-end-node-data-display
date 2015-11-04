@@ -33,5 +33,12 @@ div {
 
 h1 {
   color: #ff9900;
-  font-size: 1.8em;
+  font-size: 1.6em;
+  
+}
+
+@media all and (min-width: 414px) {
+  h1 {
+    font-size: 1.8em;
+  }
 }

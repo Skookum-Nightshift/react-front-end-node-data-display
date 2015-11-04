@@ -87,6 +87,10 @@ p {
   text-align: center;
 }
 
+.appBody h1 {
+  margin: 0.5em 0 0.3em 0;
+}
+
 #beginState p, #endState p {
   display: inline-block;
 }
@@ -130,5 +134,9 @@ i {
   #beginState p, #endState p {
     width: 325px;
     display: inline-block;
+  }
+
+  .appBody h1 {
+    margin: 0.67em 0;
   }
 }
