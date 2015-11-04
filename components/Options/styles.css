@@ -32,14 +32,25 @@
   margin: 0 auto;
 }
 
-.accordionDesc {
-  background-color: #ffad32;
-  /*border-radius: 0 0 10px 10px;*/
+.accordionDesc p {
   color: #fff;
   font-size: 12px;
-  margin: -8px auto 8px;
   padding: 5px;
+  margin: 0px;
+}
+
+.accordionDesc {
+  background-color: #ffad32;
+  margin: -8px auto 8px;
   width: 92%;
+  max-height: 0px;
+  -webkit-transition: max-height .4s;
+  transition: max-height .4s;
+  overflow: hidden;
+}
+
+.accordionDescActive {
+  max-height: 60px;
 }
 
 
