@@ -21,7 +21,7 @@
 }
 
 .appBodyImg {
-  width: 200px;
+  width: 150px;
   margin: 0 auto;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .accordionDescActive {
-  max-height: 60px;
+  max-height: 64px;
 }
 
 
@@ -65,5 +65,9 @@
 
   .sectionIcon {
     width: 150px;
+  }
+
+  .appBodyImg {
+    width: 200px;
   }
 }
