@@ -92,7 +92,7 @@ Copyright (c) 2015 Daniel Eden
   }
 }
 
-.bounce {
+.bounce, .appBodyImgTransition-bounce-enter, .appBodyImgTransition-bounce-leave {
   -webkit-animation-name: bounce;
   animation-name: bounce;
   -webkit-transform-origin: center bottom;
@@ -1266,7 +1266,7 @@ Copyright (c) 2015 Daniel Eden
   }
 }
 
-.fadeInLeft, .appBodyImgTransition-enter {
+.fadeInLeft, .appBodyImgTransition-right-enter {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
@@ -1332,7 +1332,7 @@ Copyright (c) 2015 Daniel Eden
   }
 }
 
-.fadeInRight {
+.fadeInRight, .appBodyImgTransition-left-enter {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
@@ -1543,7 +1543,7 @@ Copyright (c) 2015 Daniel Eden
   }
 }
 
-.fadeOutLeft {
+.fadeOutLeft, .appBodyImgTransition-left-leave {
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
 }
@@ -1601,7 +1601,7 @@ Copyright (c) 2015 Daniel Eden
   }
 }
 
-.fadeOutRight, .appBodyImgTransition-leave {
+.fadeOutRight, .appBodyImgTransition-right-leave {
   -webkit-animation-name: fadeOutRight;
   animation-name: fadeOutRight;
 }

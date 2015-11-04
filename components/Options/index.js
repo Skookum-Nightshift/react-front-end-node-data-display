@@ -7,6 +7,10 @@ var {PropTypes} = React;
 
 let {CSSTransitionGroup} = React.addons;
 
+// We define this so that we know what the previously selected item.option was 
+// so that we know whether to transition the image left or right.
+let oldItemSet = null;
+
 
 class Options extends React.Component {
 
@@ -19,6 +23,8 @@ class Options extends React.Component {
   }
 
   setBalance (item, cost, choice) {
+    // oldItemSet = item.set;
+
     let bal = this.props.balance;
 
     /**
@@ -45,11 +51,14 @@ class Options extends React.Component {
   renderImg (item, index) {
     if (index === -1) {
       if (item.sectionImage.length < 2) {
+        oldItemSet = item.options[0];
         return <img src={item.sectionImage[0]} className="sectionIcon" />;
       } else {
+        oldItemSet = item.options[1];
         return <img src={item.sectionImage[1]} className="sectionIcon" />;
       }
     } else {
+      oldItemSet = item.options[index];
       return <img src={item.sectionImage[index]} className="sectionIcon" />;
     }
   }
@@ -57,10 +66,19 @@ class Options extends React.Component {
   renderOptionsDescAndImg () {
     let item = this.props.selectedItem;
     let index = item.options.indexOf(item.set);
+    let direction = null;
+
+    if (oldItemSet > item.set) {
+      direction = 'appBodyImgTransition-right';
+    } else if (oldItemSet < item.set) {
+      direction = 'appBodyImgTransition-left';
+    } else {
+      direction = 'appBodyImgTransition-bounce';
+    }
 
     return (
       <div>
-        <CSSTransitionGroup transitionName="appBodyImgTransition" transitionEnterTimeout={600} transitionLeaveTimeout={600}>
+        <CSSTransitionGroup transitionName={direction} transitionEnterTimeout={600} transitionLeaveTimeout={600}>
           <div key={item.set} className="animated appBodyImg">{this.renderImg(item, index)}</div>
         </CSSTransitionGroup>
         <p className="options-desc">{this.props.selectedItem.desc}</p>

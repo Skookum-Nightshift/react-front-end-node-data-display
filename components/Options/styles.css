@@ -25,7 +25,7 @@
   margin: 0 auto;
 }
 
-.appBodyImgTransition-enter {
+.appBodyImgTransition-right-enter, .appBodyImgTransition-left-enter, .appBodyImgTransition-bounce-enter {
   position: absolute;
   left: 0;
   right: 0;
