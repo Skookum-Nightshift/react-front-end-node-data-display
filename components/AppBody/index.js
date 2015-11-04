@@ -22,11 +22,11 @@ class AppBody extends React.Component {
     console.log("Your balance is: " + this.props.balance);
     console.log("Your min is: " + min);
     if (this.props.appCompleted === true) {
-      return <button className="button next" onClick={this.props.unDiverge}>Return to Summary</button>;
+      return <a href="#" onClick={this.props.unDiverge}><div className="button next">Return to Summary</div></a>;
     } else if (this.props.balance >= min && item.set === null) {
-      return <button className="button" disabled={true}>Make a Choice</button>;
+      return <a><div className="button disabled">Make a Choice</div></a>;
     } else if (this.props.balance >= min || item.set != null || item.type ==="fact") {
-      return <button className="button next" onClick={this.props.setPage}>Next</button>;
+      return <a href="#" onClick={this.props.setPage}><div className="button next">Next</div></a>;
     } else {
       return <p>You are out of money! You need to go back and adjust your monthly budget.</p>;
     }
@@ -86,7 +86,7 @@ class AppBody extends React.Component {
           <p>Stay within your limited monthly budget.<br />
           <br />Experience the tough choices of 1 in 5 families in Charlotte.</p>
           <br />
-          <button className="button next" onClick={this.props.showFirstQuestion}>Begin</button>
+          <a href="#" onClick={this.props.showFirstQuestion}><div className="button next">Begin</div></a>
         </div>
       );
     } else if (this.props.appCompleted === true && this.props.diverged === false && this.props.getInvolved === false) {
@@ -103,7 +103,7 @@ class AppBody extends React.Component {
           </a>
           <br />
           <br /> 
-          <div id="getInvolved"><button className="button selected" onClick={this.props.setGetInvolved}>Get Involved</button></div>
+          <a href="#" onClick={this.props.setGetInvolved}><div id="getInvolved" className="button selected">Get Involved</div></a>
         </div>
       );
     } else if (this.props.appCompleted === true && this.props.diverged === false && this.props.getInvolved === true) {
@@ -119,7 +119,7 @@ class AppBody extends React.Component {
           
           <br />
           <br /> 
-          <div id="getInvolved"><button className="button selected" onClick={this.props.setSocialShare}>Share this!</button></div>
+          <a href="#" onClick={this.props.setSocialShare}><div id="getInvolved" className="button selected">Share this!</div></a>
         </div>
       );
     } else {

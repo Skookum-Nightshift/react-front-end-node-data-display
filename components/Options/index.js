@@ -34,16 +34,18 @@ class Options extends React.Component {
      * the budget, update the item's 'set' key, and deduct the newly selected
      * amount from the budget.
      */
-    if (item['set'] === null) {
-      item['set'] = cost;
-      bal -= cost;
-    } else {
-      bal += item['set'];
-      item['set'] = cost;
-      bal -= cost;
-    }
+    if (!(cost > (this.props.balance + item.set) || (item.type === "setback" && item.visited === true && (this.props.page - 1) > this.props.activeItemIndex))) {
+      if (item['set'] === null) {
+        item['set'] = cost;
+        bal -= cost;
+      } else {
+        bal += item['set'];
+        item['set'] = cost;
+        bal -= cost;
+      }
 
-    this.props.handleBalance(bal);
+      this.props.handleBalance(bal);
+    }
   }
 
   // If an option isn't selected, load the first or second as default
@@ -101,11 +103,11 @@ class Options extends React.Component {
          * made, then disable whatever doesn't fit within their budget.
          */
         <span>
-          <button
-            onClick={this.setBalance.bind(this, item, cost, index)}
-            className={cost === item.set ? "button selected" : "button unselected"}
-            disabled={(cost > (this.props.balance + item.set) || (item.type === "setback" && item.visited === true && (this.props.page - 1) > this.props.activeItemIndex)) ? true : false}
-            >{item.optionShort[index]}</button>
+          <a href="#" onClick={this.setBalance.bind(this, item, cost, index)}>
+            <div className={(cost > (this.props.balance + item.set) || (item.type === "setback" && item.visited === true && (this.props.page - 1) > this.props.activeItemIndex)) ? "button disabled" : (cost === item.set ? "button selected" : "button unselected")}>
+              {item.optionShort[index]}
+            </div>
+          </a>
             <br />
             
             <div className={(item.set !== null && cost == item.set) ? "accordionDesc accordionDescActive" : "accordionDesc"}>

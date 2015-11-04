@@ -36,12 +36,19 @@
   font-size: 14px;
   font-weight: 500;
   margin: auto auto 8px;
+  padding: 4px 3px 3px 3px;
   outline: none;
   text-align: center;
   width: 100%;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.btn-group div.button {
+  margin-bottom: -15px;
+  z-index: 10;
+  position: relative;
 }
 
 .next {
@@ -76,10 +83,11 @@
   background: #b7bce2;
 }
 
-.button[disabled] {
+.disabled {
   color: #cccccc;
   background: #fff;
   border: 3px solid #cccccc;
+  cursor: default;
 }
 
 p {

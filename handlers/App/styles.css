@@ -40,11 +40,6 @@
 	}
 }
 
-#appBar a {
-	text-decoration: none;
-	color: #fff;
-}
-
 #appBar .fa {
 	font-size: 22pt;
 }
@@ -87,6 +82,11 @@ p {
   font-size: 14px;
   color: #606060;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .social {
