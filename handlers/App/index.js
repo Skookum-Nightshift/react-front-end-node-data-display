@@ -46,9 +46,7 @@ let App = React.createClass({
     }
   },
   
-  setPage (event) {
-    console.log(event);
-    event.stopPropagation(); // prevent tap on mobile devices from bleeding through transition
+  setPage () {
     let page = this.state.page;
 
     // If you diverge, return the user to the spot they were (don't iterate the page.)

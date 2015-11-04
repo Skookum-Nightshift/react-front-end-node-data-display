@@ -2,8 +2,11 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React from 'react/addons';
 var {PropTypes} = React;
+
+let {CSSTransitionGroup} = React.addons;
+
 
 class Options extends React.Component {
 
@@ -15,9 +18,7 @@ class Options extends React.Component {
     this.renderOptions = this.renderOptions.bind(this);
   }
 
-  setBalance (item, cost, choice, event) {
-    console.log(event);
-    event.stopPropagation(); // prevent tap on mobile devices from bleeding through transition
+  setBalance (item, cost, choice) {
     let bal = this.props.balance;
 
     /**
@@ -59,7 +60,9 @@ class Options extends React.Component {
 
     return (
       <div>
-        {this.renderImg(item, index)}
+        <CSSTransitionGroup transitionName="appBodyImgTransition" transitionEnterTimeout={600} transitionLeaveTimeout={600}>
+          <div key={item.set} className="animated appBodyImg">{this.renderImg(item, index)}</div>
+        </CSSTransitionGroup>
         <p className="options-desc">{this.props.selectedItem.desc}</p>
       </div>
     );

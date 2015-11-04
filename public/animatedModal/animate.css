@@ -1266,7 +1266,7 @@ Copyright (c) 2015 Daniel Eden
   }
 }
 
-.fadeInLeft {
+.fadeInLeft, .appBodyImgTransition-enter {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
@@ -1601,7 +1601,7 @@ Copyright (c) 2015 Daniel Eden
   }
 }
 
-.fadeOutRight {
+.fadeOutRight, .appBodyImgTransition-leave {
   -webkit-animation-name: fadeOutRight;
   animation-name: fadeOutRight;
 }
