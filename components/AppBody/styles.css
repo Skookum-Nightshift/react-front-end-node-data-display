@@ -46,9 +46,7 @@
 }
 
 .btn-group div.button {
-  margin-bottom: -15px;
-  z-index: 10;
-  position: relative;
+  line-height: 18px;
 }
 
 .next {

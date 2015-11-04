@@ -107,12 +107,10 @@ class Options extends React.Component {
             <div className={(cost > (this.props.balance + item.set) || (item.type === "setback" && item.visited === true && (this.props.page - 1) > this.props.activeItemIndex)) ? "button disabled" : (cost === item.set ? "button selected" : "button unselected")}>
               {item.optionShort[index]}
             </div>
-          </a>
-            <br />
-            
-            <div className={(item.set !== null && cost == item.set) ? "accordionDesc accordionDescActive" : "accordionDesc"}>
-              <p>{item.optionDesc[index]} - <span className="cost">Cost: ${item.options[index]}</span></p>
-            </div>
+          </a>            
+          <div className={(item.set !== null && cost == item.set) ? "accordionDesc accordionDescActive" : "accordionDesc"}>
+            <p>{item.optionDesc[index]} - <span className="cost">Cost: ${item.options[index]}</span></p>
+          </div>
         </span>
       )
     );
