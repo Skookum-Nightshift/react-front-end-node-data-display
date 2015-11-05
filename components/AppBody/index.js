@@ -19,7 +19,7 @@ class AppBody extends React.Component {
   }
 
   nextButton (min, item) {
-    console.log("Your balance is: " + this.props.balance);
+    console.log("Your budget is: " + this.props.balance);
     console.log("Your min is: " + min);
     if (this.props.appCompleted === true) {
       return <a href="#" onClick={this.props.unDiverge}><div className="button next">Return to Summary</div></a>;
@@ -28,7 +28,7 @@ class AppBody extends React.Component {
     } else if (this.props.balance >= min || item.set != null || item.type ==="fact") {
       return <a href="#" onClick={this.props.setPage} id="nextButton"><div className="button next">Next</div></a>;
     } else {
-      return <p>You are out of money! You need to go back and adjust your monthly budget.</p>;
+      return <p>You are out of money!<br /><br />You need to make harder choices to stay within your monthly budget.</p>;
     }
   }
 
@@ -69,7 +69,7 @@ class AppBody extends React.Component {
           {this.nextButton(min, item)}
         </div>
         <div className="balance">
-          <p>Your balance is: ${this.props.balance}</p>
+          <p>Your budget is: ${this.props.balance}</p>
         </div>
       </div>
       </CSSTransitionGroup>
@@ -80,8 +80,9 @@ class AppBody extends React.Component {
     if (this.props.activeItemIndex === null) {
       return (
         <div id="beginState">
-          <h1>How to Play...</h1>
-          <p>Assume you’re a parent. You work. Your spouse works part-time. You have a 7 year old daughter and 12 year old son.</p><br />
+          <h1>Assume...</h1>
+          <p>You’re a parent. You work. Your spouse works part-time. You have a 7-year-old daughter and 12-year-old son.</p><br />
+          <p>You live paycheck to paycheck.</p><br />
           <img src="http://simpleicon.com/wp-content/uploads/meeting.png" alt="family of 4" className="sectionIcon" /><br />
           <p>Stay within your limited monthly budget.<br />
           <br />Experience the tough choices of 1 in 5 families in Charlotte.</p>
@@ -135,7 +136,7 @@ class AppBody extends React.Component {
         {this.beginOrEnd(selectedItem)}
         {(this.props.appCompleted === true && this.props.diverged === false) ? 
           <div className="balance">
-            <p>Your balance is: ${this.props.balance}</p>
+            <p>Your budget is: ${this.props.balance}</p>
           </div>
         : null}
       </div>
@@ -143,7 +144,6 @@ class AppBody extends React.Component {
     )
   }
 }
-
 
 AppBody.displayName = 'AppBody';
 
