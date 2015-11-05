@@ -20,7 +20,6 @@
 .column-landing .container {
   text-align: center;
   height: 100%;
-  padding: 5px;
   position: relative;
 }
 
@@ -45,10 +44,12 @@
   margin: 0;
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 1%;
   font-size: 60pt;
   font-weight: 700;
   color: white;
-  text-align: center;
+  text-align: left;
+  letter-spacing: 3px;
 }
 
 .column-landing .vertical-align--bottom {
@@ -76,12 +77,12 @@
   white-space: nowrap;
   vertical-align: middle;
   -ms-touch-action: manipulation;
-  touch-action: manipulation;
+      touch-action: manipulation;
   cursor: pointer;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background-image: none;
   border: 1px solid transparent;
   border-radius: 5px;
@@ -112,7 +113,7 @@
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
-  text-align: center;
+  text-align: left;
 }
 
 .column-landing h1, .column-landing h2, .column-landing h3 {
@@ -132,6 +133,7 @@
   font-weight: 500;
   font-size: 20pt;
   line-height: 24pt;
+  margin-top: 20px;
 }
 
 .column-landing h4 {
@@ -164,7 +166,7 @@
   border: 5pt solid #ff9900;
   display: inline-block;
   margin: auto;
-  width: 475px;
+  max-width: 475px;
 }
 
 .weloveclt {
@@ -178,8 +180,8 @@
 /* Fix display on smaller devices */
 @media all and (max-width: 500px) {
   .column-landing .vertical-align--middle h1 {
-    font-size: 3em;
-    text-align: center;
+    font-size: 36pt;
+    text-align: left;
   } 
 
   .text-block {
