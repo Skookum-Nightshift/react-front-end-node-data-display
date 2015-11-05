@@ -26,7 +26,7 @@ class AppBody extends React.Component {
     } else if (this.props.balance >= min && item.set === null) {
       return <a><div className="button disabled">Make a Choice</div></a>;
     } else if (this.props.balance >= min || item.set != null || item.type ==="fact") {
-      return <a href="#" onClick={this.props.setPage}><div className="button next">Next</div></a>;
+      return <a href="#" onClick={this.props.setPage} id="nextButton"><div className="button next">Next</div></a>;
     } else {
       return <p>You are out of money! You need to go back and adjust your monthly budget.</p>;
     }

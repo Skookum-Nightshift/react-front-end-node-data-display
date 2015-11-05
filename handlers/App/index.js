@@ -48,7 +48,12 @@ let App = React.createClass({
   
   setPage () {
     let page = this.state.page;
-
+    
+    // once clicked, remove the Next button so that it cannot be clicked again 
+    // during the ReactCSSTransition
+    let nextButton = document.getElementById('nextButton');
+    nextButton.parentNode.removeChild(nextButton);
+    
     // If you diverge, return the user to the spot they were (don't iterate the page.)
     if (page === appAreas.length) {
       this.setState({completed: true});
