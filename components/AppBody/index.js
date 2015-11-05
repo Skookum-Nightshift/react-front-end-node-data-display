@@ -28,7 +28,12 @@ class AppBody extends React.Component {
     } else if (this.props.balance >= min || item.set != null || item.type ==="fact") {
       return <a href="#" onClick={this.props.setPage} id="nextButton"><div className="button next">Next</div></a>;
     } else {
-      return <p>You are out of money!<br /><br />You need to make harder choices to stay within your monthly budget.</p>;
+      return (
+        <span>
+          <p>You are out of money!<br /><br />You need to make harder choices to stay within your monthly budget.</p>
+          <a href="#" onClick={this.props.openModalMenu} id="nextButton"><div className="button next">Adjust Your Budget</div></a>
+        </span>
+      );
     }
   }
 
