@@ -10,13 +10,6 @@ import {Resolver} from 'react-resolver';
 var Home = React.createClass({
 
 	render () {
-
-		if (typeof window === 'undefined') { 
-			return;
-		} else {
-			document.getElementsByTagName('body')[0].className='homeBody';
-		}
-
 		return (
 		<div className="column-landing">
 		  <div className="container">
