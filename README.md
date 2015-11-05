@@ -8,7 +8,11 @@ a web app for [United Way of Central Carolinas](http://www.uwcentralcarolinas.or
 
 Made by [Team Povizio](http://josephjguerra.github.io/teampovizio/) in [Skookum's](http://skookum.com/) [Night Shift 2.0](http://www.nightshiftc.lt/) program. Povizio is a play on words for poverty, visual awareness, and choices.
 
-# React Base App
+# Check it out live
+* [Paycheck to Paycheck](http://povsim-staging.herokuapp.com/)
+* This is the [Heroku](https://www.heroku.com/) hosted ([staging](http://github.com/Skookum-Nightshift/react-front-end-node-data-display/tree/staging)) copy of the app 
+
+# React
 
 This app uses [React](http://facebook.github.io/react/) and was created from Skookum's [http://github.com/Skookum/generator-genreact](https://github.com/Skookum/generator-genreact) repo.
 
