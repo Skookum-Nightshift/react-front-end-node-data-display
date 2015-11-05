@@ -10,9 +10,8 @@
  * type (string: normal, fact, setback, etc.) When set to "normal", the item name will appear in the drawer.
  * optionDesc: an array of strings, each coinciding with the earlier array of options.
  *
- * To DO
- * make this into a pure JSON gile
- * get better icons
+ * Future Enhancements:
+ * --make this into a pure JSON gile
  */
 
 let povertyData = [
@@ -36,7 +35,7 @@ let povertyData = [
     "visited": true,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/home-3.png", "http://simpleicon.com/wp-content/uploads/home-6.png", "http://simpleicon.com/wp-content/uploads/building-3.png"],
     "optionShort": ["3 bedroom home", "2 bedroom apartment", "1 bedroom studio"],
-    "optionDesc": ["3 bedroom, 2 bath house, utilities, small yard, garage, stove, refrigerator, and dishwasher. Plenty of room for the family.", "2 bedroom, 1 bath apartment, utilities, covered patio, 1 parking space, stove, and refrigerator. Your children share a room.", "1 bedroom, 1 bath apartment, utilities, no patio, no yard, street parking, and stove only. It's tight living quarters with little privacy."]
+    "optionDesc": ["3 bedroom, 2 bath house, utilities, small yard, garage, stove, refrigerator, and dishwasher. Plenty of room for the family.", "2 bedroom, 1 bath apartment, utilities, patio, 1 parking space, stove, and refrigerator. Your children share a room. That's tough with your son becoming a teenager.", "1 bedroom, 1 bath apartment, utilities, no patio, no yard, street parking, stove only. It's tight living quarters and little privacy."]
 }, {
     "name": "Housing Fact",
     "desc": "Fair Market Rent for a 2 bedroom in Mecklenburg County is $831 a month. Nearly 50% of renters in Charlotte-Mecklenburg spend more than 30% of their income on housing.",
@@ -96,7 +95,7 @@ let povertyData = [
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/shopping_trolley_7.png", "http://simpleicon.com/wp-content/uploads/t_shirt.png"],
     "optionShort": ["Shop for new clothes", "Hand-me-downs"],
-    "optionDesc": ["4 sets of new and stylish pants and shirts.", "2 sets of hand-me-down or used clothing (nothing like her friends'.) clothes."]
+    "optionDesc": ["4 sets of new and stylish pants and shirts.", "2 sets of hand-me-down or used clothing. They're nothing like her friends' clothes."]
 }, {
     "name": "Your Health Insurance",
     "desc": "What kind of healthcare do you have?",
@@ -106,10 +105,10 @@ let povertyData = [
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/docter__nurse_1.png", "http://simpleicon.com/wp-content/uploads/surgeon_1.png", "http://simpleicon.com/wp-content/uploads/nurse1.png"],
     "optionShort": ["Family plan", "You only", "None"],
-    "optionDesc": ["Health insurance for you and your family.", "Health insurance for you only.", "No health insurance. You pay all medical expenses out of pocket."]
+    "optionDesc": ["Health insurance for you and your family. You have peace of mind.", "Health insurance for you only. You're nervous if your spouse or children get sick.", "No health insurance. You pay all medical expenses out of pocket. That can be expensive!"]
 }, {
     "name": "Health Fact",
-    "desc": "18.5% of Mecklenburg residents do not have health insurance (under age 65).",
+    "desc": "18.5% of Mecklenburg residents do not have health insurance (under age 65). Not having health insurance can results in fines or overwhelming medical costs if you get seriously sick or injured.",
     "options": [],
     "set": null,
     "type": "fact",
@@ -139,14 +138,14 @@ let povertyData = [
     "optionDesc": []
 }, {
     "name": "Ugh, sick!!",
-    "desc": "Your spouse got pretty sick. How do you handle the trip to the hospital?",
-    "options": [140, 100],
+    "desc": "Your spouse got pretty sick. How do you handle the trip to Urgent Care?",
+    "options": [147, 127],
     "set": null,
     "type": "setback",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/stethoscope1.png", "http://simpleicon.com/wp-content/uploads/ambulance1.png"],
-    "optionShort": ["Emergency room and medication", "Emergency room only"],
-    "optionDesc": ["Emergency room plus medication, better in no time.", "Emergency room visit but no medication. You may miss some work and earn less this month."]
+    "optionShort": ["Urgent Care and medication", "Urgent Care only"],
+    "optionDesc": ["Urgent Care visit plus medication, better in no time.", "Urgent Care visit but no medication. Your spouse may miss some work and earn less this month."]
 }, {
     "name": "Your Family Leisure",
     "desc": "How many fun outings for your family this month?",
@@ -155,7 +154,7 @@ let povertyData = [
     "type": "normal",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/film.png", "http://simpleicon.com/wp-content/uploads/music-note-8.png", "http://simpleicon.com/wp-content/uploads/fruit_basket.png"],
-    "optionShort": ["2 Activities", "1 Activity", "None"],
+    "optionShort": ["2 activities", "1 activity", "None"],
     "optionDesc": ["2 family activities, like eating out, movies, or a concert", "1 family activity, like a picnic, bowling, or local music show", "No family outings, maybe visiting nearby family, or a local park."]
 }, {
     "name": "Family Leisure Fact",
@@ -175,8 +174,8 @@ let povertyData = [
     "type": "setback",
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/football1.png", "http://simpleicon.com/wp-content/uploads/football.png"],
-    "optionShort": ["Yes", "No"],
-    "optionDesc": ["Cleats, shin pads, uniform, and ball", "He does not participate"]
+    "optionShort": ["Sure!", "No..."],
+    "optionDesc": ["Cleats, shin pads, uniform, and ball. He's super excited.", "He does not participate. He's bummed and misses a chance to make new friends."]
 }, {
     "name": "Your Laundry",
     "desc": "Where do you do laundry?",
@@ -186,7 +185,7 @@ let povertyData = [
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/washing_machine.png","http://simpleicon.com/wp-content/uploads/backet.png","http://simpleicon.com/wp-content/uploads/shop-4.png"],
     "optionShort": ["Your own washer/dryer", "Shared laundry room", "Laundromat"],
-    "optionDesc": ["Payment for your own washer and dryer in your home", "Shared laundry room in your complex", "Laundromat that you can walk to, and you have to wait around"]
+    "optionDesc": ["Payment for your own washer and dryer in your home. Very convenient.", "Shared laundry room in your complex. It's pretty busy on weekends.", "You can walk to the local laundromat. But you have to wait around. And the dryers take forver."]
 }, {
     "name": "Laundry Fact",
     "desc": "Basic chores like laundry can be difficult for those in poverty, with limited budgets and transportation.",
@@ -206,7 +205,7 @@ let povertyData = [
     "visited": false,
     "sectionImage": ["http://simpleicon.com/wp-content/uploads/money-bag-4.png","http://simpleicon.com/wp-content/uploads/money-7.png", "http://simpleicon.com/wp-content/uploads/coin-money-7.png"],
     "optionShort": ["$200", "$100", "None"],
-    "optionDesc": ["Small savings, for vacations or house projects", "Tiny savings, for clothes and shopping", "Nothing left for savings after other expenses."]
+    "optionDesc": ["Small savings, for vacations or home projects.", "Tiny savings, for clothes and shopping.", "No savings after other expenses."]
 }, {
     "name": "Savings Fact",
     "desc": "A savings reserve is often unavailable for those in poverty. Some families are one crisis away (car breakdown or medical bill) from losing their homes.",
