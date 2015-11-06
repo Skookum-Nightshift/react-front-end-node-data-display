@@ -28,14 +28,18 @@ let App = React.createClass({
 
   /**
    * Sets the state of activeItemIndex to the index of the clicked LI, forces a re-render.
-   * This runs when a page is accessed from a click on an item in the drawer. That means 
+   * This runs when a page is accessed from a click on an item in the modal menu. That means 
    * that the person has diverged from the normal order of the pages. So it sets the 'diverged'
    * flag to true. That way, the app can decide if it should display the next item or the item
    * that was clicked.
    */
   handleItem (activeItemIndex) {
     this.setState({activeItemIndex});
-    this.setState({diverged: true, currentOption: 0});
+
+    // get the $ option for the diverged item to change it to yellow
+    let currentOption = appAreas[activeItemIndex].set;
+
+    this.setState({diverged: true, currentOption: currentOption});
   },
   
   
