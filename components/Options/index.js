@@ -44,7 +44,7 @@ class Options extends React.Component {
         bal -= cost;
       }
 
-      this.props.handleBalance(bal);
+      this.props.handleBalance(bal, cost);
     }
   }
 

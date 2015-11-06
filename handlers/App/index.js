@@ -21,6 +21,8 @@ let App = React.createClass({
       budgetBusted: false,
       completed: false,
       getInvolved: false,
+      currentOption: null, // initially same as lastOption, BalanceBar looks at this
+      lastOption: null     // right after diverge, BalanceBar gets this
     };
   },
 
@@ -33,16 +35,19 @@ let App = React.createClass({
    */
   handleItem (activeItemIndex) {
     this.setState({activeItemIndex});
-    this.setState({diverged: true});
+    this.setState({diverged: true, currentOption: 0});
   },
   
   
   // Don't let the balance get below 0
-  handleBalance (balance) {
+  // If user diverged, then when they change their choice, don't change lastOption
+  handleBalance (balance, option) {
     if (balance < 0) {
-      console.log('Balance went below 0! That is not right!')
+      console.log('Balance went below 0! That is not right!');
+    } else if (this.state.diverged === false) {
+      this.setState({balance: balance, currentOption: option, lastOption: option});
     } else {
-      this.setState({balance}); 
+      this.setState({balance: balance, currentOption: option});
     }
   },
   
@@ -58,9 +63,11 @@ let App = React.createClass({
     if (page === appAreas.length) {
       this.setState({completed: true});
     } else if (this.state.diverged) {
-      this.setState({page: page, diverged: false, activeItemIndex: page});
+      this.setState({page: page, diverged: false, activeItemIndex: page, currentOption: this.state.lastOption});
+      this.setState({lastOption: 0});
     } else {
-      this.setState({page: page + 1, diverged: false, activeItemIndex: page});  
+      // set currentOption state back to 0 so that BalanceBar changes option to spent.
+      this.setState({page: page + 1, diverged: false, activeItemIndex: page, currentOption: 0, lastOption: 0});
     }
   },
 
@@ -127,7 +134,8 @@ let App = React.createClass({
           setSocialShare={this.setSocialShare} 
           unDiverge={this.unDiverge} 
           setToCompleted={this.setToCompleted}
-          openModalMenu={this.openModalMenu} />
+          openModalMenu={this.openModalMenu} 
+          currentOption={this.state.currentOption} />
       
         <CSSTransitionGroup 
           transitionName="modalTransition" 

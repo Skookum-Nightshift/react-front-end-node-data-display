@@ -1,0 +1,41 @@
+/** @define BalanceBar; use strict */
+
+.BalanceBar {}
+
+.BalanceBar-child {}
+
+.BalanceBar-child.is-state {}
+
+.balanceBar {
+  width: 100%;
+  height: 24px;
+  border: 2px #ccc solid;
+}
+
+.balanceSection {
+  display: inline-block;
+  height: 20px;
+  font-size: 10pt;
+  vertical-align: top;
+  text-align: center;
+}
+
+.balanceSection p {
+  margin: 0;
+  padding: 3px;
+}
+
+.spent {
+  background-color: red;
+  transition: width .4s ease-in-out;
+}
+
+.spending {
+  background-color: yellow;
+  transition: width .4s ease-in-out;
+}
+
+.left {
+  background-color: lightgreen;
+  transition: width .4s ease-in-out;
+}

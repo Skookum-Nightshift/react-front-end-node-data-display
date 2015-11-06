@@ -7,6 +7,7 @@ require('./styles.css');
 const FontAwesome = require('react-fontawesome');
 
 import Options from 'Options';
+import BalanceBar from 'BalanceBar';
 
 class AppBody extends React.Component {
 
@@ -76,6 +77,9 @@ class AppBody extends React.Component {
         <div className="balance">
           <p>Your budget is: ${this.props.balance}</p>
         </div>
+        <BalanceBar 
+          currentOption={this.props.currentOption} 
+          balance={this.props.balance}/>
       </div>
       </CSSTransitionGroup>
     );
@@ -142,6 +146,9 @@ class AppBody extends React.Component {
         {(this.props.appCompleted === true && this.props.diverged === false) ? 
           <div className="balance">
             <p>Your budget is: ${this.props.balance}</p>
+            <BalanceBar 
+              currentOption={this.props.currentOption} 
+              balance={this.props.balance}/>
           </div>
         : null}
       </div>
