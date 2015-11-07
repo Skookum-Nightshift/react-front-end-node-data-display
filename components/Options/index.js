@@ -102,7 +102,7 @@ class Options extends React.Component {
          * want to allow people to decrease their budget. If no selection has been
          * made, then disable whatever doesn't fit within their budget.
          */
-        <span>
+        <span key={cost}>
           <a href="#" onClick={this.setBalance.bind(this, item, cost, index)}>
             <div className={(cost > (this.props.balance + item.set) || (item.type === "setback" && item.visited === true && (this.props.page - 1) > this.props.activeItemIndex)) ? "button disabled" : (cost === item.set ? "button selected" : "button unselected")}>
               {item.optionShort[index]}

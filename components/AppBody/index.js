@@ -21,7 +21,7 @@ class AppBody extends React.Component {
 
   nextButton (min, item) {
     console.log("Your budget is: " + this.props.balance);
-    console.log("Your min is: " + min);
+    console.log('==========================');
     if (this.props.appCompleted === true) {
       return <a href="#" onClick={this.props.unDiverge}><div className="button next">Return to Summary</div></a>;
     } else if (this.props.balance >= min && item.set === null) {
@@ -66,6 +66,7 @@ class AppBody extends React.Component {
         <h1>{item.name}</h1>
 
         <Options 
+          id='Options' 
           handleBalance={this.props.handleBalance}
           balance={this.props.balance} 
           selectedItem={item}
@@ -78,6 +79,7 @@ class AppBody extends React.Component {
           <p>Your budget is: ${this.props.balance}</p>
         </div>
         <BalanceBar 
+          id='BalanceBar' 
           currentOption={this.props.currentOption} 
           balance={this.props.balance}/>
       </div>
@@ -147,6 +149,7 @@ class AppBody extends React.Component {
           <div className="balance">
             <p>Your budget is: ${this.props.balance}</p>
             <BalanceBar 
+              id='BalanceBar' 
               currentOption={this.props.currentOption} 
               balance={this.props.balance}/>
           </div>

@@ -123,6 +123,7 @@ let App = React.createClass({
         </div>
 
         <AppBody 
+          id='AppBody' 
           selectedItem={selectedItem} 
           menuItems={appAreas} 
           handleBalance={this.handleBalance} 
@@ -147,6 +148,7 @@ let App = React.createClass({
           transitionLeaveTimeout={600}>
           {this.state.navOpen === true ?
             <MenuItems 
+              id='MenuItems' 
               closeModalMenu={this.closeModalMenu} 
               onActivate={this.handleItem} 
               activeItemIndex={this.state.activeItemIndex} 

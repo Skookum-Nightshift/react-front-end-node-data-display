@@ -91,7 +91,7 @@ class MenuItems extends React.Component {
 
     return (
       items.map((item) =>
-        <div className={this.props.menuItems.indexOf(item) === activeItemIndex ? "bold testIndex" : null}>
+        <div key={item.name} className={this.props.menuItems.indexOf(item) === activeItemIndex ? "bold testIndex" : null}>
           {this.getListItem(item)}
         </div>
       )
