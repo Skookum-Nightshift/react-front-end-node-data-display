@@ -40,7 +40,6 @@ let App = React.createClass({
     let currentOption = appAreas[activeItemIndex].set;
 
     this.setState({diverged: true, currentOption: currentOption});
-    console.log('You diverged! Your currentOption is ' + this.state.currentOption + '. Your lastOption is ' + this.state.lastOption + '.');
   },
   
   
@@ -51,10 +50,8 @@ let App = React.createClass({
       console.log('Balance went below 0! That is not right!');
     } else if (this.state.diverged === false) {
       this.setState({balance: balance, currentOption: option, lastOption: option});
-      console.log('You did not diverge. Your currentOption is ' + this.state.currentOption + '. Your lastOption is ' + this.state.lastOption + '.');
     } else {
       this.setState({balance: balance, currentOption: option});
-      console.log('You diverged! Your currentOption is ' + this.state.currentOption + '. Your lastOption is ' + this.state.lastOption + '.');
     }
   },
   
