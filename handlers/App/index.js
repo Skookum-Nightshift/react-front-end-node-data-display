@@ -80,9 +80,12 @@ let App = React.createClass({
     console.log("State set: " + description);
     this.setState(state);
   },
+
+  componentDidMount() {
+    window.onbeforeunload = () => "Your will lose your progress if you use the browser's back or reload buttons. To go back to prior budget items, please click the menu button.";
+  },
   
   render () {
-    
     let selectedItem = appAreas[this.state.activeItemIndex]; // load the data
     
     return (
