@@ -67,6 +67,7 @@ let App = React.createClass({
       this.setState({completed: true});
     }
 
+    // If you diverge, return the user to the spot they were (don't iterate the page.)
     if (this.state.diverged) {
       this.setState({page: page, diverged: false, activeItemIndex: page, currentOption: this.state.lastOption});
       this.setState({lastOption: 0});

@@ -9,11 +9,15 @@ import {Resolver} from 'react-resolver';
 
 var Home = React.createClass({
 
-	render () {
+  componentDidMount() {
+    document.getElementsByTagName('body')[0].className='homeBody';
+  },
 
-		if (typeof window !== 'undefined') { 
-			document.getElementsByTagName('body')[0].className='homeBody';
-		}
+  componentWillUnmount() {
+    document.getElementsByTagName('body')[0].className='';
+  },
+
+	render () {
 
 		return (
 		<div className="column-landing">
