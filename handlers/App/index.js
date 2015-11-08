@@ -58,8 +58,7 @@ let App = React.createClass({
   setPage () {
     let page = this.state.page;
     
-    // once clicked, remove the Next button so that it cannot be clicked again 
-    // during the ReactCSSTransition
+    // once clicked, remove the Next button so that it cannot be clicked again during the ReactCSSTransition
     let nextButton = document.getElementById('nextButton');
     nextButton.parentNode.removeChild(nextButton);
 
@@ -77,33 +76,10 @@ let App = React.createClass({
     }
   },
 
-  showFirstQuestion () {
-    this.setState({page: 1, activeItemIndex: 0});
+  setOwnerState (state, description) {
+    console.log("State set: " + description);
+    this.setState(state);
   },
-
-  setGetInvolved () {
-    this.setState({getInvolved: true});
-  },
-
-  setSocialShare () {
-    this.setState({getInvolved: false});
-  },
-
-  unDiverge () {
-    this.setState({diverged: false});
-  },
-
-  openModalMenu () {
-    this.setState({navOpen: true});
-  },
-
-  closeModalMenu () {
-    this.setState({navOpen: false});
-  },
-  
-  /**
-   This generates everything between the drawer and the running balance.
-   */
   
   render () {
     
@@ -115,7 +91,7 @@ let App = React.createClass({
           <div id="appBar">
             <h1>Paycheck to Paycheck</h1>
             <div id="menuButton">
-              <a href="#" onClick={this.openModalMenu}><FontAwesome name="bars"/></a>
+              <a href="#" onClick={this.setOwnerState.bind(null, {navOpen: true}, "Open modal menu")}><FontAwesome name="bars"/></a>
             </div>
           </div>
         </div>
@@ -130,14 +106,10 @@ let App = React.createClass({
           balance={this.state.balance}
           activeItemIndex={this.state.activeItemIndex} 
           setPage={this.setPage} 
-          showFirstQuestion={this.showFirstQuestion}
+          setOwnerState={this.setOwnerState}
           appCompleted={this.state.completed} 
           getInvolved={this.state.getInvolved}
-          setGetInvolved={this.setGetInvolved}
-          setSocialShare={this.setSocialShare} 
-          unDiverge={this.unDiverge} 
           setToCompleted={this.setToCompleted}
-          openModalMenu={this.openModalMenu} 
           currentOption={this.state.currentOption} />
       
         <CSSTransitionGroup 
@@ -147,7 +119,7 @@ let App = React.createClass({
           {this.state.navOpen === true ?
             <MenuItems 
               id='MenuItems' 
-              closeModalMenu={this.closeModalMenu} 
+              setOwnerState={this.setOwnerState} 
               onActivate={this.handleItem} 
               activeItemIndex={this.state.activeItemIndex} 
               menuItems={appAreas}

@@ -20,7 +20,7 @@ class MenuItems extends React.Component {
      /* pass the index of the clicked LI to the parent Component's
      onActivate prop, which happens to be the handleItem method */
     this.props.onActivate(activeItemIndex);
-    this.props.closeModalMenu();
+    this.props.setOwnerState({navOpen: false}, "Close modal menu");
   }
 
   // If an option isn't selected, load the first or second as default
@@ -107,7 +107,7 @@ class MenuItems extends React.Component {
     return (
       <div id="animatedModal" className="animated modalDiv">
         <div id="closebt-container" className="close-animatedModal">
-          <img className="closebt" src="public/animatedModal/closebt.svg" onClick={this.props.closeModalMenu} />
+          <img className="closebt" src="public/animatedModal/closebt.svg" onClick={this.props.setOwnerState.bind(null, {navOpen: false}, "Close modal menu")} />
         </div>
         <div className="modal-container">
           <div className="modal-body">

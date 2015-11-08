@@ -22,7 +22,11 @@ class AppBody extends React.Component {
     console.log("Your budget is: " + this.props.balance);
     console.log('==========================');
     if (this.props.appCompleted === true) {
-      return <a href="#" onClick={this.props.unDiverge}><div className="button next">Return to Summary</div></a>;
+      return (
+        <a href="#" onClick={this.props.setOwnerState.bind(null, {diverged: false}, "Undiverge")}>
+          <div className="button next">Return to Summary</div>
+        </a>
+      );
     } else if (this.props.balance >= min && item.set === null) {
       return <a><div className="button disabled">Make a Choice</div></a>;
     } else if ((this.props.balance >= min || item.set != null || item.type === "fact") && this.props.diverged == false) {
@@ -33,7 +37,9 @@ class AppBody extends React.Component {
       return (
         <span>
           <p>You are out of money!<br /><br />You need to make harder choices to stay within your monthly budget.</p>
-          <a href="#" onClick={this.props.openModalMenu} id="nextButton"><div className="button next">Adjust Your Budget</div></a>
+          <a href="#" onClick={this.props.setOwnerState.bind(null, {navOpen: true}, "Show modal menu")} id="nextButton">
+            <div className="button next">Adjust Your Budget</div>
+          </a>
         </span>
       );
     }
@@ -99,7 +105,9 @@ class AppBody extends React.Component {
           <p>Stay within your limited monthly budget.<br />
           <br />Experience the tough choices of 1 in 5 families in Charlotte.</p>
           <br />
-          <a href="#" onClick={this.props.showFirstQuestion}><div className="button next">Begin</div></a>
+          <a href="#" onClick={this.props.setOwnerState.bind(null, {page: 1, activeItemIndex: 0}, "Display first question")}>
+            <div className="button next">Begin</div>
+          </a>
         </div>
       );
     } else if (this.props.appCompleted === true && this.props.diverged === false && this.props.getInvolved === false) {
@@ -116,7 +124,9 @@ class AppBody extends React.Component {
           </a>
           <br />
           <br /> 
-          <a href="#" onClick={this.props.setGetInvolved}><div id="getInvolved" className="button selected">Get Involved</div></a>
+          <a href="#" onClick={this.props.setOwnerState.bind(null, {getInvolved: true}, "Display 'Get Involved' page")}>
+            <div id="getInvolved" className="button selected">Get Involved</div>
+          </a>
         </div>
       );
     } else if (this.props.appCompleted === true && this.props.diverged === false && this.props.getInvolved === true) {
@@ -132,7 +142,9 @@ class AppBody extends React.Component {
           
           <br />
           <br /> 
-          <a href="#" onClick={this.props.setSocialShare}><div id="getInvolved" className="button selected">Share this!</div></a>
+          <a href="#" onClick={this.props.setOwnerState.bind(null, {getInvolved: false}, "Display 'Social Share' page")}>
+            <div id="getInvolved" className="button selected">Share this!</div>
+          </a>
         </div>
       );
     } else {
