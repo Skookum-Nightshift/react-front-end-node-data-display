@@ -79,10 +79,6 @@ let App = React.createClass({
     this.setState({page: 1, activeItemIndex: 0});
   },
 
-  setToCompleted () {
-    this.setState({completed: true});
-  },
-
   setGetInvolved () {
     this.setState({getInvolved: true});
   },
