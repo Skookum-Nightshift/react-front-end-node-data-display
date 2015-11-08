@@ -63,10 +63,11 @@ let App = React.createClass({
     let nextButton = document.getElementById('nextButton');
     nextButton.parentNode.removeChild(nextButton);
 
-    // If you diverge, return the user to the spot they were (don't iterate the page.)
     if (page === appAreas.length) {
       this.setState({completed: true});
-    } else if (this.state.diverged) {
+    }
+
+    if (this.state.diverged) {
       this.setState({page: page, diverged: false, activeItemIndex: page, currentOption: this.state.lastOption});
       this.setState({lastOption: 0});
     } else {
