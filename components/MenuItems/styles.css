@@ -107,6 +107,10 @@ body.modalOpen {
   padding: 0 3px;
 }
 
+.navactive {
+  
+}
+
 .navselected {
   color: #ff9900;
   background: #ffffff;

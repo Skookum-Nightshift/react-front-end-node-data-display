@@ -13,7 +13,6 @@ class AppBody extends React.Component {
 
   constructor () {
     super();
-
     this.nextButton = this.nextButton.bind(this);
     this.cyclePage = this.cyclePage.bind(this);
     this.beginOrEnd = this.beginOrEnd.bind(this);
@@ -26,8 +25,10 @@ class AppBody extends React.Component {
       return <a href="#" onClick={this.props.unDiverge}><div className="button next">Return to Summary</div></a>;
     } else if (this.props.balance >= min && item.set === null) {
       return <a><div className="button disabled">Make a Choice</div></a>;
-    } else if (this.props.balance >= min || item.set != null || item.type ==="fact") {
+    } else if ((this.props.balance >= min || item.set != null || item.type === "fact") && this.props.diverged == false) {
       return <a href="#" onClick={this.props.setPage} id="nextButton"><div className="button next">Next</div></a>;
+    } else if ((this.props.balance >= min || item.set != null || item.type === "fact") && this.props.diverged == true) {
+      return <a href="#" onClick={this.props.setPage} id="nextButton"><div className="button next">Continue Where You Left Off</div></a>;
     } else {
       return (
         <span>
@@ -52,7 +53,7 @@ class AppBody extends React.Component {
       item = this.props.menuItems[this.props.page-1];
       /**
        * if you visit the item via Next (linear, non-diverged), then set the 
-       * item's visted flag to true so as to enable users to access that item 
+       * item's visited flag to true so as to enable users to access that item 
        * again later from the drawer.
        */
       item['visited'] = true;

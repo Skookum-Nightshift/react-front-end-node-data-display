@@ -46,7 +46,7 @@ class MenuItems extends React.Component {
     }
   }
 
-  getListItem (item) {
+  getListItem (item, lastVisitedItem) {
     // We must get the index of the item from the unfiltered list to make the links 
     // in the filtered list activate the appropriate item when clicked.
     let unfilteredItemIndex = this.props.menuItems.indexOf(item);
@@ -57,7 +57,7 @@ class MenuItems extends React.Component {
       );
      });
     
-    if (item.visited && item.set !== null) {
+    if (item.visited && item !== lastVisitedItem) {
       return (
         <a href="#" onClick={this.handleItemClick.bind(this, unfilteredItemIndex)}>
           <div className="menu-item">
@@ -80,8 +80,6 @@ class MenuItems extends React.Component {
     }
   }
 
-  // TODO: (bugfix) The bold/test index class application has a bug. It doesn't apply to the 
-  // first item (House) initially, and it doesn't apply when facts are selected either.
   renderMenuItems () {
     let activeItemIndex = this.props.activeItemIndex;
 
@@ -89,10 +87,17 @@ class MenuItems extends React.Component {
       (item.type === "normal" || (item.type === "setback" && item.visited === true))
     );
 
+    // Get the last item that was visited.
+    // We'll prevent it from being clickable in the nav modal. 
+    let visitedItems = this.props.menuItems.filter(item => 
+      (item.visited === true)
+    );
+    let lastVisitedItem = visitedItems[visitedItems.length - 1];
+
     return (
       items.map((item) =>
-        <div key={item.name} className={this.props.menuItems.indexOf(item) === activeItemIndex ? "bold testIndex" : null}>
-          {this.getListItem(item)}
+        <div key={item.name} className={this.props.menuItems.indexOf(item) === activeItemIndex ? "navactive" : null}>
+          {this.getListItem(item, lastVisitedItem)}
         </div>
       )
     );
