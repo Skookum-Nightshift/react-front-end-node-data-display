@@ -57,7 +57,7 @@
 }
 
 
-@media all and (min-width: 414px) {
+@media all and (min-width: 415px) {
   .options-desc {
     width: 325px;
   }

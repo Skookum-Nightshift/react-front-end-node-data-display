@@ -37,7 +37,7 @@ h1 {
   
 }
 
-@media all and (min-width: 414px) {
+@media all and (min-width: 415px) {
   h1 {
     font-size: 1.8em;
   }

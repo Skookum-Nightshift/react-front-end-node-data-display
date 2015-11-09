@@ -131,7 +131,7 @@ i {
   margin: 10px;
 }
 
-@media all and (min-width: 414px) {
+@media all and (min-width: 415px) {
   .btn-group span > div:nth-child(1),
   #actionButton > div, 
   #beginState > div { 
