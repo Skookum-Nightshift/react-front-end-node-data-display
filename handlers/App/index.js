@@ -112,7 +112,6 @@ let App = React.createClass({
           setOwnerState={this.setOwnerState}
           appCompleted={this.state.completed} 
           getInvolved={this.state.getInvolved}
-          setToCompleted={this.setToCompleted}
           currentOption={this.state.currentOption} />
       
         <CSSTransitionGroup 
