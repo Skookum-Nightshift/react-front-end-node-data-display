@@ -107,8 +107,17 @@ body.modalOpen {
   padding: 0 3px;
 }
 
-.navactive {
-  
+.navactive .navselected {
+  color: #ff9900;
+  background: #ffffff;
+  border: 3px solid #ff9900;
+  font-weight: bold;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .navselected {
@@ -122,6 +131,10 @@ body.modalOpen {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.navselected:hover {
+  border: 3px solid #ff9900;
 }
 
 .navunselected {
