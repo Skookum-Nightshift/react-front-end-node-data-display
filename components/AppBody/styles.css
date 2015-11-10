@@ -79,8 +79,8 @@
 }
 
 .unselected:hover {
-  color: #ffffff;
-  background: #b7bce2;
+  color: #9098d3;
+  background: #ffffff;
 }
 
 .disabled {
@@ -100,6 +100,7 @@ p {
 
 .appBody h1 {
   margin: 0.5em 0 0.3em 0;
+  font-size: 20pt;
 }
 
 #beginState p, #endState p {
@@ -149,5 +150,11 @@ i {
 
   .appBody h1 {
     margin: 0.67em 0;
+    font-size: 28pt;
+  }
+
+  .unselected:hover {
+    color: #ffffff;
+    background: #b7bce2;
   }
 }
