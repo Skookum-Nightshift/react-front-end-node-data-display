@@ -161,11 +161,11 @@ class AppBody extends React.Component {
         {(this.props.appCompleted === true && this.props.diverged === false) ? 
           <div className="balance">
             <p>You have <b>${this.props.balance}</b> left for the month.</p>
-          </div>
-          <BalanceBar 
+            <BalanceBar 
               id='BalanceBar' 
               currentOption={this.props.currentOption} 
               balance={this.props.balance}/>
+          </div>
         : null}
       </div>
 
