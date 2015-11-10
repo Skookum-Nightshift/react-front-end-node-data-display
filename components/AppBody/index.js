@@ -116,7 +116,7 @@ class AppBody extends React.Component {
           <h1>How did you fare?</h1>
           <p>You had to make some hard choices! These are the choices of 1 in 5 families in Charlotte.</p><br />
           <p>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p><br />
-          <a href="https://www.facebook.com/dialog/feed?app_id=928451220563474&link=http://povsim-staging.herokuapp.com/&picture=http://povsim-staging.herokuapp.com/public/img/uncc_logo2.png&name=Paycheck%20to%20Paycheck&description=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families.&redirect_uri=http://povsim-staging.herokuapp.com/">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpovsim-staging.herokuapp.com%2F&display=popup&ref=plugin&src=share_button">
             <div className="social"><FontAwesome name="facebook" size="5x"/></div>
           </a>
           <a href="https://twitter.com/home?status=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%40myUWCC%20http%3A//bit.ly/1Rjfrwm">
