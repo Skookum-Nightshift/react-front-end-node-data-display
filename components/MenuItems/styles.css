@@ -107,6 +107,11 @@ body.modalOpen {
   padding: 0 3px;
 }
 
+.navactive .navdisabled {
+  border: 3px solid #ff9900;
+  color: #ffffff;
+}
+
 .navactive .navselected {
   color: #ff9900;
   background: #ffffff;
@@ -140,7 +145,7 @@ body.modalOpen {
 .navdisabled {
   color: #cccccc;
   background: #9098d3;
-  border: 3px solid #cccccc;
+  border: 3px solid #cccccc
 }
 
 #animatedModal ul {
