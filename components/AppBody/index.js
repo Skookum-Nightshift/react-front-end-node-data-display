@@ -36,7 +36,7 @@ class AppBody extends React.Component {
     } else {
       return (
         <span>
-          <p>You are out of money!<br /><br />You need to make harder choices to stay within your monthly budget.</p>
+          <span id="outOfMoney"><p><b>You are out of money!</b></p><p>You need to make harder choices to stay within your monthly budget.</p></span>
           <a href="#" onClick={this.props.setOwnerState.bind(null, {navOpen: true}, "Show modal menu")} id="nextButton">
             <div className="button next">Adjust Your Budget</div>
           </a>
