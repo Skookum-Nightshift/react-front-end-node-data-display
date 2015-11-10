@@ -8,7 +8,6 @@
 /* appBar Styling */
 #appBar {
   background-color: #ff9900;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
