@@ -22,12 +22,11 @@ class BalanceBar extends React.Component {
     let spentPercent 		= (100 - spendingPercent - balPercent);
     
     return (
-      <div>
-        <div className='balanceBar'>
-          <div className='balanceSection spent' style={{'width': spentPercent+'%'}}></div>
-          <div className='balanceSection spending' style={{'width': spendingPercent+'%'}}></div>
-          <div className='balanceSection left' style={{'width': balPercent+'%'}}><p>${bal} left</p></div>    
-        </div>
+      <div className='balanceBar'>
+        {/* <div id="balanceBarBalance"><p>You have <b>${bal}</b> left for the month.</p></div> */}
+        <div className='balanceSection spent' style={{'width': spentPercent+'%'}}></div>
+        <div className='balanceSection spending' style={{'width': spendingPercent+'%'}}></div>
+        <div className='balanceSection left' style={{'width': balPercent+'%'}}></div>    
       </div>
     );
   }

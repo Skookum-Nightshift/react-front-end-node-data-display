@@ -79,16 +79,16 @@ class AppBody extends React.Component {
           selectedItem={item}
           page={this.props.page}
           activeItemIndex={this.props.activeItemIndex} />
-        <div id="actionButton">
-          {this.nextButton(min, item)}
-        </div>
         <div className="balance">
-          <p>Your budget is: ${this.props.balance}</p>
+          <p>You have <b>${this.props.balance}</b> left for the month.</p>
         </div>
         <BalanceBar 
           id='BalanceBar' 
           currentOption={this.props.currentOption} 
           balance={this.props.balance}/>
+        <div id="actionButton">
+          {this.nextButton(min, item)}
+        </div>
       </div>
       </CSSTransitionGroup>
     );
@@ -160,12 +160,12 @@ class AppBody extends React.Component {
         {this.beginOrEnd(selectedItem)}
         {(this.props.appCompleted === true && this.props.diverged === false) ? 
           <div className="balance">
-            <p>Your budget is: ${this.props.balance}</p>
-            <BalanceBar 
+            <p>You have <b>${this.props.balance}</b> left for the month.</p>
+          </div>
+          <BalanceBar 
               id='BalanceBar' 
               currentOption={this.props.currentOption} 
               balance={this.props.balance}/>
-          </div>
         : null}
       </div>
 

@@ -95,6 +95,10 @@ p {
   text-align: center;
 }
 
+.balance p {
+  margin: 3px 0;
+}
+
 .appBody h1 {
   margin: 0.5em 0 0.3em 0;
   font-size: 20pt;
