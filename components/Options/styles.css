@@ -1,0 +1,73 @@
+/** NEW **/
+/** @define Options; use strict */
+
+.cost {
+  color: #606060;
+}
+
+.Options {}
+
+.Options-child {}
+
+.Options-child.is-state {}
+
+.options-desc {
+  margin: 0 auto 10px;
+  text-align: justify;
+}
+
+.sectionIcon {
+  width: 100px;
+}
+
+.appBodyImg {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.appBodyImgTransition-right-enter, .appBodyImgTransition-left-enter, .appBodyImgTransition-bounce-enter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.accordionDesc p {
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  margin: 0px;
+}
+
+.accordionDesc {
+  background-color: #ffad32;
+  margin: -8px auto 8px;
+  width: 92%;
+  max-height: 0px;
+  -webkit-transition: max-height .4s;
+  transition: max-height .4s;
+  overflow: hidden;
+}
+
+.accordionDescActive {
+  max-height: 64px;
+}
+
+
+@media all and (min-width: 415px) {
+  .options-desc {
+    width: 325px;
+  }
+
+  .accordionDesc {
+    width: 300px;
+  }
+
+  .sectionIcon {
+    width: 150px;
+  }
+
+  .appBodyImg {
+    width: 200px;
+  }
+}

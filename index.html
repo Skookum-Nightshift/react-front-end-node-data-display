@@ -2,40 +2,35 @@
 <html>
   <head>
     <!-- base meta -->
-    <title>Title</title>
+    <title>Paycheck to Paycheck</title>
     <meta charset="utf8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="http://hasten.io" />
+    <link rel="canonical" href="http://paychecktopaycheck.herokuapp.com" />
     <!-- base meta end -->
 
     <!-- seo -->
-    <meta name="keywords" content="words, that, describe, your, app" />
-    <meta name="description" content="Short descrption of your site" />
+    <meta name="keywords" content="poverty, simulator, united way, team povizio" />
+    <meta name="description" content="Experience the tough choices of 1 in 5 in Charlotte." />
     <meta name="revisit-after" content="30 days">
 
-    <!-- open graph -->
-    <meta property="og:title" content="Title">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Short descrption of your site">
-    <meta property="og:url" content="http://app.herokuapp.com">
-    <meta property="og:image" content="http://app.herokuapp.com/meta/apple-touch-icon-76x76.png?v=yyyBYmXl7m">
-    <meta property="og:image:width" content="76">
-    <meta property="og:image:height" content="76">
-    <meta property="og:image" content="http://app.herokuapp.com/meta/apple-touch-icon-57x57.png?v=yyyBYmXl7m">
-    <meta property="og:image:width" content="57">
-    <meta property="og:image:height" content="57">
-    <!-- end open graph -->
-
-    <!-- twiter card -->
+    <!-- You can use open graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+    <meta property="og:url"           content="http://povsim-staging.herokuapp.com/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Paycheck to Paycheck: Charlotte Poverty Simulator" />
+    <meta property="og:description"   content="Experience the tough choices of 1 in 5 in Charlotte." />
+    <meta property="og:image"         content="http://povsim-staging.herokuapp.com/public/img/uwcc.jpg" />
+    
+    <!-- twitter card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@title" />
-    <meta name="twitter:title" content="Title" />
-    <meta name="twitter:description" content="Short descrption of your site" />
-    <meta name="twitter:image" content="http://app.herokuapp.com/meta/favicon-96x96.png?v=yyyBYmXl7m" />
-    <!-- end twiter card -->
+    <meta name="twitter:site" content="@teampovizio" />
+    <meta name="twitter:title" content="Paycheck to Paycheck: Charlotte Poverty Simulator" />
+    <meta name="twitter:description" content="Experience the tough choices of 1 in 5 in Charlotte." />
+    <meta name="twitter:image" content="http://paychecktopaycheck.herokuapp.com/public/img/uwcc.jpg" />
+    <!-- end twitter card -->
 
-    <!-- favicons http://realfavicongenerator.net/ -->
+    <!-- favicons http://realfavicongenerator.net/
     <link rel="apple-touch-icon" sizes="57x57" href="http://app.herokuapp.com/meta/apple-touch-icon-57x57.png?v=yyyBYmXl7m">
     <link rel="apple-touch-icon" sizes="60x60" href="http://app.herokuapp.com/meta/apple-touch-icon-60x60.png?v=yyyBYmXl7m">
     <link rel="apple-touch-icon" sizes="72x72" href="http://app.herokuapp.com/meta/apple-touch-icon-72x72.png?v=yyyBYmXl7m">
@@ -57,69 +52,49 @@
     <meta name="msapplication-TileImage" content="http://app.herokuapp.com/meta/mstile-144x144.png?v=yyyBYmXl7m">
     <meta name="msapplication-config" content="http://app.herokuapp.com/meta/browserconfig.xml?v=yyyBYmXl7m">
     <meta name="theme-color" content="#ffffff">
-    <!-- favicons end -->
-	
-	<!-- bootstrap test -->
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <favicons end -->
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-	
-	<!-- Temporary holding for app CSS -->
-	<style>
-		body {
-		  font-family: Helvetica;  
-		}
+    <!-- local Font-Awesome -->
+    <link rel="stylesheet" href="public/font-awesome/4.4.0/css/font-awesome.css">
+    <link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'>
 
-		li {
-		  background-color: #FFF;
-		  -webkit-transition: background-color 1s;
-		  transition: background-color 1s;
-		}
-
-		.bold {
-		  font-weight: bold;
-		}
-
-		.hidden {
-		  display: none;
-		}
-
-		.activeOption {
-		  background-color: #FF0000;
-		}
-
-		.sectionIcon {
-		  width: 200px;
-		}
-
-        .button-options {
-          margin-right: 10px;
-          display: inline;
-        }
-	</style>
+    <!-- animatedModal -->
+    <link rel="stylesheet" href="public/animatedModal/animate.css">
 
     <script id="__resolver__" async>var __resolver__ = †__resolver__†;</script>
     †head†
   </head>
   <body>
-    <div class="row">
-       <div class="col-md-4"></div>
-       <div class="col-md-4">
-           <div id="app" class="container">†react†</div>
-       </div>
-       <div class="col-md-4"></div>
-     </div>
+    <div id="app" class="container">†react†</div>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    
+    <!-- Script for landing h1 fly-in effect -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/2.3.2/scrollReveal.min.js"></script>
+    <script>
+      window.sr = new scrollReveal();
+    </script>
 
     <!-- Google Analytics -->
     <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69939604-1', 'auto');
+      ga('send', 'pageview');
 
     </script>
     <!-- End Google Analytics -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>

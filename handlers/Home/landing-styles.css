@@ -1,0 +1,190 @@
+/** @define Home; use strict */
+@import 'normalize.css';
+
+.homeBody {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6)), url(http://povsim-staging.herokuapp.com/public/img/splashbg.jpg) no-repeat center fixed;
+  webkit-background-size: cover;
+    -moz-background-size: cover;
+      -o-background-size: cover;
+         background-size: cover; 
+}
+
+.column-landing {
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+
+.column-landing .container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+.column-landing .vertical-align-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.column-landing .vertical-align {
+  display: table-cell;
+  color: white;
+  font-weight: 700;
+}
+
+.column-landing .vertical-align--middle {
+  vertical-align: middle;
+}
+
+.column-landing .vertical-align--middle h1 {
+  margin: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  font-size: 60pt;
+  font-weight: 700;
+  color: white;
+  text-align: left;
+  letter-spacing: 3px;
+}
+
+.column-landing .vertical-align--bottom {
+  vertical-align: bottom;
+}
+
+/*
+ * Presentational stuff
+ */
+
+.column-landing a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.column-landing .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  margin-top: 4%;
+  font-size: 36pt;
+  font-weight: 600;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.column-landing .btn-group-lg>.btn, .column-landing .btn-lg {
+  padding: 10px 16px;
+  font-size: 36pt;
+  line-height: 1.3333333;
+  border-radius: 5px;
+}
+
+.column-landing .btn-dark {
+  border-radius: 5px;
+  color: #fff;
+  background-color: #ff9900;
+}
+
+.column-landing .btn-dark:hover,
+.column-landing .btn-dark:focus,
+.column-landing .btn-dark:active {
+  color: #fff;
+  background-color: #9098d3;
+}
+
+.column-landing h1, .column-landing h2, .column-landing h3, .column-landing h4, .column-landing h5, .column-landing h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  text-align: left;
+}
+
+.column-landing h1, .column-landing h2, .column-landing h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.column-landing h4, .column-landing h5, .column-landing h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.column-landing h3 {
+  color: #ff9900;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-weight: 500;
+  font-size: 20pt;
+  line-height: 24pt;
+  margin-top: 20px;
+}
+
+.column-landing h4 {
+  font-size: 14pt;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  line-height: 16.8pt;
+  font-weight: 400;
+}
+
+.column-landing p {
+  margin: 0 0 10px;
+}
+
+.column-landing small { 
+  font-size: 85%;
+  color: #aaa;
+}
+
+.column-landing .padding-cus {
+  padding-top: 25px;
+}
+
+.column-landing .padding1 {
+    padding-top: 10px;
+}
+
+.text-block {
+  border: 5pt solid #ff9900;
+  display: inline-block;
+  margin: auto;
+  max-width: 475px;
+}
+
+.weloveclt {
+  display: inline-block;
+  padding: 10px;
+  clear: both;
+  position: relative;
+  margin: 20px 0 20px 0;
+}
+
+/* Fix display on smaller devices */
+@media all and (max-width: 500px) {
+  .column-landing .vertical-align--middle h1 {
+    font-size: 36pt;
+    text-align: left;
+  } 
+
+  .text-block {
+    width: auto;
+  }
+}

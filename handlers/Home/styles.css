@@ -1,0 +1,44 @@
+/** @define Home; use strict */
+@import 'normalize.css';
+
+.Home {
+
+}
+
+body, html {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14pt;
+  color: #606060;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* other */
+#app {
+	width: 100%;
+	height: 100%;
+}
+
+.AppBase {
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+  color: #ff9900;
+  font-size: 1.6em;
+  
+}
+
+@media all and (min-width: 415px) {
+  h1 {
+    font-size: 1.8em;
+  }
+}

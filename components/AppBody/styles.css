@@ -1,0 +1,157 @@
+/** OLD **/
+/** @define AppBody; use strict */
+
+.AppBody {}
+
+.AppBody-child {}
+
+.AppBody-child.is-state {}
+
+
+.appBodyTransition-enter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.btn-group span > div:nth-child(1),
+#actionButton > div, 
+#beginState > div {
+	width: 98%;
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+  border-radius: 3px;
+  border: 3px solid black;
+  cursor: pointer;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin: auto auto 8px;
+  padding: 4px 3px 3px 3px;
+  outline: none;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-group div.button {
+  line-height: 18px;
+  position: relative;
+  z-index: 10;
+}
+
+.next {
+  color: #ffffff;
+  background: #ff9900;
+  border: 3px solid #ff9900;
+}
+
+.next:hover {
+  background: #ffad32;
+}
+
+.selected {
+  color: #ffffff;
+  background: #9098d3;
+  border: 3px solid #9098d3;
+  text-decoration: none;
+}
+
+.selected:hover {
+  background: #b7bce2;
+}
+
+.unselected {
+  color: #9098d3;
+  background: #ffffff;
+  border: 3px solid #9098d3;
+}
+
+.unselected:hover {
+  color: #9098d3;
+  background: #ffffff;
+}
+
+.disabled {
+  color: #cccccc;
+  background: #fff;
+  border: 3px solid #cccccc;
+  cursor: default;
+}
+
+p {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #606060;
+  text-align: center;
+}
+
+.appBody h1 {
+  margin: 0.5em 0 0.3em 0;
+  font-size: 20pt;
+}
+
+#beginState p, #endState p {
+  display: inline-block;
+}
+
+.social {
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  background-color: #9098d3;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  padding: 4px;
+}
+
+i {
+  padding: 10px;
+}
+
+.fa-facebook {
+  margin-left: 25px;
+}
+
+#endState a {
+  display: inline-block;
+  margin: 10px;
+}
+
+@media all and (min-width: 415px) {
+  .btn-group span > div:nth-child(1),
+  #actionButton > div, 
+  #beginState > div { 
+    width: 350px;
+  }
+
+  .button {
+    width: 325px;
+  }
+
+  #beginState p, #endState p {
+    width: 325px;
+    display: inline-block;
+  }
+
+  .appBody h1 {
+    margin: 0.67em 0;
+    font-size: 28pt;
+  }
+
+  .unselected:hover {
+    color: #ffffff;
+    background: #b7bce2;
+  }
+}
