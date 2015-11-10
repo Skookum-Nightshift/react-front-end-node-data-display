@@ -27,8 +27,8 @@ var Home = React.createClass({
 		      	
 		      	<div className="text-block">
 			        <h1 data-sr>Paycheck to Paycheck</h1>
-			        <h3>Brought to you by United Way of Central Carolinas</h3>
-	            	<h4>Learn the tough choices made by those in poverty. What would you choose?</h4>
+	            	<h3>Learn the tough choices made by those in poverty. What would you choose?</h3>
+			        <h4>Brought to you by United Way of Central Carolinas</h4>
 		      	</div>
 		      	
 		      	<br />
@@ -39,8 +39,8 @@ var Home = React.createClass({
 	            
 	            <br />
 	            
-	            <div className="fb-share-button" data-href="https://povsim-staging.herokuapp.com/" data-layout="button_count"/>
-				
+	            {/* <div className="fb-share-button" data-href="https://povsim-staging.herokuapp.com/" data-layout="button_count"/> 
+				*/}
 	            <br />
 
 				<div className="weloveclt">
