@@ -28,7 +28,7 @@ var Home = React.createClass({
 		      	<div className="text-block">
 			        <h1 data-sr>Paycheck to Paycheck</h1>
 	            	<h3>Learn the tough choices made by those in poverty. What would you choose?</h3>
-			        <h4>Brought to you by United Way of Central Carolinas</h4>
+			        {/* <h4>Brought to you by United Way of Central Carolinas</h4> */}
 		      	</div>
 		      	
 		      	<br />
