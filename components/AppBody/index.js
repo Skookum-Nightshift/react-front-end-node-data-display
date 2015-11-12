@@ -103,7 +103,7 @@ class AppBody extends React.Component {
           <p>You live paycheck to paycheck.</p><br />
           <img src="http://simpleicon.com/wp-content/uploads/meeting.png" alt="family of 4" className="sectionIcon" /><br />
           <p>Stay within your limited monthly budget.<br />
-          <br />Experience the tough choices of 1 in 5 families in Charlotte.</p>
+          <br />Experience the tough choices that 1 in 5 families in Charlotte makes every month.</p>
           <br />
           <a href="#" onClick={this.props.setOwnerState.bind(null, {page: 1, activeItemIndex: 0}, "Display first question")}>
             <div className="button next">Begin</div>
@@ -114,8 +114,8 @@ class AppBody extends React.Component {
       return (
         <div id="endState">
           <h1>How did you fare?</h1>
-          <p>You had to make some hard choices! These are the choices of 1 in 5 families in Charlotte.</p><br />
-          <p>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p><br />
+          <p>You had to make some hard choices! These are the choices 1 in 5 families in Charlotte must make every month.</p><br />
+          <p>United Way works with local charities to help those in need. It is their goal to make Charlotte a great place to live and work for all.</p><br />
           <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpovsim-staging.herokuapp.com%2F&display=popup&ref=plugin&src=share_button">
             <div className="social"><FontAwesome name="facebook" size="5x"/></div>
           </a>
@@ -134,7 +134,7 @@ class AppBody extends React.Component {
         <div id="endState">
           <h1>Get Involved!</h1>
           <p>Click something below to get involved!</p>
-          <p>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p><br />
+          <p>United Way works with local charities to help those in need. It is their goal to make Charlotte a great place to live and work for all.</p><br />
           
           <a href="http://www.uwcentralcarolinas.org/invest" id="donate" className="button selected">Donate!</a><br />
           
