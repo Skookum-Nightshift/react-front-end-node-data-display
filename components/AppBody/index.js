@@ -128,6 +128,9 @@ class AppBody extends React.Component {
           <a id="getInvolved" href="#" onClick={this.props.setOwnerState.bind(null, {getInvolved: true}, "Display 'Get Involved' page")}>
             <div className="button selected">Get Involved</div>
           </a>
+          <a href="#" onClick={this.props.setOwnerState.bind(null, {navOpen: true}, "Show modal menu")} id="nextButton">
+            <div className="button next">Review Your Choices</div>
+          </a>
         </div>
       );
     } else if (this.props.appCompleted === true && this.props.diverged === false && this.props.getInvolved === true) {
