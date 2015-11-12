@@ -13,7 +13,7 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: 64px;
+  top: 44px;
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -160,6 +160,10 @@ i {
   #beginState p, #endState p {
     width: 325px;
     display: inline-block;
+  }
+
+  .appBodyTransition-enter {
+    top: 64px;
   }
 
   .appBody h1 {
