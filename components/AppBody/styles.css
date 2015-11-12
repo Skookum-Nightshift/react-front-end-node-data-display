@@ -7,6 +7,9 @@
 
 .AppBody-child.is-state {}
 
+.appBody {
+  height: 100%;
+}
 
 .appBodyTransition-enter {
   position: absolute;
