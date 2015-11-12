@@ -110,6 +110,8 @@ p {
 
 #beginState p, #endState p {
   display: inline-block;
+  margin: 0 auto 14px;
+  font-size: 16px;
 }
 
 .social {
@@ -122,6 +124,7 @@ p {
   color: #fff;
   cursor: pointer;
   padding: 4px;
+  display: inline-block;
 }
 
 i {
@@ -130,10 +133,11 @@ i {
 
 .fa-facebook {
   margin-left: 25px;
+  display: inline-block;
 }
 
 #endState a {
-  display: inline-block;
+  display: block;
   margin: 10px;
 }
 

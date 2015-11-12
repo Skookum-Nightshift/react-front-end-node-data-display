@@ -114,18 +114,19 @@ class AppBody extends React.Component {
       return (
         <div id="endState">
           <h1>How did you fare?</h1>
+          <p>You ended up with ${this.props.balance} and this exercise didn't even cover every expense.</p><br />
           <p>You had to make some hard choices! These are the choices 1 in 5 families in Charlotte must make every month.</p><br />
           <p>United Way works with local charities to help those in need. It is their goal to make Charlotte a great place to live and work for all.</p><br />
-          <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpovsim-staging.herokuapp.com%2F&display=popup&ref=plugin&src=share_button">
+          <a style={{'display': 'inline-block'}} target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpovsim-staging.herokuapp.com%2F&display=popup&ref=plugin&src=share_button">
             <div className="social"><FontAwesome name="facebook" size="5x"/></div>
           </a>
-          <a href="https://twitter.com/home?status=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%40myUWCC%20http%3A//bit.ly/1Rjfrwm">
+          <a style={{'display': 'inline-block'}} target="_blank" href="https://twitter.com/home?status=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%40myUWCC%20http%3A//bit.ly/1Rjfrwm">
             <div className="social"><FontAwesome name="twitter" size="5x"/></div>
           </a>
           <br />
           <br /> 
-          <a href="#" onClick={this.props.setOwnerState.bind(null, {getInvolved: true}, "Display 'Get Involved' page")}>
-            <div id="getInvolved" className="button selected">Get Involved</div>
+          <a id="getInvolved" href="#" onClick={this.props.setOwnerState.bind(null, {getInvolved: true}, "Display 'Get Involved' page")}>
+            <div className="button selected">Get Involved</div>
           </a>
         </div>
       );
@@ -133,17 +134,17 @@ class AppBody extends React.Component {
       return (
         <div id="endState">
           <h1>Get Involved!</h1>
-          <p>Click something below to get involved!</p>
+          <p>Click something below to get involved!</p><br />
           <p>United Way works with local charities to help those in need. It is their goal to make Charlotte a great place to live and work for all.</p><br />
           
-          <a href="http://www.uwcentralcarolinas.org/invest" id="donate" className="button selected">Donate!</a><br />
-          
-          <a href="http://www.uwcentralcarolinas.org/give" id="volunteer" className="button selected">Volunteer!</a>
-          
-          <br />
-          <br /> 
-          <a href="#" onClick={this.props.setOwnerState.bind(null, {getInvolved: false}, "Display 'Social Share' page")}>
-            <div id="getInvolved" className="button selected">Share this!</div>
+          <a target="_blank" href="http://www.uwcentralcarolinas.org/invest" id="donate">
+            <div className="button selected">Donate!</div>
+          </a>
+          <a target="_blank" href="http://www.uwcentralcarolinas.org/give" id="volunteer">
+            <div className="button selected">Volunteer!</div>
+          </a><br /><span />
+          <a id="getInvolved" href="#" onClick={this.props.setOwnerState.bind(null, {getInvolved: false}, "Display 'Social Share' page")}>
+            <div className="button selected">Share this!</div>
           </a>
         </div>
       );
