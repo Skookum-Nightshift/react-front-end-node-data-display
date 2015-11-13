@@ -145,7 +145,7 @@ body.modalOpen {
 .navdisabled {
   color: #cccccc;
   background: #9098d3;
-  border: 3px solid #cccccc
+  border: 3px solid #cccccc;
 }
 
 #animatedModal ul {

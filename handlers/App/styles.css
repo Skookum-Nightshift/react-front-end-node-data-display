@@ -13,26 +13,20 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  min-height: 64px;
+  min-height: 44px;
   padding-left: 24px;
   padding-right: 24px;
 }
 
 #appBar h1 {
-  margin: 0;
-  font-size: 24px;
+  margin: 3px 0 0 0;
+  font-size: 18px;
   font-weight: 400;
   color: #fff;
-  line-height: 64px;
+  line-height: 41px;
 }
 
-/*Adjust long app names in h1 on smaller devices*/
-@media (max-width: 340px) {
-	#appBar h1 {
-		font-size: 18px;
-	}
-}
-
+/*Remove App Name in h1 on tiny devices*/
 @media (max-width: 270px) {
 	#appBar h1 {
 		display: none;
@@ -44,7 +38,7 @@
 }
 
 #menuButton {
-	margin-top: 16px;
+	margin-top: 6px;
 	margin-right: 19px;
 	margin-left: auto;
 }
@@ -105,6 +99,22 @@ i {
 
 .fa-facebook {
   margin-left: 25px;
+}
+
+@media all and (min-width: 415px) {
+  #appBar {
+    min-height: 64px;
+  }
+
+  #appBar h1 {
+    margin: 0;
+    line-height: 64px;
+    font-size: 24px;
+  }
+
+  #menuButton {
+    margin-top: 16px;
+  }
 }
 
 @media all and (min-width: 800px) {

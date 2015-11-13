@@ -7,13 +7,16 @@
 
 .AppBody-child.is-state {}
 
+.appBody {
+  height: 100%;
+}
 
 .appBodyTransition-enter {
   position: absolute;
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: 64px;
+  top: 44px;
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -95,6 +98,14 @@ p {
   text-align: center;
 }
 
+#outOfMoney p {
+  margin: 3px 0;
+}
+
+.balance p {
+  margin: 3px 0;
+}
+
 .appBody h1 {
   margin: 0.5em 0 0.3em 0;
   font-size: 20pt;
@@ -102,6 +113,8 @@ p {
 
 #beginState p, #endState p {
   display: inline-block;
+  margin: 0 auto 14px;
+  font-size: 16px;
 }
 
 .social {
@@ -114,6 +127,7 @@ p {
   color: #fff;
   cursor: pointer;
   padding: 4px;
+  display: inline-block;
 }
 
 i {
@@ -122,10 +136,11 @@ i {
 
 .fa-facebook {
   margin-left: 25px;
+  display: inline-block;
 }
 
 #endState a {
-  display: inline-block;
+  display: block;
   margin: 10px;
 }
 
@@ -136,6 +151,11 @@ i {
     width: 350px;
   }
 
+  #actionButton {
+    width: 325px;
+    margin: 0 auto;
+  }
+
   .button {
     width: 325px;
   }
@@ -143,6 +163,10 @@ i {
   #beginState p, #endState p {
     width: 325px;
     display: inline-block;
+  }
+
+  .appBodyTransition-enter {
+    top: 64px;
   }
 
   .appBody h1 {

@@ -14,6 +14,7 @@
 .options-desc {
   margin: 0 auto 10px;
   text-align: justify;
+  font-size: 18px;
 }
 
 .sectionIcon {
@@ -34,9 +35,10 @@
 
 .accordionDesc p {
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   padding: 5px;
   margin: 0px;
+  line-height: 16px;
 }
 
 .accordionDesc {
@@ -47,10 +49,11 @@
   -webkit-transition: max-height .4s;
   transition: max-height .4s;
   overflow: hidden;
+  border-radius: 0 0 3px 3px;
 }
 
 .accordionDescActive {
-  max-height: 64px;
+  max-height: 100px;
 }
 
 

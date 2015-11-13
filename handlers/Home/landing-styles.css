@@ -48,7 +48,7 @@
   font-size: 60pt;
   font-weight: 700;
   color: white;
-  text-align: left;
+  text-align: center;
   letter-spacing: 3px;
 }
 
@@ -113,7 +113,7 @@
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
-  text-align: left;
+  text-align: justify;
 }
 
 .column-landing h1, .column-landing h2, .column-landing h3 {
@@ -181,7 +181,7 @@
 @media all and (max-width: 500px) {
   .column-landing .vertical-align--middle h1 {
     font-size: 36pt;
-    text-align: left;
+    text-align: center;
   } 
 
   .text-block {

@@ -36,7 +36,7 @@ class AppBody extends React.Component {
     } else {
       return (
         <span>
-          <p>You are out of money!<br /><br />You need to make harder choices to stay within your monthly budget.</p>
+          <span id="outOfMoney"><p><b>You are out of money!</b></p><p>You need to make harder choices to stay within your monthly budget.</p></span>
           <a href="#" onClick={this.props.setOwnerState.bind(null, {navOpen: true}, "Show modal menu")} id="nextButton">
             <div className="button next">Adjust Your Budget</div>
           </a>
@@ -79,16 +79,16 @@ class AppBody extends React.Component {
           selectedItem={item}
           page={this.props.page}
           activeItemIndex={this.props.activeItemIndex} />
-        <div id="actionButton">
-          {this.nextButton(min, item)}
-        </div>
         <div className="balance">
-          <p>Your budget is: ${this.props.balance}</p>
+          <p>You have <b>${this.props.balance}</b> left for the month.</p>
         </div>
         <BalanceBar 
           id='BalanceBar' 
           currentOption={this.props.currentOption} 
           balance={this.props.balance}/>
+        <div id="actionButton">
+          {this.nextButton(min, item)}
+        </div>
       </div>
       </CSSTransitionGroup>
     );
@@ -103,7 +103,7 @@ class AppBody extends React.Component {
           <p>You live paycheck to paycheck.</p><br />
           <img src="http://simpleicon.com/wp-content/uploads/meeting.png" alt="family of 4" className="sectionIcon" /><br />
           <p>Stay within your limited monthly budget.<br />
-          <br />Experience the tough choices of 1 in 5 families in Charlotte.</p>
+          <br />Experience the tough choices that 1 in 5 families in Charlotte makes every month.</p>
           <br />
           <a href="#" onClick={this.props.setOwnerState.bind(null, {page: 1, activeItemIndex: 0}, "Display first question")}>
             <div className="button next">Begin</div>
@@ -114,18 +114,31 @@ class AppBody extends React.Component {
       return (
         <div id="endState">
           <h1>How did you fare?</h1>
+<<<<<<< HEAD
           <p>You had to make some hard choices! These are the choices of 1 in 5 families in Charlotte.</p><br />
           <p>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p><br />
           <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpovsim-staging.herokuapp.com%2F&display=popup&ref=plugin&src=share_button" target="_blank">
             <div className="social"><FontAwesome name="facebook" size="5x"/></div>
           </a>
           <a href="https://twitter.com/home?status=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%40myUWCC%20http%3A//bit.ly/1Rjfrwm" target="_blank">
+=======
+          <p>You ended up with ${this.props.balance} and this exercise didn't even cover every expense.</p><br />
+          <p>You had to make some hard choices! These are the choices 1 in 5 families in Charlotte must make every month.</p><br />
+          <p>United Way works with local charities to help those in need. It is their goal to make Charlotte a great place to live and work for all.</p><br />
+          <a style={{'display': 'inline-block'}} target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpovsim-staging.herokuapp.com%2F&display=popup&ref=plugin&src=share_button">
+            <div className="social"><FontAwesome name="facebook" size="5x"/></div>
+          </a>
+          <a style={{'display': 'inline-block'}} target="_blank" href="https://twitter.com/home?status=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%40myUWCC%20http%3A//bit.ly/1Rjfrwm">
+>>>>>>> staging
             <div className="social"><FontAwesome name="twitter" size="5x"/></div>
           </a>
           <br />
           <br /> 
-          <a href="#" onClick={this.props.setOwnerState.bind(null, {getInvolved: true}, "Display 'Get Involved' page")}>
-            <div id="getInvolved" className="button selected">Get Involved</div>
+          <a id="getInvolved" href="#" onClick={this.props.setOwnerState.bind(null, {getInvolved: true}, "Display 'Get Involved' page")}>
+            <div className="button selected">Get Involved</div>
+          </a>
+          <a href="#" onClick={this.props.setOwnerState.bind(null, {navOpen: true}, "Show modal menu")} id="nextButton">
+            <div className="button next">Review Your Choices</div>
           </a>
         </div>
       );
@@ -133,17 +146,26 @@ class AppBody extends React.Component {
       return (
         <div id="endState">
           <h1>Get Involved!</h1>
+<<<<<<< HEAD
           <p>Click something below to get involved!</p>
           <p>United Way works with local charities to help those in need. It is there goal to make Charlotte a great place to live and work for all.</p><br />
           
           <a href="http://www.uwcentralcarolinas.org/invest" id="donate" className="button selected" target="_blank">Donate!</a><br />
           
           <a href="http://www.uwcentralcarolinas.org/give" id="volunteer" className="button selected" target="_blank">Volunteer!</a>
+=======
+          <p>Click something below to get involved!</p><br />
+          <p>United Way works with local charities to help those in need. It is their goal to make Charlotte a great place to live and work for all.</p><br />
+>>>>>>> staging
           
-          <br />
-          <br /> 
-          <a href="#" onClick={this.props.setOwnerState.bind(null, {getInvolved: false}, "Display 'Social Share' page")}>
-            <div id="getInvolved" className="button selected">Share this!</div>
+          <a target="_blank" href="http://www.uwcentralcarolinas.org/invest" id="donate">
+            <div className="button selected">Donate!</div>
+          </a>
+          <a target="_blank" href="http://www.uwcentralcarolinas.org/give" id="volunteer">
+            <div className="button selected">Volunteer!</div>
+          </a><br /><span />
+          <a id="getInvolved" href="#" onClick={this.props.setOwnerState.bind(null, {getInvolved: false}, "Display 'Social Share' page")}>
+            <div className="button selected">Share this!</div>
           </a>
         </div>
       );
@@ -160,7 +182,7 @@ class AppBody extends React.Component {
         {this.beginOrEnd(selectedItem)}
         {(this.props.appCompleted === true && this.props.diverged === false) ? 
           <div className="balance">
-            <p>Your budget is: ${this.props.balance}</p>
+            <p>You have <b>${this.props.balance}</b> left for the month.</p>
             <BalanceBar 
               id='BalanceBar' 
               currentOption={this.props.currentOption} 
