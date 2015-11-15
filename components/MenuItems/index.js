@@ -3,6 +3,7 @@
 require('./styles.css');
 
 import React from 'react';
+import Isvg from 'react-inlinesvg';
 var {PropTypes} = React;
 
 class MenuItems extends React.Component {
@@ -28,11 +29,11 @@ class MenuItems extends React.Component {
   renderImg (item) {
     if (item.set !== null) {
       let imgIndex = item.options.indexOf(item.set);
-      return <img src={item.sectionImage[imgIndex]} className="menuIcon" />;
+      return <Isvg src={item.sectionImage[imgIndex]} />;
     } else if (item.sectionImage.length < 2) {
-      return <img src={item.sectionImage[0]} className="menuIcon" />;
+      return <Isvg src={item.sectionImage[0]} />;
     } else {
-      return <img src={item.sectionImage[1]} className="menuIcon" />;
+      return <Isvg src={item.sectionImage[1]} />;
     }
   }
 
@@ -61,7 +62,7 @@ class MenuItems extends React.Component {
       return (
         <a href="#" onClick={this.handleItemClick.bind(this, unfilteredItemIndex)}>
           <div className="menu-item">
-            {this.renderImg(item)}
+            <div className="menuIcon">{this.renderImg(item)}</div>
             <ul className="menuOptionList">
               <li className="navselected menuOptionListItem">{item.optionShort[item.options.indexOf(item.set)]}</li>
             </ul>
@@ -71,7 +72,7 @@ class MenuItems extends React.Component {
     } else {
       return (
         <div className="menu-item">
-          {this.renderImg(item)}
+          <div className="menuIcon">{this.renderImg(item)}</div>
           <ul className="menuOptionList">
             <li className="navdisabled menuOptionListItem">{item.name}</li>
           </ul>

@@ -75,7 +75,12 @@ body.modalOpen {
 }
 
 .menuIcon {
-  width: 30px;
+  width: 35px;
+  height: 35px;
+  color: white;
+  float: left;
+  margin-right: 8px;
+  margin-top: 7px;
 }
 .menu-item {
   height: 50px;

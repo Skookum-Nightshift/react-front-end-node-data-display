@@ -8,6 +8,7 @@ const FontAwesome = require('react-fontawesome');
 
 import Options from 'Options';
 import BalanceBar from 'BalanceBar';
+import Isvg from 'react-inlinesvg';
 
 class AppBody extends React.Component {
 
@@ -101,7 +102,7 @@ class AppBody extends React.Component {
           <h1>Assume...</h1>
           <p>You’re a parent. You work. Your spouse works part-time. You have a 7-year-old daughter and 12-year-old son.</p><br />
           <p>You live paycheck to paycheck.</p><br />
-          <img src="http://simpleicon.com/wp-content/uploads/meeting.png" alt="family of 4" className="sectionIcon" /><br />
+          <Isvg src="public/img/icons/meeting.svg" alt="family of 4" className="sectionIcon" /><br />
           <p>Stay within your limited monthly budget.<br />
           <br />Experience the tough choices that 1 in 5 families in Charlotte makes every month.</p>
           <br />

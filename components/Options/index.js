@@ -3,6 +3,7 @@
 require('./styles.css');
 
 import React from 'react/addons';
+import Isvg from 'react-inlinesvg';
 var {PropTypes} = React;
 
 let {CSSTransitionGroup} = React.addons;
@@ -54,14 +55,14 @@ class Options extends React.Component {
     if (index === -1) {
       if (item.sectionImage.length < 2) {
         oldItemSet = item.options[0];
-        return <img src={item.sectionImage[0]} className="sectionIcon" />;
+        return <Isvg src={item.sectionImage[0]} className="sectionIcon" />;
       } else {
         oldItemSet = item.options[1];
-        return <img src={item.sectionImage[1]} className="sectionIcon" />;
+        return <Isvg src={item.sectionImage[1]} className="sectionIcon" />;
       }
     } else {
       oldItemSet = item.options[index];
-      return <img src={item.sectionImage[index]} className="sectionIcon" />;
+      return <Isvg src={item.sectionImage[index]} className="sectionIcon" />;
     }
   }
 

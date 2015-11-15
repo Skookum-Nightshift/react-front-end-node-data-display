@@ -18,7 +18,15 @@
 }
 
 .sectionIcon {
+  width: 75px;
+  color: #9098D3;
+}
+
+.sectionIcon svg {
+  border-radius: 50%;
   width: 100px;
+  height: 100px;
+  background: linear-gradient(rgba(255,153, 0, 0.4), rgba(144,152,211, 0.5));
 }
 
 .appBodyImg {
@@ -67,7 +75,12 @@
   }
 
   .sectionIcon {
+    width: 120px;
+  }
+
+  .sectionIcon svg {
     width: 150px;
+    height: 150px;
   }
 
   .appBodyImg {
