@@ -118,10 +118,10 @@ class AppBody extends React.Component {
           <p>You ended up with ${this.props.balance} and this exercise didn't even cover every expense.</p><br />
           <p>You had to make some hard choices! These are the choices 1 in 5 families in Charlotte must make every month.</p><br />
           <p>United Way works with local charities to help those in need. It is their goal to make Charlotte a great place to live and work for all.</p><br />
-          <a style={{'display': 'inline-block'}} target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpovsim-staging.herokuapp.com%2F&display=popup&ref=plugin&src=share_button">
+          <a style={{'display': 'inline-block'}} target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpaychecktopaycheck.herokuapp.com%2F&display=popup&ref=plugin&src=share_button">
             <div className="social"><FontAwesome name="facebook" size="5x"/></div>
           </a>
-          <a style={{'display': 'inline-block'}} target="_blank" href="https://twitter.com/home?status=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%40myUWCC%20http%3A//bit.ly/1Rjfrwm">
+          <a style={{'display': 'inline-block'}} target="_blank" href="https://twitter.com/home?status=I%20completed%20the%20Paycheck%20to%20Paycheck%20poverty%20app.%20I%20learned%20the%20tough%20choices%20of%201%20in%205%20Charlotte%20families%20%40myUWCC%20http%3A//bit.ly/uwccptp">
             <div className="social"><FontAwesome name="twitter" size="5x"/></div>
           </a>
           <br />
