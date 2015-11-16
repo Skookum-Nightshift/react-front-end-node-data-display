@@ -7,6 +7,7 @@ require('./styles.css');
 import React from 'react';
 import {Resolver} from 'react-resolver';
 
+
 var Home = React.createClass({
 
   componentDidMount() {
@@ -43,9 +44,9 @@ var Home = React.createClass({
 				*/}
 	            <br />
 
-				<div className="weloveclt">
-					<img src="public/img/weloveclt.png" />
-				</div>
+							<div className="weloveclt">
+								<img src="public/img/weloveclt.png" />
+							</div>
 
               </div>
 		    </div>

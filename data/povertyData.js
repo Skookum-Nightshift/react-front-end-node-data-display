@@ -22,7 +22,7 @@ let povertyData = [
     "set": null,
     "type": "fact",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/bar-chart-down-3.png"],
+    "sectionImage": ["/public/img/icons/bar-chart-down-3.svg"],
     "optionShort": [],
     "optionDesc": []
 },
@@ -33,7 +33,7 @@ let povertyData = [
     "set": null,
     "type": "normal",
     "visited": true,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/home-3.png", "http://simpleicon.com/wp-content/uploads/home-6.png", "http://simpleicon.com/wp-content/uploads/building-3.png"],
+    "sectionImage": ["/public/img/icons/house/basic.svg", "/public/img/icons/house/apartment.svg", "/public/img/icons/house/city.svg"],
     "optionShort": ["3 bedroom home", "2 bedroom apartment", "1 bedroom studio"],
     "optionDesc": ["3 bedroom, 2 bath house, utilities, small yard, garage, stove, refrigerator, and dishwasher. Plenty of room for the family.", "2 bedroom, 1 bath apartment, utilities, patio, 1 parking space, stove, and refrigerator. Your children share a room. That's tough with your son becoming a teenager.", "1 bedroom, 1 bath apartment, utilities, no patio, no yard, street parking, stove only. It's tight living quarters with little privacy."]
 }, {
@@ -43,7 +43,7 @@ let povertyData = [
     "set": null,
     "type": "fact",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/home-7.png"],
+    "sectionImage": ["/public/img/icons/house/basic.svg"],
     "optionShort": [],
     "optionDesc": []
 }, {
@@ -53,7 +53,7 @@ let povertyData = [
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/burger.png", "http://simpleicon.com/wp-content/uploads/pizza_1.png","http://simpleicon.com/wp-content/uploads/plate__spoon.png"],
+    "sectionImage": ["/public/img/icons/meals/sushi.svg", "/public/img/icons/meals/twomeals.svg","/public/img/icons/meals/bread.svg"],
     "optionShort": ["3 meals a day", "2 meals a day", "1 meal a day"],
     "optionDesc": ["Your family is satisfied with 3 meals a day and snacks.", "Your family is a bit hungry during the day.", "Your family is hungry most of the time. It's hard to concentrate at work and school."]
 }, {
@@ -63,7 +63,7 @@ let povertyData = [
     "set": null,
     "type": "fact",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/pizza.png"],
+    "sectionImage": ["/public/img/icons/meals/twomeals.svg"],
     "optionShort": [],
     "optionDesc": []
 }, {
@@ -73,7 +73,7 @@ let povertyData = [
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/car_4.png", "http://simpleicon.com/wp-content/uploads/train.png", "http://simpleicon.com/wp-content/uploads/bicycle.png"],
+    "sectionImage": ["/public/img/icons/transportation/car.svg", "/public/img/icons/transportation/bus.svg", "/public/img/icons/transportation/bicycle.svg"],
     "optionShort": ["Car", "Public transit", "Walk or bike"],
     "optionDesc": ["You have your own car and insurance. It's easy to get around.", "Walk, bike, and public transit. The train and bus schedules can be tricky.", "Walk or bike everywhere. Inconvenient, especially in cold and rainy weather."]
 }, {
@@ -83,7 +83,7 @@ let povertyData = [
     "set": null,
     "type": "fact",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/car_11.png"],
+    "sectionImage": ["/public/img/icons/transportation/bus.svg"],
     "optionShort": [],
     "optionDesc": []
 }, {
@@ -93,7 +93,7 @@ let povertyData = [
     "set": null,
     "type": "setback",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/shopping_trolley_7.png", "http://simpleicon.com/wp-content/uploads/t_shirt.png"],
+    "sectionImage": ["/public/img/icons/clothes/cart.svg", "/public/img/icons/clothes/tshirt.svg"],
     "optionShort": ["Shop for new clothes", "Hand-me-downs"],
     "optionDesc": ["4 sets of new and stylish pants and shirts.", "2 sets of hand-me-downs or used clothing. They're nothing like her friends' clothes."]
 }, {
@@ -103,8 +103,8 @@ let povertyData = [
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/docter__nurse_1.png", "http://simpleicon.com/wp-content/uploads/surgeon_1.png", "http://simpleicon.com/wp-content/uploads/nurse1.png"],
-    "optionShort": ["Family plan", "You only", "None"],
+    "sectionImage": ["/public/img/icons/health/hospital.svg", "/public/img/icons/health/hospital.svg", "/public/img/icons/savings/nomoney.svg"],
+    "optionShort": ["Family plan", "You only", "No Insurance"],
     "optionDesc": ["Health insurance for you and your family. You have peace of mind.", "Health insurance for you only. You're nervous if your spouse or children get sick.", "No health insurance. You pay all medical expenses out of pocket. That can be expensive!"]
 }, {
     "name": "Health Fact",
@@ -113,7 +113,7 @@ let povertyData = [
     "set": null,
     "type": "fact",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/stethoscope1.png"],
+    "sectionImage": ["/public/img/icons/health/siren.svg"],
     "optionShort": [],
     "optionDesc": []
 }, {
@@ -123,7 +123,7 @@ let povertyData = [
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/lcd_1.png", "http://simpleicon.com/wp-content/uploads/iphone-landscape-portrait.png", "http://simpleicon.com/wp-content/uploads/mobile_phone.png"],
+    "sectionImage": ["/public/img/icons/technology/computer.svg", "/public/img/icons/technology/tv.svg", "/public/img/icons/technology/phone.svg"],
     "optionShort": ["Smartphones, cable TV, laptop", "2 cell phones and TV", "1 cell phone"],
     "optionDesc": ["2 smart phones, TV with cable, home computer. Plenty of entertainment and leisure.", "2 cell phones and a TV, but no cable.", "1 cell phone but no TV or electronics for play."]
 }, {
@@ -133,7 +133,7 @@ let povertyData = [
     "set": null,
     "type": "fact",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/tv_table.png"],
+    "sectionImage": ["/public/img/icons/technology/iphone.svg"],
     "optionShort": [],
     "optionDesc": []
 }, {
@@ -143,7 +143,7 @@ let povertyData = [
     "set": null,
     "type": "setback",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/stethoscope1.png", "http://simpleicon.com/wp-content/uploads/ambulance1.png"],
+    "sectionImage": ["/public/img/icons/health/pharmacy.svg", "/public/img/icons/health/hospital.svg"],
     "optionShort": ["Urgent Care and medication", "Urgent Care only"],
     "optionDesc": ["Urgent Care visit plus medication, better in no time.", "Urgent Care visit but no medication. Your spouse may miss some work and earn less this month."]
 }, {
@@ -153,8 +153,8 @@ let povertyData = [
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/film.png", "http://simpleicon.com/wp-content/uploads/music-note-8.png", "http://simpleicon.com/wp-content/uploads/fruit_basket.png"],
-    "optionShort": ["2 activities", "1 activity", "None"],
+    "sectionImage": ["/public/img/icons/leisure/movie.svg", "/public/img/icons/leisure/music.svg", "/public/img/icons/savings/nomoney.svg"],
+    "optionShort": ["2 activities", "1 activity", "No activities"],
     "optionDesc": ["2 family activities, like eating out, movies, or a concert", "1 family activity, like a picnic, bowling, or local music show", "No family outings, maybe visiting nearby family or a local park."]
 }, {
     "name": "Family Leisure Fact",
@@ -163,7 +163,7 @@ let povertyData = [
     "set": null,
     "type": "fact",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/bowling_ball_2.png"],
+    "sectionImage": ["/public/img/icons/leisure/movie.svg"],
     "optionShort": [],
     "optionDesc": []
 }, {
@@ -173,8 +173,8 @@ let povertyData = [
     "set": null,
     "type": "setback",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/football1.png", "http://simpleicon.com/wp-content/uploads/football.png"],
-    "optionShort": ["Sure!", "No..."],
+    "sectionImage": ["/public/img/icons/sports/playfootball.svg", "/public/img/icons/sports/football.svg"],
+    "optionShort": ["Sure!", "No soccer"],
     "optionDesc": ["Cleats, shin pads, uniform, and ball. He's super excited.", "He does not participate. He's bummed and misses a chance to make new friends."]
 }, {
     "name": "Your Laundry",
@@ -183,7 +183,7 @@ let povertyData = [
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/washing_machine.png","http://simpleicon.com/wp-content/uploads/backet.png","http://simpleicon.com/wp-content/uploads/shop-4.png"],
+    "sectionImage": ["/public/img/icons/laundry/dedicated.svg","/public/img/icons/laundry/shared.svg","/public/img/icons/laundry/laundromat.svg"],
     "optionShort": ["Your own washer/dryer", "Shared laundry room", "Laundromat"],
     "optionDesc": ["Payment for your own washer and dryer in your home. Very convenient.", "Shared laundry room in your complex. It's pretty busy on weekends.", "You can walk to the local laundromat. But you have to wait around. And the dryers take forever."]
 }, {
@@ -193,7 +193,7 @@ let povertyData = [
     "set": null,
     "type": "fact",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/washing_machine_1.png"],
+    "sectionImage": ["/public/img/icons/laundry/dedicated.svg"],
     "optionShort": [],
     "optionDesc": []
 }, {
@@ -203,8 +203,8 @@ let povertyData = [
     "set": null,
     "type": "normal",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/money-bag-4.png","http://simpleicon.com/wp-content/uploads/money-7.png", "http://simpleicon.com/wp-content/uploads/coin-money-7.png"],
-    "optionShort": ["$200", "$100", "None"],
+    "sectionImage": ["/public/img/icons/savings/coins.svg","/public/img/icons/savings/money.svg", "/public/img/icons/savings/nomoney.svg"],
+    "optionShort": ["$200", "$100", "No savings"],
     "optionDesc": ["Small savings, for vacations or home projects.", "Tiny savings, for clothes and shopping.", "No savings after other expenses."]
 }, {
     "name": "Savings Fact",
@@ -213,7 +213,7 @@ let povertyData = [
     "set": null,
     "type": "fact",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/money-5.png"],
+    "sectionImage": ["/public/img/icons/savings/wallet.svg"],
     "optionShort": [],
     "optionDesc": []
 }, {
@@ -223,7 +223,7 @@ let povertyData = [
     "set": null,
     "type": "fact",
     "visited": false,
-    "sectionImage": ["http://simpleicon.com/wp-content/uploads/slide_share.png"],
+    "sectionImage": ["/public/img/icons/people.svg"],
     "optionShort": [],
     "optionDesc": []
 }]
