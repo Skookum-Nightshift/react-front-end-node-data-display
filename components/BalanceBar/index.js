@@ -20,13 +20,21 @@ class BalanceBar extends React.Component {
     let spendingPercent = (spending / budget * 100);
     let balPercent 			= (bal / budget * 100);
     let spentPercent 		= (100 - spendingPercent - balPercent);
+
+    let spentBackground = spendingPercent > 0 ? '#9098d3' : '#6fcccc';
+    let spendingBackground = balPercent > 0 ? '#6fcccc' : 'transparent';
     
     return (
       <div className='balanceBar'>
-        {/* <div id="balanceBarBalance"><p>You have <b>${bal}</b> left for the month.</p></div> */}
-        <div className='balanceSection spent' style={{'width': spentPercent+'%'}}></div>
-        <div className='balanceSection spending' style={{'width': spendingPercent+'%'}}></div>
-        <div className='balanceSection left' style={{'width': balPercent+'%'}}></div>    
+        <div className='balanceSection' style={{'width': spentPercent+'%', 'backgroundColor': spentBackground}}>
+          <div className='spent'></div>
+        </div>
+        <div className='balanceSection' style={{'width': spendingPercent+'%', 'backgroundColor': spendingBackground}}>
+          <div className='spending'></div>
+        </div>
+        <div className='balanceSection' style={{'width': balPercent+'%'}}>
+          <div className='left'></div>
+        </div>
       </div>
     );
   }
