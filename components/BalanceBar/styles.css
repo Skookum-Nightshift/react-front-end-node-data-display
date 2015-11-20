@@ -8,18 +8,19 @@
 
 .balanceBar {
   width: 100%;
-  height: 22px;
-  border: 1px #ccc solid;
+  height: 18px;
   margin: 0px auto 8px;
-  border-radius: 3px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .balanceSection {
   display: inline-block;
-  height: 20px;
+  height: 18px;
   font-size: 10pt;
   vertical-align: top;
   text-align: center;
+  border-radius: 8px 0 0 8px;
 }
 
 .balanceSection p {
@@ -28,20 +29,24 @@
 }
 
 .spent {
-  background-color: #e74c3c;
+  background-color: #ff9900;
   transition: width .4s ease-in-out;
-  border-radius: 3px 0 0 3px; 
+  border-radius: 8px;
+  height: 18px;
 }
 
 .spending {
-  background-color: #f1c40f;
+  background-color: #9098d3;
   transition: width .4s ease-in-out;
+  border-radius: 0 8px 8px 0;
+  height: 18px;
 }
 
 .left {
-  background-color: #2ecc71;
+  background-color: #6fcccc;
   transition: width .4s ease-in-out;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 8px 8px 0;
+  height: 18px;
 }
 
 #balanceBarBalance {
