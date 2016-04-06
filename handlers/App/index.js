@@ -1,5 +1,4 @@
 import React from 'react/addons';
-import {Resolver} from 'react-resolver';
 import MenuItems from 'MenuItems';
 import AppBody from 'AppBody';
 import appAreas from '../../data/povertyData';
@@ -28,7 +27,7 @@ let App = React.createClass({
 
   /**
    * Sets the state of activeItemIndex to the index of the clicked LI, forces a re-render.
-   * This runs when a page is accessed from a click on an item in the modal menu. That means 
+   * This runs when a page is accessed from a click on an item in the modal menu. That means
    * that the person has diverged from the normal order of the pages. So it sets the 'diverged'
    * flag to true. That way, the app can decide if it should display the next item or the item
    * that was clicked.
@@ -41,8 +40,8 @@ let App = React.createClass({
 
     this.setState({diverged: true, currentOption: currentOption});
   },
-  
-  
+
+
   // Don't let the balance get below 0
   // If user diverged, then when they change their choice, don't change lastOption
   handleBalance (balance, option) {
@@ -54,10 +53,10 @@ let App = React.createClass({
       this.setState({balance: balance, currentOption: option});
     }
   },
-  
+
   setPage () {
     let page = this.state.page;
-    
+
     // once clicked, remove the Next button so that it cannot be clicked again during the ReactCSSTransition
     let nextButton = document.getElementById('nextButton');
     nextButton.parentNode.removeChild(nextButton);
@@ -84,10 +83,10 @@ let App = React.createClass({
   componentDidMount() {
     window.onbeforeunload = () => "Your will lose your progress if you use the browser's back or reload buttons. To go back to prior budget items, please click the menu button.";
   },
-  
+
   render () {
     let selectedItem = appAreas[this.state.activeItemIndex]; // load the data
-    
+
     return (
       <div id="appWrapper" className={this.state.navOpen === true ? "noOverflow" : null}>
         <div id="appBarContainer">
@@ -99,31 +98,32 @@ let App = React.createClass({
           </div>
         </div>
 
-        <AppBody 
-          id='AppBody' 
-          selectedItem={selectedItem} 
-          menuItems={appAreas} 
-          handleBalance={this.handleBalance} 
-          diverged={this.state.diverged} 
+        <AppBody
+          id='AppBody'
+          selectedItem={selectedItem}
+          menuItems={appAreas}
+          handleBalance={this.handleBalance}
+          diverged={this.state.diverged}
           page={this.state.page}
           balance={this.state.balance}
-          activeItemIndex={this.state.activeItemIndex} 
-          setPage={this.setPage} 
+          activeItemIndex={this.state.activeItemIndex}
+          setPage={this.setPage}
           setOwnerState={this.setOwnerState}
-          appCompleted={this.state.completed} 
+          appCompleted={this.state.completed}
           getInvolved={this.state.getInvolved}
-          currentOption={this.state.currentOption} />
-      
-        <CSSTransitionGroup 
-          transitionName="modalTransition" 
-          transitionEnterTimeout={600} 
+          currentOption={this.state.currentOption}
+        />
+
+        <CSSTransitionGroup
+          transitionName="modalTransition"
+          transitionEnterTimeout={600}
           transitionLeaveTimeout={600}>
           {this.state.navOpen === true ?
-            <MenuItems 
-              id='MenuItems' 
-              setOwnerState={this.setOwnerState} 
-              onActivate={this.handleItem} 
-              activeItemIndex={this.state.activeItemIndex} 
+            <MenuItems
+              id='MenuItems'
+              setOwnerState={this.setOwnerState}
+              onActivate={this.handleItem}
+              activeItemIndex={this.state.activeItemIndex}
               menuItems={appAreas}
               page={this.state.page}
               balance={this.state.balance} />

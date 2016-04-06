@@ -6,7 +6,7 @@ var debug = require('debug')('app startup');
 import express from 'express';
 import React from 'react';
 import Router from 'react-router';
-import {Resolver} from 'react-resolver';
+import {renderToString} from 'react-dom/server';
 import routes from '../routes';
 import {resources} from './webpack';
 import cookie from 'react-cookie';
@@ -50,12 +50,7 @@ app.get('*', function(req, res) {
 
     var status = isNotFound ? 404 : 200;
     cookie.plugToRequest(req, res);
-    return (
-      Resolver.renderToString(<Handler />)
-        .then((o) => {
-          res.status(status).send(tmpl({html: o.toString(), data: o.data}));
-        })
-    );
+    return res.status(status).send(tmpl({html: renderToString(<Handler />)}));
   });
 });
 

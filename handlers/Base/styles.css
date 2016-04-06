@@ -1,12 +1,30 @@
 /** @define AppBase; use strict */
 @import 'normalize.css';
 
+@font-face {
+  font-family: 'Meta';
+  src: url('/public/fonts/meta-book-lf-roman.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'TradeGothicNo.18-Condensed';
+  src: url('/public/fonts/trade-gothic-condensed.ttf')  format('truetype');
+}
+
+* {
+  font-family: 'Meta', Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'TradeGothicNo.18-Condensed', Arial, sans-serif !important;
+}
+
 .LeftNavOverlay {
-	position: fixed;
-	background-color: rgba(0, 0, 0, 0.5);
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 9;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
 }

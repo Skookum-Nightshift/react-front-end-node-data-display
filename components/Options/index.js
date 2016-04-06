@@ -8,7 +8,7 @@ var {PropTypes} = React;
 
 let {CSSTransitionGroup} = React.addons;
 
-// We define this so that we know what the previously selected item.option was 
+// We define this so that we know what the previously selected item.option was
 // so that we know whether to transition the image left or right.
 let oldItemSet = null;
 
@@ -55,7 +55,11 @@ class Options extends React.Component {
     if (index === -1) {
       if (item.sectionImage.length < 2) {
         oldItemSet = item.options[0];
-        return <Isvg src={item.sectionImage[0]} className="sectionIcon" />;
+        if (item.sectionImage[0].indexOf('.svg') > -1) {
+          return <Isvg src={item.sectionImage[0]} className="sectionIcon" />;
+        } else {
+          return <image src={item.sectionImage[0]} className="sectionIcon" />;
+        }
       } else {
         oldItemSet = item.options[1];
         return <Isvg src={item.sectionImage[1]} className="sectionIcon" />;
@@ -108,7 +112,7 @@ class Options extends React.Component {
             <div className={(cost > (this.props.balance + item.set) || (item.type === "setback" && item.visited === true && (this.props.page - 1) > this.props.activeItemIndex)) ? "button disabled" : (cost === item.set ? "button selected" : "button unselected")}>
               {item.optionShort[index]}
             </div>
-          </a>            
+          </a>
           <div className={(item.set !== null && cost == item.set) ? "accordionDesc accordionDescActive" : "accordionDesc"}>
             <p>{item.optionDesc[index]} - <span className="cost">Cost: ${item.options[index]}</span></p>
           </div>

@@ -22,20 +22,20 @@
 }
 
 .btn-group span > div:nth-child(1),
-#actionButton > div, 
+#actionButton > div,
 #beginState > div {
-	width: 98%;
+  width: 98%;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .button {
   border-radius: 3px;
   border: 3px solid black;
   cursor: pointer;
-  font-family: 'Fira Sans', sans-serif;
+  /*font-family: 'Fira Sans', sans-serif;*/
   font-size: 14px;
   font-weight: 500;
   margin: auto auto 8px;
@@ -91,7 +91,7 @@
 }
 
 p {
-  font-family: 'Fira Sans', sans-serif;
+  /*font-family: 'Fira Sans', sans-serif;*/
   font-weight: 500;
   font-size: 14px;
   color: #606060;
@@ -146,8 +146,8 @@ i {
 
 @media all and (min-width: 415px) {
   .btn-group span > div:nth-child(1),
-  #actionButton > div, 
-  #beginState > div { 
+  #actionButton > div,
+  #beginState > div {
     width: 350px;
   }
 

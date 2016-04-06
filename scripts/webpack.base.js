@@ -4,8 +4,9 @@ var glob = require('glob');
 var fs = require('fs');
 var readdir = fs.readdirSync;
 var WHITE_LIST_OF_NODE_MODULES = require('./node-white-list');
-var reworkLoader = require('rework-webpack-loader');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var postcssImport = require('postcss-import');
+var precss = require('precss');
 
 var concat = function() {
   var args = Array.prototype.slice.call(arguments);
@@ -86,14 +87,14 @@ module.exports = function(options) {
       loaders: [
         { test: /\.css$/,
           loader: options.env !== 'development' ?
-            ExtractTextPlugin.extract('style', 'rework-webpack') :
-            'style!rework-webpack',
+            ExtractTextPlugin.extract('style', 'css!postcss') :
+            'style!css!postcss',
         },
         {test: /\.json$/, loader: 'json'},
         {test: /\.jsx?$/,
           exclude: [
             // exclude everything that isn’t a react- component
-            /node_modules(?!\/react-)/,
+            /node_modules/,
           ],
           loaders: concat(
             options.hotloader && 'react-hot',
@@ -132,16 +133,17 @@ module.exports = function(options) {
       (options.env !== 'development' && new ExtractTextPlugin('styles.css'))
     ),
 
-    devtool: 'sourcemap',
-
-    rework: {
-      use: [
-        reworkLoader.plugins.imports,
-        reworkLoader.plugins.urls,
-      ],
+    postcss: function (webpack) {
+      return [
+        postcssImport({
+          addDependencyTo: webpack,
+        }),
+        precss(),
+      ];
     },
+
+    devtool: 'sourcemap',
 
     __options: options,
   };
 };
-

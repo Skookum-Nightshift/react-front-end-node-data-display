@@ -1,5 +1,4 @@
 import React from 'react/addons';
-import {Resolver} from 'react-resolver';
 
 let {CSSTransitionGroup} = React.addons;
 require('./styles.css');
@@ -50,7 +49,7 @@ class AppBody extends React.Component {
     console.log("Page: " + this.props.page); // For debugging
     console.log("ActiveItemIndex: " + this.props.activeItemIndex); // For debugging
     console.log("Diverged: " + this.props.diverged); // For debugging
-    
+
     /**
      * By default, the item displayed is what you click on in the drawer.
      * But if you're clicking Next (state is not diverged from order), then
@@ -59,33 +58,33 @@ class AppBody extends React.Component {
     if (!this.props.diverged) {
       item = this.props.menuItems[this.props.page-1];
       /**
-       * if you visit the item via Next (linear, non-diverged), then set the 
-       * item's visited flag to true so as to enable users to access that item 
+       * if you visit the item via Next (linear, non-diverged), then set the
+       * item's visited flag to true so as to enable users to access that item
        * again later from the drawer.
        */
       item['visited'] = true;
     };
 
     let min = Math.min.apply(null, item.options);
-    
+
     return (
       <CSSTransitionGroup transitionName="appBodyTransition" transitionEnterTimeout={600} transitionLeaveTimeout={600}>
       <div key={item.name} className="animated">
         <h1>{item.name}</h1>
 
-        <Options 
-          id='Options' 
+        <Options
+          id='Options'
           handleBalance={this.props.handleBalance}
-          balance={this.props.balance} 
+          balance={this.props.balance}
           selectedItem={item}
           page={this.props.page}
           activeItemIndex={this.props.activeItemIndex} />
         <div className="balance">
           <p>You have <b>${this.props.balance}</b> left for the month.</p>
         </div>
-        <BalanceBar 
-          id='BalanceBar' 
-          currentOption={this.props.currentOption} 
+        <BalanceBar
+          id='BalanceBar'
+          currentOption={this.props.currentOption}
           balance={this.props.balance}/>
         <div id="actionButton">
           {this.nextButton(min, item)}
@@ -100,7 +99,7 @@ class AppBody extends React.Component {
       return (
         <div id="beginState">
           <h1>Assume...</h1>
-          <p>You’re a parent. You work. Your spouse works part-time. You have a 7-year-old daughter and 12-year-old son.</p><br />
+          <p>You’re a parent. You work. Your spouse works part-time. You have a 3-year-old daughter and a 12-year-old son.</p><br />
           <p>You live paycheck to paycheck.</p><br />
           <Isvg src="public/img/icons/meeting.svg" alt="family of 4" className="sectionIcon" /><br />
           <p>Stay within your limited monthly budget.<br />
@@ -116,8 +115,8 @@ class AppBody extends React.Component {
         <div id="endState">
           <h1>How did you fare?</h1>
           <p>You ended up with ${this.props.balance} and this exercise didn't even cover every expense.</p><br />
-          <p>You had to make some hard choices! These are the choices 1 in 5 families in Charlotte must make every month.</p><br />
-          <p>United Way works with local charities to help those in need. It is their goal to make Charlotte a great place to live and work for all.</p><br />
+          <p>You had to make some hard choices! Living paycheck to paycheck is a reality for over 150,000 people in Mecklenburg County.</p><br />
+          <p>United Way creates change for a stronger  community to make Charlotte a great place for all to live and work.</p><br />
           <a style={{'display': 'inline-block'}} target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpaychecktopaycheck.herokuapp.com%2F&display=popup&ref=plugin&src=share_button">
             <div className="social"><FontAwesome name="facebook" size="5x"/></div>
           </a>
@@ -125,7 +124,7 @@ class AppBody extends React.Component {
             <div className="social"><FontAwesome name="twitter" size="5x"/></div>
           </a>
           <br />
-          <br /> 
+          <br />
           <a id="getInvolved" href="#" onClick={this.props.setOwnerState.bind(null, {getInvolved: true}, "Display 'Get Involved' page")}>
             <div className="button selected">Get Involved</div>
           </a>
@@ -139,8 +138,8 @@ class AppBody extends React.Component {
         <div id="endState">
           <h1>Get Involved!</h1>
           <p>Click something below to get involved!</p><br />
-          <p>United Way works with local charities to help those in need. It is their goal to make Charlotte a great place to live and work for all.</p><br />
-          
+          <p>United Way creates change for a stronger community by increasing high school graduation, reducing homelessness, empowering healthy lives and providing a safety net of basic needs. This makes Charlotte a great place for ALL to live and work. But we need you!</p><br />
+
           <a target="_blank" href="http://www.uwcentralcarolinas.org/invest" id="donate">
             <div className="button selected">Donate!</div>
           </a>
@@ -163,13 +162,14 @@ class AppBody extends React.Component {
     return (
       <div className="appBody" style={{"paddingLeft": "24px", "paddingRight": "24px"}}>
         {this.beginOrEnd(selectedItem)}
-        {(this.props.appCompleted === true && this.props.diverged === false) ? 
+        {(this.props.appCompleted === true && this.props.diverged === false) ?
           <div className="balance">
             <p>You have <b>${this.props.balance}</b> left for the month.</p>
-            <BalanceBar 
-              id='BalanceBar' 
-              currentOption={this.props.currentOption} 
-              balance={this.props.balance}/>
+            <BalanceBar
+              id='BalanceBar'
+              currentOption={this.props.currentOption}
+              balance={this.props.balance}
+            />
           </div>
         : null}
       </div>
