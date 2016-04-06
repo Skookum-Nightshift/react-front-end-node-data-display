@@ -14,7 +14,7 @@ let App = React.createClass({
     return {
       navOpen: false,
       activeItemIndex: null, // App starts without an Item selected
-      balance: 2000,
+      balance: 2045,
       page: 2, // This is order.
       diverged: false,
       budgetBusted: false,
